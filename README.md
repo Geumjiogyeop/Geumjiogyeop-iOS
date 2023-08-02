@@ -1,5 +1,4 @@
 # 🧸 Geumjiogyeop-iOS
-https://avatars.githubusercontent.com/u/102959791?v=4
 ## 🪄 Developers
 | 이서연 | 이자민 | 이장혁 |
 | :---: | :---: | :---: | 
