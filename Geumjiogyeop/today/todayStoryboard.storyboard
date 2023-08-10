@@ -76,7 +76,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="fixedBtn"/>
                                 <connections>
                                     <action selector="fixedBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YZz-iH-G9j"/>
-                                    <segue destination="iC1-2u-Gz5" kind="show" id="nEk-Dd-nwy"/>
+                                    <segue destination="iC1-2u-Gz5" kind="show" id="mpI-5Z-8gv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,7 +134,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-9N-4ZH">
-                                <rect key="frame" x="50" y="440.00000000000006" width="240" height="148.33333333333331"/>
+                                <rect key="frame" x="50" y="440.00000000000011" width="240" height="148.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPW-nX-3KA">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="20.333333333333332"/>
