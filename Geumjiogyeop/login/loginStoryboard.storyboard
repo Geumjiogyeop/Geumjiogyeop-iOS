@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="loginViewController" customModule="GeumjiogyeopUITests" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="loginViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,7 @@
                                                     <segue destination="RZn-en-HwY" kind="show" id="1gc-iq-RNJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIO-Q7-bh5">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIO-Q7-bh5" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="53" width="288" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Yvg-ks-vul"/>
@@ -74,11 +74,6 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="로그인 없이 시작하기">
                                                     <color key="baseForegroundColor" red="1" green="0.58823529409999997" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="1" green="0.58823529409999997" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -213,7 +208,7 @@
         <!--회원가입-->
         <scene sceneID="pfw-mO-AnS">
             <objects>
-                <viewController id="jLJ-dp-p61" customClass="SignUpViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jLJ-dp-p61" customClass="AgreeViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Z8-Nr-geh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +320,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="OnQ-1p-4sB">
-                                <rect key="frame" x="20" y="159" width="353" height="423"/>
+                                <rect key="frame" x="20" y="159" width="353" height="534"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF8-BE-eyB">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
@@ -360,16 +355,30 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zom-eq-fdx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHw-Rm-CAO" userLabel="비밀번호">
                                         <rect key="frame" x="0.0" y="222" width="353" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt0-8Q-hNw">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uop-lC-6KQ">
                                         <rect key="frame" x="0.0" y="267" width="353" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="kuK-5t-3EY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zom-eq-fdx">
+                                        <rect key="frame" x="0.0" y="333" width="353" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt0-8Q-hNw">
+                                        <rect key="frame" x="0.0" y="378" width="353" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2V-gX-lMG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2V-gX-lMG" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="oAu-Hy-JYo"/>
@@ -383,8 +392,11 @@
                                                         <color key="value" red="1" green="0.63529411759999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="womanBtn:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="Rml-Tj-VO8"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egk-uB-OQd">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egk-uB-OQd" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                                 <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="HFo-lu-mPn"/>
@@ -393,19 +405,22 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="남자">
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="manBtn:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="k0x-Le-6Dc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내국인 / 외국인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-om-80K">
-                                        <rect key="frame" x="0.0" y="333" width="353" height="24"/>
+                                        <rect key="frame" x="0.0" y="444" width="353" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-oZ-YcK">
-                                        <rect key="frame" x="0.0" y="378" width="353" height="45"/>
+                                        <rect key="frame" x="0.0" y="489" width="353" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jD-Xc-AmU">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jD-Xc-AmU" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="AVF-jp-jNg"/>
@@ -414,8 +429,11 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="내국인">
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="local:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="zaq-gA-NaH"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-Wx-KX9">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-Wx-KX9" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                                 <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="LbL-SF-UA2"/>
@@ -424,6 +442,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="외국인">
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="foreign:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="cOg-XX-dJe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -450,6 +471,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="W1z-53-erX"/>
+                    <connections>
+                        <outlet property="birthTextField" destination="rA5-Fd-hsn" id="gSe-zC-WaI"/>
+                        <outlet property="nameTextField" destination="aqs-WD-yT9" id="DoN-SK-vda"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sf1-al-9Tj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -532,6 +557,11 @@
             <point key="canvasLocation" x="4588.5496183206105" y="-365.49295774647891"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="eIO-Q7-bh5">
+            <size key="intrinsicContentSize" width="165.33333333333334" height="34.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
