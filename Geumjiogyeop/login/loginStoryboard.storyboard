@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHg-p9-TjJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jCg-Yc-96U">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -375,11 +375,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt0-8Q-hNw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Qt0-8Q-hNw">
                                         <rect key="frame" x="0.0" y="378" width="353" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2V-gX-lMG" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="oAu-Hy-JYo"/>
                                                 </constraints>
@@ -397,7 +397,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egk-uB-OQd" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="45"/>
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="165.33333333333337" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="HFo-lu-mPn"/>
                                                 </constraints>
@@ -417,11 +417,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-oZ-YcK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-oZ-YcK">
                                         <rect key="frame" x="0.0" y="489" width="353" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jD-Xc-AmU" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="AVF-jp-jNg"/>
                                                 </constraints>
@@ -434,7 +434,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-Wx-KX9" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="45"/>
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="165.33333333333337" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="LbL-SF-UA2"/>
                                                 </constraints>
@@ -456,7 +456,12 @@
                                     <constraint firstAttribute="height" constant="45" id="Joa-CD-KSi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음">
+                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nexttophone:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="ak1-6a-dkb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbD-bu-Mbd"/>
@@ -473,7 +478,12 @@
                     <navigationItem key="navigationItem" title="회원가입" id="W1z-53-erX"/>
                     <connections>
                         <outlet property="birthTextField" destination="rA5-Fd-hsn" id="gSe-zC-WaI"/>
+                        <outlet property="foreign" destination="jOa-Wx-KX9" id="W4l-pO-jaN"/>
+                        <outlet property="local" destination="9jD-Xc-AmU" id="bCg-VH-z9r"/>
+                        <outlet property="manBtn" destination="egk-uB-OQd" id="zCS-Ar-sEK"/>
                         <outlet property="nameTextField" destination="aqs-WD-yT9" id="DoN-SK-vda"/>
+                        <outlet property="nexttophone" destination="cNd-IF-oo2" id="HF0-mK-Sh0"/>
+                        <outlet property="womanBtn" destination="d2V-gX-lMG" id="sqO-9P-2h7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sf1-al-9Tj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -558,8 +568,20 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="9jD-Xc-AmU">
+            <size key="intrinsicContentSize" width="68.333333333333329" height="34.333333333333336"/>
+        </designable>
+        <designable name="d2V-gX-lMG">
+            <size key="intrinsicContentSize" width="53.666666666666664" height="34.333333333333336"/>
+        </designable>
         <designable name="eIO-Q7-bh5">
             <size key="intrinsicContentSize" width="165.33333333333334" height="34.333333333333336"/>
+        </designable>
+        <designable name="egk-uB-OQd">
+            <size key="intrinsicContentSize" width="53.666666666666664" height="34.333333333333336"/>
+        </designable>
+        <designable name="jOa-Wx-KX9">
+            <size key="intrinsicContentSize" width="68.333333333333329" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>
@@ -568,6 +590,9 @@
         <image name="logo" width="288" height="288"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
