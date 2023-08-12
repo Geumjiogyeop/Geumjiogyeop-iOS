@@ -274,6 +274,14 @@
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="cQs-7O-Gho">
+                                                    <rect key="frame" x="94" y="34" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_like" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-Ew-PU7">
+                                                    <rect key="frame" x="333" y="8" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="361" height="100"/>
@@ -297,6 +305,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="empty_like" width="40" height="40"/>
+        <image name="location" width="20" height="24"/>
         <image name="logo" width="288" height="288"/>
         <image name="next" width="51" height="51"/>
         <systemColor name="systemBackgroundColor">

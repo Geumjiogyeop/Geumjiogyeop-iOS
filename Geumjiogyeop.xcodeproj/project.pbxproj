@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		296399F62A87C5E60043DB34 /* InterestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296399F52A87C5E60043DB34 /* InterestStoryboard.storyboard */; };
 		296399F82A87D1DD0043DB34 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296399F72A87D1DD0043DB34 /* MainStoryboard.storyboard */; };
+		296399FA2A87E9000043DB34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 296399F92A87E9000043DB34 /* GoogleService-Info.plist */; };
 		78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78311C742A8553EE000A4C58 /* DetailViewController.swift */; };
-		78B6142B2A877B850011D7AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B6142A2A877B850011D7AE /* GoogleService-Info.plist */; };
 		78B6142E2A877BEB0011D7AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */; };
 		78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8332A7A31F800F77FD7 /* AppDelegate.swift */; };
 		78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8352A7A31F800F77FD7 /* SceneDelegate.swift */; };
@@ -55,11 +55,11 @@
 		26F08E3C1A19B7C518187973 /* Pods-Geumjiogyeop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop.debug.xcconfig"; sourceTree = "<group>"; };
 		296399F52A87C5E60043DB34 /* InterestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = InterestStoryboard.storyboard; path = Geumjiogyeop/interestNotice/InterestStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		296399F72A87D1DD0043DB34 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = Geumjiogyeop/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		296399F92A87E9000043DB34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeumjiogyeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop_GeumjiogyeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78311C742A8553EE000A4C58 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		78B6142A2A877B850011D7AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78DAA8302A7A31F800F77FD7 /* Geumjiogyeop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geumjiogyeop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DAA8332A7A31F800F77FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78DAA8352A7A31F800F77FD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				78DAA83C2A7A31F800F77FD7 /* Assets.xcassets */,
 				78DAA83E2A7A31F800F77FD7 /* LaunchScreen.storyboard */,
 				78DAA8412A7A31F800F77FD7 /* Info.plist */,
-				78B6142A2A877B850011D7AE /* GoogleService-Info.plist */,
+				296399F92A87E9000043DB34 /* GoogleService-Info.plist */,
 			);
 			path = Geumjiogyeop;
 			sourceTree = "<group>";
@@ -376,13 +376,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DAA8402A7A31F800F77FD7 /* LaunchScreen.storyboard in Resources */,
+				296399FA2A87E9000043DB34 /* GoogleService-Info.plist in Resources */,
 				78DAA83D2A7A31F800F77FD7 /* Assets.xcassets in Resources */,
 				78DAA83B2A7A31F800F77FD7 /* Main.storyboard in Resources */,
 				296399F62A87C5E60043DB34 /* InterestStoryboard.storyboard in Resources */,
 				78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */,
 				78DAA8702A7A3BDB00F77FD7 /* loginStoryboard.storyboard in Resources */,
 				296399F82A87D1DD0043DB34 /* MainStoryboard.storyboard in Resources */,
-				78B6142B2A877B850011D7AE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
