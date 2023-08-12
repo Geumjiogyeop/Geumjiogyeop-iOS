@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,26 +17,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="96L-09-Ouh">
-                                <rect key="frame" x="52" y="299" width="253" height="254.33333333333337"/>
+                                <rect key="frame" x="52" y="299" width="288" height="254.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eo7-oH-eYn">
-                                        <rect key="frame" x="0.0" y="0.0" width="253" height="145.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="145.66666666666666"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="myJ-cZ-mKY">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="105"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="114.55" id="DfV-9y-wRD"/>
                                                     <constraint firstAttribute="height" constant="105" id="VMu-hQ-7yy"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금지옥엽으로 키운 내 자식" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRM-lJ-yH6">
-                                                <rect key="frame" x="0.0" y="105" width="253" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="105" width="288" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이젠 안심하고 대비하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB0-OV-TG3">
-                                                <rect key="frame" x="0.0" y="125.3333333333333" width="253" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="125.3333333333333" width="288" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -44,10 +44,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hwq-0B-Lqt">
-                                        <rect key="frame" x="0.0" y="185.66666666666669" width="253" height="68.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="185.66666666666669" width="288" height="68.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyO-WK-QAM">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                                 <connections>
@@ -55,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIO-Q7-bh5">
-                                                <rect key="frame" x="0.0" y="34.333333333333314" width="253" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="34.333333333333314" width="288" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="로그인 없이 시작하기"/>
                                             </button>

@@ -21,10 +21,10 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     @IBOutlet weak var contentView: UIView!
     
     var posts: [(image: UIImage, title: String, date: String,content: String,userID:String)] = [
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
+        (userID: "이서연#1111",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
+        (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
+        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
+        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
         (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
         (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다")
     ]
@@ -56,8 +56,8 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         NSLayoutConstraint.activate([
             fixedBtn.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -30),
             fixedBtn.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -32),
-            fixedBtn.widthAnchor.constraint(equalToConstant: 40),
-            fixedBtn.heightAnchor.constraint(equalToConstant: 40)
+            fixedBtn.widthAnchor.constraint(equalToConstant: 60),
+            fixedBtn.heightAnchor.constraint(equalToConstant: 60)
         ])
         
 //        fixedBtn.addTarget(self, action: #selector(fixedBtnTapped), for: .touchUpInside)
@@ -86,6 +86,24 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
 
             return cell
         }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedPost = posts[indexPath.item]
+
+        // 스토리보드에서 DetailViewController의 식별자를 설정하세요.
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            detailVC.detailUser = selectedPost.userID
+            detailVC.detailImage = selectedPost.image
+            detailVC.detailTitle = selectedPost.title
+            detailVC.detailContent = selectedPost.content
+            detailVC.detailDate = selectedPost.date
+            
+            print(detailVC.detailUser)
+            print("Selected Post: \(selectedPost)")
+            
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
+
 
 //        // Function to add new data
 //        func addNewPost() {
