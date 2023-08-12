@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHg-p9-TjJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -101,7 +102,7 @@
         <!--로그인-->
         <scene sceneID="kk5-AX-dJe">
             <objects>
-                <viewController id="RZn-en-HwY" customClass="loginViewController" customModule="GeumjiogyeopUITests" sceneMemberID="viewController">
+                <viewController id="RZn-en-HwY" customClass="loginViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5h-f7-Rqn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,13 +213,13 @@
         <!--회원가입-->
         <scene sceneID="pfw-mO-AnS">
             <objects>
-                <viewController id="jLJ-dp-p61" sceneMemberID="viewController">
+                <viewController id="jLJ-dp-p61" customClass="SignUpViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Z8-Nr-geh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="kcw-jK-UG5">
-                                <rect key="frame" x="20" y="153" width="353" height="580"/>
+                                <rect key="frame" x="20" y="153" width="353" height="575"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-Mv-xA0">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="312"/>
@@ -235,36 +236,40 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-Yf-F9L">
-                                        <rect key="frame" x="0.0" y="427" width="353" height="153"/>
+                                        <rect key="frame" x="0.0" y="427" width="353" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te1-wL-u8l">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pH-K4-Ofb">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="q9j-Oc-Fzn"/>
+                                                    <constraint firstAttribute="height" constant="45" id="6je-Dv-i2a"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" image="checkmark" catalog="system" title="필수 약관 전체 동의">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="12" bottom="0.0" trailing="13"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="필수 약관 전체동의">
+                                                    <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="placeholderTextColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="allagreeBtn:" destination="jLJ-dp-p61" eventType="touchUpInside" id="xPc-bj-tgs"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCY-14-rC6">
-                                                <rect key="frame" x="0.0" y="50" width="353" height="34.333333333333343"/>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCY-14-rC6" userLabel="firstagreeBtn">
+                                                <rect key="frame" x="0.0" y="45" width="353" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="[필수] 만 14세 이상입니다">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-Y2-OAU">
-                                                <rect key="frame" x="0.0" y="84.333333333333371" width="353" height="34.333333333333343"/>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-Y2-OAU" userLabel="secondagreeBtn">
+                                                <rect key="frame" x="0.0" y="79.333333333333371" width="353" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title="[필수] 서비스 이용약관 동의">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-DT-oP0">
-                                                <rect key="frame" x="0.0" y="118.66666666666661" width="353" height="34.333333333333329"/>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-DT-oP0" userLabel="thirdagreeBtn">
+                                                <rect key="frame" x="0.0" y="113.66666666666661" width="353" height="34.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title="[필수] 개인정보 처리방침 동의">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
@@ -284,7 +289,7 @@
                                     <color key="baseBackgroundColor" systemColor="placeholderTextColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="zHg-p9-TjJ" kind="show" id="0s9-eI-pPR"/>
+                                    <action selector="nexttoinfoBtn:" destination="jLJ-dp-p61" eventType="touchUpInside" id="HBk-7R-7kk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -300,6 +305,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="2XC-BX-Osx"/>
+                    <connections>
+                        <outlet property="firstagreeBtn" destination="CCY-14-rC6" id="TVS-qh-59r"/>
+                        <outlet property="nexttoinfoBtn" destination="Ve3-Ly-LKb" id="q1S-qu-rz0"/>
+                        <outlet property="secondagreeBtn" destination="FAy-Y2-OAU" id="iCf-EO-8Ap"/>
+                        <outlet property="thirdagreeBtn" destination="fv9-DT-oP0" id="bbQ-ek-WSg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3g-EH-nwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,13 +319,13 @@
         <!--회원가입-->
         <scene sceneID="iOG-sn-hhc">
             <objects>
-                <viewController id="zHg-p9-TjJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zHg-p9-TjJ" customClass="SignUpViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2w-5V-tIv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="OnQ-1p-4sB">
-                                <rect key="frame" x="20" y="203" width="353" height="423"/>
+                                <rect key="frame" x="20" y="159" width="353" height="423"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF8-BE-eyB">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
@@ -425,9 +436,6 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
-                                <connections>
-                                    <segue destination="jCg-Yc-96U" kind="show" id="QtH-WP-7Ni"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbD-bu-Mbd"/>
@@ -450,13 +458,13 @@
         <!--회원가입-->
         <scene sceneID="6hM-mc-7sc">
             <objects>
-                <viewController id="jCg-Yc-96U" sceneMemberID="viewController">
+                <viewController id="jCg-Yc-96U" customClass="SignUpViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oAB-ly-5v8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6lN-cA-r8u">
-                                <rect key="frame" x="20" y="253" width="353" height="156"/>
+                                <rect key="frame" x="20" y="209" width="353" height="156"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="휴대폰 인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-hE-3HD" userLabel="휴대폰 인증">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
