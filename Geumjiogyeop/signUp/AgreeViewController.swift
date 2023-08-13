@@ -15,12 +15,19 @@ class AgreeViewController: UIViewController {
     @IBOutlet weak var secondagreeBtn : UIButton!
     @IBOutlet weak var thirdagreeBtn : UIButton!
     @IBOutlet weak var nexttoinfoBtn : UIButton!
+    @IBOutlet weak var allagreeBtn : UIButton!
     
 //    @IBOutlet weak var agreeBtn : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        nexttoinfoBtn.backgroundColor = UIColor(hex: 0xEBEBEB)
+        nexttoinfoBtn.setTitleColor(UIColor.black, for: .normal)
+        
+        allagreeBtn.setTitleColor(UIColor.black, for: .normal)
+        allagreeBtn.backgroundColor = UIColor(hex: 0xEBEBEB)
+        nexttoinfoBtn.setTitle("다음", for: .normal)
+        
     }
 //    @IBAction func firstagreeBtn(_ sender: UIButton){
 //
@@ -48,18 +55,41 @@ class AgreeViewController: UIViewController {
         print(agreeclickcount)
         if agreeclickcount % 2 == 0 {
                 isagreeclick = true
-//                agreeBtn.setTitleColor(.white, for: .normal)
-                firstagreeBtn.setTitleColor(.black, for: .normal)
-                secondagreeBtn.setTitleColor(.black, for: .normal)
-                thirdagreeBtn.setTitleColor(.black, for: .normal)
+                allagreeBtn.setTitleColor(UIColor.white, for: .normal)
+            allagreeBtn.backgroundColor = UIColor.black
+                firstagreeBtn.setTitleColor(UIColor.black, for: .normal)
+            firstagreeBtn.titleLabel?.alpha = 1
+                secondagreeBtn.setTitleColor(UIColor.black, for: .normal)
+            secondagreeBtn.titleLabel?.alpha = 1
+                thirdagreeBtn.setTitleColor(UIColor.black, for: .normal)
+            thirdagreeBtn.titleLabel?.alpha = 1
                 nexttoinfoBtn.backgroundColor = UIColor(hex: 0xFFA24B)
+            nexttoinfoBtn.setTitleColor(UIColor.white, for: .normal)
+            allagreeBtn.setTitle("필수 약관 전체동의", for: .normal)
+            allagreeBtn.setImage(.checkmark, for: .normal)
+            firstagreeBtn.setTitle("[필수] 만 14세 이상입니다", for: .normal)
+            secondagreeBtn.setTitle("[필수] 서비스 이용약관 동의", for: .normal)
+            thirdagreeBtn.setTitle("[필수] 개인정보 처리방침 동의", for: .normal)
+            nexttoinfoBtn.setTitle("다음", for: .normal)
             } else {
                 isagreeclick = false
-//                agreeBtn.setTitleColor(.black, for: .normal)
-                firstagreeBtn.setTitleColor(.white, for: .normal)
-                secondagreeBtn.setTitleColor(.white, for: .normal)
-                thirdagreeBtn.setTitleColor(.white, for: .normal)
-                nexttoinfoBtn.backgroundColor = .gray
+                allagreeBtn.setTitleColor(UIColor.black, for: .normal)
+                allagreeBtn.backgroundColor = UIColor(hex: 0xEBEBEB)
+                firstagreeBtn.setTitleColor(UIColor(hex: 0x333333), for: .normal)
+                firstagreeBtn.titleLabel?.alpha = 0.5
+                
+                secondagreeBtn.setTitleColor(UIColor(hex: 0x333333), for: .normal)
+                secondagreeBtn.titleLabel?.alpha = 0.5
+                thirdagreeBtn.setTitleColor(UIColor(hex: 0x333333), for: .normal)
+                thirdagreeBtn.titleLabel?.alpha = 0.5
+                nexttoinfoBtn.backgroundColor = UIColor(hex: 0xEBEBEB)
+                nexttoinfoBtn.setTitleColor(UIColor.black, for: .normal)
+                allagreeBtn.setTitle("필수 약관 전체동의", for: .normal)
+                allagreeBtn.setImage(.checkmark, for: .normal)
+                firstagreeBtn.setTitle("[필수] 만 14세 이상입니다", for: .normal)
+                secondagreeBtn.setTitle("[필수] 서비스 이용약관 동의", for: .normal)
+                thirdagreeBtn.setTitle("[필수] 개인정보 처리방침 동의", for: .normal)
+                nexttoinfoBtn.setTitle("다음", for: .normal)
             }
     }
     

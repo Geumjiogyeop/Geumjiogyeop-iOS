@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jCg-Yc-96U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHg-p9-TjJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="HtP-SA-zpd">
-                                <rect key="frame" x="30" y="303" width="333" height="212"/>
+                                <rect key="frame" x="30" y="303" width="333" height="214.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-c2-t3i">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="101"/>
@@ -132,7 +132,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="CJW-hJ-PMO">
-                                        <rect key="frame" x="0.0" y="124" width="333" height="88"/>
+                                        <rect key="frame" x="0.0" y="124" width="333" height="90.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKk-7W-28X">
                                                 <rect key="frame" x="0.0" y="0.0" width="333" height="45"/>
@@ -145,18 +145,19 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAG-sY-1lV">
-                                                <rect key="frame" x="0.0" y="56" width="333" height="32"/>
+                                                <rect key="frame" x="0.0" y="56" width="333" height="34.333333333333343"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5M2-pk-fgQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5M2-pk-fgQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="비밀번호를 까먹었어요">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                            <imageReference key="image" image="exclamationmark.circle" catalog="system" symbolScale="small"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                             <color key="baseForegroundColor" systemColor="placeholderTextColor"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SND-hE-Dgq">
-                                                        <rect key="frame" x="166.66666666666663" y="0.0" width="166.33333333333337" height="32"/>
+                                                        <rect key="frame" x="166.66666666666663" y="0.0" width="166.33333333333337" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="회원가입">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
@@ -213,58 +214,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="kcw-jK-UG5">
-                                <rect key="frame" x="20" y="153" width="353" height="575"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-Mv-xA0">
+                                <rect key="frame" x="20" y="193" width="96" height="120"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-Mv-xA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="312"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-ht-hi6">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="N3i-ox-f9r"/>
+                                            <constraint firstAttribute="height" constant="96" id="hwj-89-wga"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약관 동의" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Na-3f-yc5">
+                                        <rect key="frame" x="0.0" y="96" width="96" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-Yf-F9L">
+                                <rect key="frame" x="20" y="363" width="353" height="195"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmW-EJ-q8d">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="1wG-Rs-MK9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="필수 약관 전체동의">
+                                            <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="allagreeBtn:" destination="jLJ-dp-p61" eventType="touchUpInside" id="PQc-0S-dKp"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="xRc-EQ-4uP">
+                                        <rect key="frame" x="0.0" y="66" width="353" height="129"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-ht-hi6">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="288"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약관 동의" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Na-3f-yc5">
-                                                <rect key="frame" x="0.0" y="288" width="353" height="24"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-Yf-F9L">
-                                        <rect key="frame" x="0.0" y="427" width="353" height="148"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pH-K4-Ofb">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="6je-Dv-i2a"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="필수 약관 전체동의">
-                                                    <imageReference key="image" image="checkmark" catalog="system" symbolScale="small"/>
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="placeholderTextColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="allagreeBtn:" destination="jLJ-dp-p61" eventType="touchUpInside" id="xPc-bj-tgs"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCY-14-rC6" userLabel="firstagreeBtn">
-                                                <rect key="frame" x="0.0" y="45" width="353" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="[필수] 만 14세 이상입니다">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-Y2-OAU" userLabel="secondagreeBtn">
-                                                <rect key="frame" x="0.0" y="79.333333333333371" width="353" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="47.333333333333314" width="353" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title="[필수] 서비스 이용약관 동의">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-DT-oP0" userLabel="thirdagreeBtn">
-                                                <rect key="frame" x="0.0" y="113.66666666666661" width="353" height="34.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="94.666666666666629" width="353" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system" title="[필수] 개인정보 처리방침 동의">
                                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
@@ -274,35 +277,36 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-Ly-LKb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIJ-7b-zml">
                                 <rect key="frame" x="20" y="753" width="353" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Umf-cN-lNc"/>
+                                    <constraint firstAttribute="height" constant="45" id="kfK-40-lmL"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음">
-                                    <color key="baseBackgroundColor" systemColor="placeholderTextColor"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="nexttoinfoBtn:" destination="jLJ-dp-p61" eventType="touchUpInside" id="HBk-7R-7kk"/>
+                                    <action selector="nexttoinfoBtn:" destination="jLJ-dp-p61" eventType="touchUpInside" id="JJN-lk-SbM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VuZ-S2-53k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VuZ-S2-53k" firstAttribute="trailing" secondItem="kcw-jK-UG5" secondAttribute="trailing" constant="20" id="3ji-IJ-XSA"/>
-                            <constraint firstItem="kcw-jK-UG5" firstAttribute="top" secondItem="VuZ-S2-53k" secondAttribute="top" constant="50" id="FiG-yv-kR5"/>
-                            <constraint firstItem="VuZ-S2-53k" firstAttribute="bottom" secondItem="Ve3-Ly-LKb" secondAttribute="bottom" constant="20" id="WV8-6z-skR"/>
-                            <constraint firstItem="VuZ-S2-53k" firstAttribute="trailing" secondItem="Ve3-Ly-LKb" secondAttribute="trailing" constant="20" id="YlC-tK-BtR"/>
-                            <constraint firstItem="kcw-jK-UG5" firstAttribute="leading" secondItem="VuZ-S2-53k" secondAttribute="leading" constant="20" id="Zhr-mh-kKz"/>
-                            <constraint firstItem="Ve3-Ly-LKb" firstAttribute="leading" secondItem="VuZ-S2-53k" secondAttribute="leading" constant="20" id="dIQ-Zq-Q1o"/>
+                            <constraint firstItem="VuZ-S2-53k" firstAttribute="bottom" secondItem="DIJ-7b-zml" secondAttribute="bottom" constant="20" id="481-X3-c1M"/>
+                            <constraint firstItem="VuZ-S2-53k" firstAttribute="trailing" secondItem="DIJ-7b-zml" secondAttribute="trailing" constant="20" id="OvI-Wz-fO4"/>
+                            <constraint firstItem="VuZ-S2-53k" firstAttribute="trailing" secondItem="EOt-Yf-F9L" secondAttribute="trailing" constant="20" id="UBL-RU-b8J"/>
+                            <constraint firstItem="EOt-Yf-F9L" firstAttribute="leading" secondItem="VuZ-S2-53k" secondAttribute="leading" constant="20" id="Yon-74-Rae"/>
+                            <constraint firstItem="3nS-Mv-xA0" firstAttribute="top" secondItem="VuZ-S2-53k" secondAttribute="top" constant="90" id="ZsI-kA-eZX"/>
+                            <constraint firstItem="3nS-Mv-xA0" firstAttribute="leading" secondItem="VuZ-S2-53k" secondAttribute="leading" constant="20" id="ej0-Pj-E3J"/>
+                            <constraint firstItem="DIJ-7b-zml" firstAttribute="leading" secondItem="VuZ-S2-53k" secondAttribute="leading" constant="20" id="mX1-HJ-WXj"/>
+                            <constraint firstItem="EOt-Yf-F9L" firstAttribute="top" secondItem="3nS-Mv-xA0" secondAttribute="bottom" constant="50" id="xe4-3s-5Br"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="2XC-BX-Osx"/>
                     <connections>
+                        <outlet property="allagreeBtn" destination="wmW-EJ-q8d" id="Qij-ZI-NxQ"/>
                         <outlet property="firstagreeBtn" destination="CCY-14-rC6" id="TVS-qh-59r"/>
-                        <outlet property="nexttoinfoBtn" destination="Ve3-Ly-LKb" id="q1S-qu-rz0"/>
+                        <outlet property="nexttoinfoBtn" destination="DIJ-7b-zml" id="HWl-KX-Qo6"/>
                         <outlet property="secondagreeBtn" destination="FAy-Y2-OAU" id="iCf-EO-8Ap"/>
                         <outlet property="thirdagreeBtn" destination="fv9-DT-oP0" id="bbQ-ek-WSg"/>
                     </connections>
@@ -450,29 +454,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-IF-oo2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tj-yT-kJr">
                                 <rect key="frame" x="20" y="753" width="353" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Joa-CD-KSi"/>
+                                    <constraint firstAttribute="height" constant="45" id="1Ox-yr-gO1"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음">
-                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="nexttophone:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="ak1-6a-dkb"/>
+                                    <action selector="nexttophone:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="JhT-D6-ahR"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbD-bu-Mbd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xbD-bu-Mbd" firstAttribute="trailing" secondItem="cNd-IF-oo2" secondAttribute="trailing" constant="20" id="845-Ce-RJ4"/>
                             <constraint firstItem="OnQ-1p-4sB" firstAttribute="leading" secondItem="xbD-bu-Mbd" secondAttribute="leading" constant="20" id="DjW-5x-IC6"/>
                             <constraint firstItem="xbD-bu-Mbd" firstAttribute="trailing" secondItem="OnQ-1p-4sB" secondAttribute="trailing" constant="20" id="Ga0-lJ-Wc6"/>
                             <constraint firstItem="OnQ-1p-4sB" firstAttribute="top" secondItem="xbD-bu-Mbd" secondAttribute="top" constant="100" id="OKA-fz-H8q"/>
-                            <constraint firstItem="xbD-bu-Mbd" firstAttribute="bottom" secondItem="cNd-IF-oo2" secondAttribute="bottom" constant="20" id="Q7N-fd-jqc"/>
-                            <constraint firstItem="cNd-IF-oo2" firstAttribute="leading" secondItem="xbD-bu-Mbd" secondAttribute="leading" constant="20" id="Zof-sO-Qmz"/>
+                            <constraint firstItem="5Tj-yT-kJr" firstAttribute="leading" secondItem="xbD-bu-Mbd" secondAttribute="leading" constant="20" id="aQa-MQ-Cmn"/>
+                            <constraint firstItem="xbD-bu-Mbd" firstAttribute="trailing" secondItem="5Tj-yT-kJr" secondAttribute="trailing" constant="20" id="pIb-Yu-QIA"/>
+                            <constraint firstItem="xbD-bu-Mbd" firstAttribute="bottom" secondItem="5Tj-yT-kJr" secondAttribute="bottom" constant="20" id="sFl-OO-ZRX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="W1z-53-erX"/>
@@ -482,7 +484,8 @@
                         <outlet property="local" destination="9jD-Xc-AmU" id="bCg-VH-z9r"/>
                         <outlet property="manBtn" destination="egk-uB-OQd" id="zCS-Ar-sEK"/>
                         <outlet property="nameTextField" destination="aqs-WD-yT9" id="DoN-SK-vda"/>
-                        <outlet property="nexttophone" destination="cNd-IF-oo2" id="HF0-mK-Sh0"/>
+                        <outlet property="nexttophone" destination="5Tj-yT-kJr" id="Plr-ws-Ezq"/>
+                        <outlet property="pwTextField" destination="uop-lC-6KQ" id="OO5-fm-aqk"/>
                         <outlet property="womanBtn" destination="d2V-gX-lMG" id="sqO-9P-2h7"/>
                     </connections>
                 </viewController>
@@ -540,24 +543,24 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an1-sU-Yiw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzw-wA-Rib">
                                 <rect key="frame" x="20" y="753" width="353" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="nF0-Zg-O0e"/>
+                                    <constraint firstAttribute="height" constant="45" id="MJZ-lQ-ndQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="가입완료"/>
+                                <buttonConfiguration key="configuration" style="plain" title="가입완료"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rH8-Sw-SlK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="an1-sU-Yiw" firstAttribute="leading" secondItem="rH8-Sw-SlK" secondAttribute="leading" constant="20" id="A0P-1y-IDT"/>
                             <constraint firstItem="rH8-Sw-SlK" firstAttribute="trailing" secondItem="6lN-cA-r8u" secondAttribute="trailing" constant="20" id="BHx-Cy-klS"/>
-                            <constraint firstItem="rH8-Sw-SlK" firstAttribute="trailing" secondItem="an1-sU-Yiw" secondAttribute="trailing" constant="20" id="C8y-o5-8Qb"/>
-                            <constraint firstItem="rH8-Sw-SlK" firstAttribute="bottom" secondItem="an1-sU-Yiw" secondAttribute="bottom" constant="20" id="GSF-2G-77j"/>
+                            <constraint firstItem="rH8-Sw-SlK" firstAttribute="trailing" secondItem="hzw-wA-Rib" secondAttribute="trailing" constant="20" id="CgV-rZ-Z6b"/>
                             <constraint firstItem="6lN-cA-r8u" firstAttribute="leading" secondItem="rH8-Sw-SlK" secondAttribute="leading" constant="20" id="J21-UI-Wz2"/>
                             <constraint firstItem="6lN-cA-r8u" firstAttribute="top" secondItem="rH8-Sw-SlK" secondAttribute="top" constant="150" id="Ttp-2Z-9vr"/>
+                            <constraint firstItem="rH8-Sw-SlK" firstAttribute="bottom" secondItem="hzw-wA-Rib" secondAttribute="bottom" constant="20" id="Vq7-j8-tmm"/>
+                            <constraint firstItem="hzw-wA-Rib" firstAttribute="leading" secondItem="rH8-Sw-SlK" secondAttribute="leading" constant="20" id="YD7-se-51d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="Ics-X0-iOc"/>
@@ -587,12 +590,10 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
         <image name="logo" width="288" height="288"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
