@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     var name : String?
@@ -57,7 +59,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         print(isCilck)
         if isCilck == true{
             print("조건 성립함")
-            //화면 이동 코드 넣기
+            alamofire()
         }
     }
     
@@ -132,5 +134,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 isCilck = false
             }
         }
+    func alamofire() {
+        // HTTP 네트워킹을 통해 전송 할 데이터
+        let parameters: Parameters = [
+            "name": name!,
+            "birthbay": birthbay!,
+            "password" : password!,
+            "gender" : gender!,
+            "is_foreigner" : is_foreigner!
+            
+        ]
+
+        AF.request("https://httpbin.org/post", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+            .validate()  // 이 부분이 .request 메서드 다음에 와야 합니다.
+            .responseData { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print(json)
+                case .failure(let error):
+                    print("\(#function): \(error)")
+                }
+            }
+    }
 }
 

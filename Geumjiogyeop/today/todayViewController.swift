@@ -40,7 +40,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumInteritemSpacing = 0 // 셀 사이의 수평 간격
         flowLayout.minimumLineSpacing = 0 // 셀 사이의 수직 간격
-        flowLayout.itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2)
+        flowLayout.itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height/3*2)
 
         collectionView.collectionViewLayout = flowLayout
         
@@ -60,7 +60,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             fixedBtn.heightAnchor.constraint(equalToConstant: 60)
         ])
         
-//        fixedBtn.addTarget(self, action: #selector(fixedBtnTapped), for: .touchUpInside)
+        fixedBtn.addTarget(self, action: #selector(fixedBtnTapped), for: .touchUpInside)
         
     }
 
@@ -102,7 +102,31 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             
             navigationController?.pushViewController(detailVC, animated: true)
         }
+        
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let post = posts[indexPath.item]
+        
+        // UILabel의 크기 계산
+        let labelWidth = collectionView.frame.width - 16 // 여백 8씩
+        let labelHeight = post.content.boundingRect(with: CGSize(width: labelWidth, height: .greatestFiniteMagnitude),
+                                                    options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                                    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)],
+                                                    context: nil).height
+        
+        // 다른 요소들의 높이
+        let titleLabelHeight: CGFloat = 20
+        let dateLabelHeight: CGFloat = 16
+        let userLabelHeight: CGFloat = 16
+        let imageViewHeight: CGFloat = 100 // 이미지 뷰 높이
+        
+        // 모든 요소들의 높이를 더한 값을 cellHeight로 설정
+        let cellHeight = labelHeight + titleLabelHeight + dateLabelHeight + userLabelHeight + imageViewHeight
+        
+        return CGSize(width: collectionView.frame.width, height: cellHeight)
+    }
+
+
 
 
 //        // Function to add new data
@@ -129,11 +153,11 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
 //            }
 //        }
     
-//    @objc func fixedBtnTapped() {
-//        let storyboard = UIStoryboard(name: "todayStoryboard", bundle: nil)
-//
-//        // WriteViewController의 storyboardID를 가진 뷰 컨트롤러 인스턴스 생성
-//        let writeViewController = storyboard.instantiateViewController(withIdentifier: "WriteViewController")
-//        self.navigationController?.pushViewController(writeViewController, animated: true)
-//    }
+    @objc func fixedBtnTapped() {
+        let storyboard = UIStoryboard(name: "todayStoryboard", bundle: nil)
+
+        // WriteViewController의 storyboardID를 가진 뷰 컨트롤러 인스턴스 생성
+        let writeViewController = storyboard.instantiateViewController(withIdentifier: "WriteViewController")
+        self.navigationController?.pushViewController(writeViewController, animated: true)
+    }
 }
