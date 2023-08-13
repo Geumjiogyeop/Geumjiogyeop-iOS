@@ -143,6 +143,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="로그인">
                                                     <color key="baseBackgroundColor" red="1" green="0.58823529409999997" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="loginBtn:" destination="RZn-en-HwY" eventType="touchUpInside" id="iFP-Wa-fm5"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAG-sY-1lV">
                                                 <rect key="frame" x="0.0" y="56" width="333" height="34.333333333333343"/>
@@ -183,6 +186,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="로그인" id="TBw-fy-wEf"/>
+                    <connections>
+                        <outlet property="phonenumTextField" destination="shm-dx-4oD" id="uKk-aM-fYA"/>
+                        <outlet property="pwTextField" destination="idd-gw-6HM" id="j6A-mY-TD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dz3-j7-ewl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
