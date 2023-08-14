@@ -146,7 +146,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             "is_foreigner" : is_foreigner!
         ]
 
-        AF.request("https://7cfc-210-222-27-136.ngrok-free.app/user/signin", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+        AF.request("http://175.45.194.93/user/signin", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
             .validate()  // 이 부분이 .request 메서드 다음에 와야 합니다.
             .responseData { response in
                 switch response.result {

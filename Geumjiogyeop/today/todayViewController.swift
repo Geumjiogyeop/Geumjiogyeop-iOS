@@ -17,12 +17,14 @@ class todayCollectionView: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var recommendLabel: UILabel!
     @IBOutlet weak var recommendImgView: UIImageView!
+    @IBOutlet weak var userIconStackView: UIStackView!
 }
 
 class todayViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var contentView: UIView!
+    
     
     
     
@@ -57,22 +59,23 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         collectionView.collectionViewLayout = flowLayout
         
         
-//        AF.request("https://api.example.com/posts").responseJSON { response in
+//        AF.request("http://175.45.194.93/today").responseJSON { response in
 //                    switch response.result {
 //                    case .success(let value):
 //                        if let jsonArray = value as? [[String: Any]] {
 //                            for json in jsonArray {
 //                                if let writer = json["writer"] as? [String: Any],
 //                                   let username = writer["username"] as? String,
-//                                   let id = writer["id"] as? String,
+//                                   let userid = writer["id"] as? String,
 //                                   let title = json["title"] as? String,
 //                                   let date = json["created_at"] as? String,
 //                                   let content = json["content"] as? String,
 //                                   let imageUrlString = json["imageUrl"] as? String,
 //                                   let imageUrl = URL(string: imageUrlString),
 //                                   let imageData = try? Data(contentsOf: imageUrl),
-//                                   let image = UIImage(data: imageData) {
-//                                    let userID = username+id
+//                                   let image = UIImage(data: imageData)
+//                                     {
+//                                    let userID = username+userid
 //                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID))
 //                                }
 //                            }
@@ -132,33 +135,22 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             cell.contentLabel.sizeToFit()
             
             // 지정된 indexPath를 저장하여 recommendImgViewTapped 함수에서 사용할 수 있도록 함
-                cell.recommendImgView.tag = indexPath.item
+            cell.recommendImgView.tag = indexPath.item
 
-                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(recommendImgViewTapped(_:)))
-                cell.recommendImgView.isUserInteractionEnabled = true
-                cell.recommendImgView.addGestureRecognizer(tapGesture)
-
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(recommendImgViewTapped(_:)))
+            cell.recommendImgView.isUserInteractionEnabled = true
+            cell.recommendImgView.addGestureRecognizer(tapGesture)
+            
+            cell.userIconStackView.isHidden = true
+            
+//            if 접속한 id와 게시글의 id가 같으면 (userID== ?) {
+//                    cell.userIconStackView.isHidden = true
+//                } else {
+//                    cell.userIconStackView.isHidden = false
+//                }
 
             return cell
         }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedPost = posts[indexPath.item]
-
-        // 스토리보드에서 DetailViewController의 식별자를 설정하세요.
-        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            detailVC.detailUser = selectedPost.userID
-            detailVC.detailImage = selectedPost.image
-            detailVC.detailTitle = selectedPost.title
-            detailVC.detailContent = selectedPost.content
-            detailVC.detailDate = selectedPost.date
-            
-            print(detailVC.detailUser)
-            print("Selected Post: \(selectedPost)")
-            
-            navigationController?.pushViewController(detailVC, animated: true)
-        }
-        
-    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let post = posts[indexPath.item]
         
@@ -179,32 +171,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         
         return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
-
-
-
-//        // Function to add new data
-//        func addNewPost() {
-//            // 새로운 데이터를 추가
-//            let newPost = (image: UIImage(named: "new_post_image")!, title: "새로운 게시물", date: "2023-08-05")
-//            posts.append(newPost)
-//
-//            // UICollectionView를 갱신하여 새로운 데이터를 반영
-  
-    //            collectionView.reloadData()
-//        }
-//
-//        // Function to modify existing data
-//        func modifyFirstPost() {
-//            // 데이터 수정 예시: 첫 번째 게시물의 제목을 수정
-//            if posts.count > 0 {
-//                var modifiedPost = posts[0]
-//                modifiedPost.title = "수정된 제목"
-//                posts[0] = modifiedPost
-//
-//                // UICollectionView를 갱신하여 수정된 데이터를 반영
-//                collectionView.reloadData()
-//            }
-//        }
+    
     @objc func recommendImgViewTapped(_ sender: UITapGestureRecognizer) {
         if let imageView = sender.view as? UIImageView {
             let location = sender.location(in: collectionView)

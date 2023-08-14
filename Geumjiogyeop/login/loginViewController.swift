@@ -33,7 +33,7 @@ class loginViewController: UIViewController {
                "password": password
            ]
            
-           AF.request("https://7cfc-210-222-27-136.ngrok-free.app/user/login/", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+           AF.request("http://175.45.194.93/user/login/", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
                .validate()
                .responseData { response in
                    switch response.result {
