@@ -26,7 +26,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         (postID: "1",image: UIImage(named: "testImg")!),(postID: "2",image: UIImage(named: "testImg")!),(postID: "3",image: UIImage(named: "testImg")!),(postID: "4",image: UIImage(named: "testImg")!),(postID: "5",image: UIImage(named: "testImg")!),(postID: "6",image: UIImage(named: "testImg")!),(postID: "7",image: UIImage(named: "testImg")!),(postID: "8",image: UIImage(named: "testImg")!),(postID: "9",image: UIImage(named: "testImg")!),(postID: "10",image: UIImage(named: "testImg")!),(postID: "11",image: UIImage(named: "testImg")!),(postID: "12",image: UIImage(named: "testImg")!)
     ]
     
-//    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String)] = []
+//    var posts: [(image: UIImage,postID:String)] = []
     
     
     override func viewDidLoad() {
@@ -49,33 +49,40 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         collectionView.collectionViewLayout = flowLayout
         
         
-//        AF.request("https://api.example.com/posts").responseJSON { response in
-//                    switch response.result {
-//                    case .success(let value):
-//                        if let jsonArray = value as? [[String: Any]] {
-//                            for json in jsonArray {
-//                                if let writer = json["writer"] as? [String: Any],
-//                                   let username = writer["username"] as? String,
-//                                   let id = writer["id"] as? String,
-//                                   let title = json["title"] as? String,
-//                                   let date = json["created_at"] as? String,
-//                                   let content = json["content"] as? String,
-//                                   let imageUrlString = json["imageUrl"] as? String,
-//                                   let imageUrl = URL(string: imageUrlString),
-//                                   let imageData = try? Data(contentsOf: imageUrl),
-//                                   let image = UIImage(data: imageData) {
-//                                    let userID = username+id
-//                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID))
-//                                }
-//                            }
-//
-//                            // 데이터 가져오기 완료 후, collectionView를 리로드하거나 UI 업데이트
-//                            self.collectionView.reloadData()
-//                        }
-//                    case .failure(let error):
-//                        print("Error: \(error)")
+//       AF.request("http://175.45.194.93/today/my").responseJSON { response in
+//        switch response.result {
+//        case .success(let value):
+//            if let jsonArray = value as? [[String: Any]] {
+//                for json in jsonArray {
+//                    if let postId = json["id"] as? String,
+//                       let imageUrlString = json["imageUrl"] as? String,
+//                        let imagesArray = json["images"] as? [String] {
+        
+//        // Assume there is only one image URL in the imagesArray
+//        if let imageUrlString = imagesArray.first,
+//           let imageUrl = URL(string: imageUrlString) {
+//            
+//            AF.request(imageUrl).responseData { response in
+//                switch response.result {
+//                case .success(let imageData):
+//                    if let image = UIImage(data: imageData) {
+//                        let userID = writer
+//                        self.posts.append((image: image, postId: postId))
+//                        self.collectionView.reloadData()
 //                    }
+//                case .failure(let error):
+//                    print("Error downloading image: \(error)")
 //                }
+//            }
+//        }
+//    }
+//}
+//}
+//case .failure(let error):
+//print("Error: \(error)")
+//}
+//}
+
         
         
         let fixedBtn = UIButton()
@@ -126,6 +133,16 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedPost = posts[indexPath.item]
+        
+        // 스토리보드에서 DetailViewController의 식별자를 설정하세요.
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            detailVC.postId = selectedPost.postID // postId 전달
+            navigationController?.pushViewController(detailVC, animated: true)
+            print(detailVC.postId)
+        }
+    }
     
     @objc func fixedBtnTapped() {
         let storyboard = UIStoryboard(name: "todayStoryboard", bundle: nil)
