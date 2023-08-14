@@ -21,7 +21,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     @IBOutlet weak var contentView: UIView!
     
     var posts: [(image: UIImage, title: String, date: String,content: String,userID:String)] = [
-        (userID: "이서연#1111",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
+        (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
         (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
         (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
         (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
@@ -40,7 +40,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumInteritemSpacing = 0 // 셀 사이의 수평 간격
         flowLayout.minimumLineSpacing = 0 // 셀 사이의 수직 간격
-        flowLayout.itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height/3*2)
+        flowLayout.itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
 
         collectionView.collectionViewLayout = flowLayout
         
@@ -83,6 +83,9 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             cell.titleLabel.adjustsFontSizeToFitWidth = true // 글자 크기 자동 조절
             cell.contentLabel.text = post.content
             cell.dateLabel.text = post.date
+            
+            cell.contentLabel.numberOfLines = 0
+            cell.contentLabel.sizeToFit()
 
             return cell
         }
