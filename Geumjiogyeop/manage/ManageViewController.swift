@@ -1,15 +1,15 @@
 //
-//  todayViewController.swift
+//  ManageViewController.swift
 //  Geumjiogyeop
 //
-//  Created by 이서연 on 2023/08/03.
+//  Created by 이서연 on 2023/08/14.
 //
 
 import UIKit
 import Alamofire
 import SwiftyJSON
 
-class todayCollectionView: UICollectionViewCell {
+class ManageViewController: UICollectionViewCell {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -19,7 +19,7 @@ class todayCollectionView: UICollectionViewCell {
     @IBOutlet weak var recommendImgView: UIImageView!
 }
 
-class todayViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
+class ManageViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var contentView: UIView!
