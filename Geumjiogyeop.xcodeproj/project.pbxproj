@@ -23,6 +23,16 @@
 		78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8752A7B8A9B00F77FD7 /* borderStyle.swift */; };
 		78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8772A7B96BF00F77FD7 /* todayViewController.swift */; };
 		78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */; };
+		EDC6506D2A83B36400652E86 /* borderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6506C2A83B36400652E86 /* borderClass.swift */; };
+		EDC650712A83B8FB00652E86 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDC650702A83B81A00652E86 /* NanumGothic.otf */; };
+		EDC650722A83B8FF00652E86 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDC6506F2A83B81A00652E86 /* NanumGothicBold.otf */; };
+		EDC650742A84AD8B00652E86 /* serviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC650732A84AD8B00652E86 /* serviceInfoViewController.swift */; };
+		EDC650772A87CC7700652E86 /* adoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC650762A87CC7700652E86 /* adoptionViewController.swift */; };
+		EDC650792A87CC9200652E86 /* adoptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC650782A87CC9200652E86 /* adoptionStoryboard.storyboard */; };
+		EDC6AF352A87DD07001C45E7 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6AF342A87DD07001C45E7 /* CategoryButton.swift */; };
+		EDEF37112A896CE6002C0AEB /* signUpServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37102A896CE6002C0AEB /* signUpServiceViewController.swift */; };
+		EDEF37132A89734F002C0AEB /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37122A89734F002C0AEB /* roundedButton.swift */; };
+		EDEF37152A897DC9002C0AEB /* defaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37142A897DC9002C0AEB /* defaultButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,16 @@
 		78DAA8752A7B8A9B00F77FD7 /* borderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderStyle.swift; sourceTree = "<group>"; };
 		78DAA8772A7B96BF00F77FD7 /* todayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayViewController.swift; sourceTree = "<group>"; };
 		78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
+		EDC6506C2A83B36400652E86 /* borderClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderClass.swift; sourceTree = "<group>"; };
+		EDC6506F2A83B81A00652E86 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicBold.otf; path = "../../../../../Downloads/nanum-gothic/NanumGothicBold.otf"; sourceTree = "<group>"; };
+		EDC650702A83B81A00652E86 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothic.otf; path = "../../../../../Downloads/nanum-gothic/NanumGothic.otf"; sourceTree = "<group>"; };
+		EDC650732A84AD8B00652E86 /* serviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serviceInfoViewController.swift; sourceTree = "<group>"; };
+		EDC650762A87CC7700652E86 /* adoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptionViewController.swift; sourceTree = "<group>"; };
+		EDC650782A87CC9200652E86 /* adoptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = adoptionStoryboard.storyboard; sourceTree = "<group>"; };
+		EDC6AF342A87DD07001C45E7 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		EDEF37102A896CE6002C0AEB /* signUpServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpServiceViewController.swift; sourceTree = "<group>"; };
+		EDEF37122A89734F002C0AEB /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
+		EDEF37142A897DC9002C0AEB /* defaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaultButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +133,8 @@
 		78DAA8322A7A31F800F77FD7 /* Geumjiogyeop */ = {
 			isa = PBXGroup;
 			children = (
+				EDC650752A87CC4100652E86 /* adoptionAnnouncement */,
+				EDC6506E2A83B79800652E86 /* Fonts */,
 				78DAA8742A7A3C4700F77FD7 /* login */,
 				78DAA8662A7A395B00F77FD7 /* report */,
 				78DAA8682A7A39DD00F77FD7 /* today */,
@@ -191,6 +213,11 @@
 			children = (
 				78311C702A83B1C1000A4C58 /* myPageStoryboard.storyboard */,
 				78311C722A83B1DC000A4C58 /* myPageViewController.swift */,
+				EDC6506C2A83B36400652E86 /* borderClass.swift */,
+				EDC650732A84AD8B00652E86 /* serviceInfoViewController.swift */,
+				EDEF37102A896CE6002C0AEB /* signUpServiceViewController.swift */,
+				EDEF37122A89734F002C0AEB /* roundedButton.swift */,
+				EDEF37142A897DC9002C0AEB /* defaultButton.swift */,
 			);
 			path = myPage;
 			sourceTree = "<group>";
@@ -210,6 +237,25 @@
 				78DAA8712A7A3BF200F77FD7 /* loginViewController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		EDC6506E2A83B79800652E86 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EDC650702A83B81A00652E86 /* NanumGothic.otf */,
+				EDC6506F2A83B81A00652E86 /* NanumGothicBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EDC650752A87CC4100652E86 /* adoptionAnnouncement */ = {
+			isa = PBXGroup;
+			children = (
+				EDC650762A87CC7700652E86 /* adoptionViewController.swift */,
+				EDC650782A87CC9200652E86 /* adoptionStoryboard.storyboard */,
+				EDC6AF342A87DD07001C45E7 /* CategoryButton.swift */,
+			);
+			path = adoptionAnnouncement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +362,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC650722A83B8FF00652E86 /* NanumGothicBold.otf in Resources */,
 				78311C712A83B1C1000A4C58 /* myPageStoryboard.storyboard in Resources */,
+				EDC650712A83B8FB00652E86 /* NanumGothic.otf in Resources */,
 				78DAA8402A7A31F800F77FD7 /* LaunchScreen.storyboard in Resources */,
 				78DAA83D2A7A31F800F77FD7 /* Assets.xcassets in Resources */,
+				EDC650792A87CC9200652E86 /* adoptionStoryboard.storyboard in Resources */,
 				78DAA83B2A7A31F800F77FD7 /* Main.storyboard in Resources */,
 				78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */,
 				78DAA8702A7A3BDB00F77FD7 /* loginStoryboard.storyboard in Resources */,
@@ -346,12 +395,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC650772A87CC7700652E86 /* adoptionViewController.swift in Sources */,
+				EDC6AF352A87DD07001C45E7 /* CategoryButton.swift in Sources */,
 				78DAA8382A7A31F800F77FD7 /* ViewController.swift in Sources */,
 				78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */,
 				78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */,
 				78311C732A83B1DC000A4C58 /* myPageViewController.swift in Sources */,
+				EDC6506D2A83B36400652E86 /* borderClass.swift in Sources */,
+				EDEF37112A896CE6002C0AEB /* signUpServiceViewController.swift in Sources */,
 				78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */,
+				EDC650742A84AD8B00652E86 /* serviceInfoViewController.swift in Sources */,
 				78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */,
+				EDEF37132A89734F002C0AEB /* roundedButton.swift in Sources */,
+				EDEF37152A897DC9002C0AEB /* defaultButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +585,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJKNV9KXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geumjiogyeop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -556,6 +613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJKNV9KXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geumjiogyeop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
