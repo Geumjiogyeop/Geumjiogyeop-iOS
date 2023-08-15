@@ -40,10 +40,10 @@ class AgreeViewController: UIViewController {
 //    }
     @IBAction func nexttoinfoBtn(_ sender: UIButton){
         print(isagreeclick)
-        let storyboard = UIStoryboard(name: "loginStoryboard", bundle: nil)
         if isagreeclick == true {
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserInfoViewController") as? SignUpViewController {
-                self.navigationController?.pushViewController(vc, animated: true)
+            print("화면 전환")
+            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserInfoViewController") as? SignUpViewController {
+                navigationController?.pushViewController(nextVC, animated: true)
             }
         }
 //        else if isagreeclick == false{

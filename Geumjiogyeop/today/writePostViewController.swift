@@ -34,7 +34,7 @@ class writePostViewController: UIViewController {
         self.present(self.imagePicker, animated: true)
     }
     
-    @IBAction func submitButtonTapped(_ sender: UIButton) {
+    @IBAction func submitButtonTapped(_ sender: UIBarButtonItem) {
             guard let title = titleTextField.text, !title.isEmpty,
                   let content = contentTextField.text, !content.isEmpty,
                   let image = imageView.image else {
@@ -60,7 +60,9 @@ class writePostViewController: UIViewController {
                         multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
                     }, to: url).response { response in
                         switch response.result {
+                            
                         case .success(let value):
+                            print("성공")
                             print("Upload success: \(value)")
                             // Handle server response
                         case .failure(let error):

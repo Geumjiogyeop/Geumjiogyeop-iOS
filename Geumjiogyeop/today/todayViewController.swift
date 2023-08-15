@@ -155,7 +155,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             
             let modifyTapGesture = UITapGestureRecognizer(target: self, action: #selector(modifyBtnViewTapped(_:)))
             cell.modifyBtn.addGestureRecognizer(modifyTapGesture)
-            
+//            
             if post.editable == true{
                 cell.userIconStackView.isHidden = false
             }else if post.editable == false{
@@ -214,6 +214,9 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             if let indexPath = collectionView.indexPathForItem(at: location){
                 if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView{
                     print("modify 선택")
+                    if let nextVC = storyboard?.instantiateViewController(withIdentifier: "ModifyViewController") as? ModifyViewController {
+                        navigationController?.pushViewController(nextVC, animated: true)
+                    }
                 }
             }
         }
@@ -263,10 +266,9 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
 
     
     @objc func fixedBtnTapped() {
-        let storyboard = UIStoryboard(name: "todayStoryboard", bundle: nil)
 
-        // WriteViewController의 storyboardID를 가진 뷰 컨트롤러 인스턴스 생성
-        let writeViewController = storyboard.instantiateViewController(withIdentifier: "WriteViewController")
-        self.navigationController?.pushViewController(writeViewController, animated: true)
+        if let nextVC = storyboard?.instantiateViewController(withIdentifier: "WriteViewController") as? writePostViewController {
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 }

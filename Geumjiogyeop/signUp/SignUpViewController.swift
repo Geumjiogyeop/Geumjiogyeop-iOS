@@ -60,6 +60,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         if isCilck == true{
             print("조건 성립함")
             alamofire()
+            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "phoneViewController") as? SignUpViewController {
+                print("??")
+                navigationController?.pushViewController(nextVC, animated: true)
+            }
         }
     }
     

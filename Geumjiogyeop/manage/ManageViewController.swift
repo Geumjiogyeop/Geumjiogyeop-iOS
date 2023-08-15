@@ -136,11 +136,10 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedPost = posts[indexPath.item]
         
-        // 스토리보드에서 DetailViewController의 식별자를 설정하세요.
-        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as? DetailViewController {
-            detailVC.postID = selectedPost.postID // postId 전달
-            navigationController?.pushViewController(detailVC, animated: true)
-            print(detailVC.postID)
+        if let nextVC = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as? DetailViewController {
+            nextVC.postID = selectedPost.postID
+            print(nextVC.postID)
+            navigationController?.pushViewController(nextVC, animated: true)
         }
     }
     

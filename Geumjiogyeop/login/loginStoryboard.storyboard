@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RZn-en-HwY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jLJ-dp-p61">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -484,7 +484,9 @@
                             <constraint firstItem="xbD-bu-Mbd" firstAttribute="bottom" secondItem="5Tj-yT-kJr" secondAttribute="bottom" constant="20" id="sFl-OO-ZRX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="회원가입" id="W1z-53-erX"/>
+                    <navigationItem key="navigationItem" title="회원가입" id="W1z-53-erX">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="5sv-Uo-OJY"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="birthTextField" destination="rA5-Fd-hsn" id="gSe-zC-WaI"/>
                         <outlet property="foreign" destination="jOa-Wx-KX9" id="W4l-pO-jaN"/>
@@ -503,7 +505,7 @@
         <!--회원가입-->
         <scene sceneID="6hM-mc-7sc">
             <objects>
-                <viewController id="jCg-Yc-96U" customClass="SignUpViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="phoneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jCg-Yc-96U" customClass="SignUpViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oAB-ly-5v8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
