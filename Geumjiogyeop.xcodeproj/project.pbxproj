@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78311C742A8553EE000A4C58 /* DetailViewController.swift */; };
+		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
+		78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */; };
+		78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FE22A8BCCA100E628CF /* ModifyViewController.swift */; };
+		78B6142B2A877B850011D7AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B6142A2A877B850011D7AE /* GoogleService-Info.plist */; };
+		78B6142E2A877BEB0011D7AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */; };
+		78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6142F2A87D89A0011D7AE /* loginViewController.swift */; };
+		78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B614312A87E2D70011D7AE /* SignUpViewController.swift */; };
+		78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B614332A87E5280011D7AE /* AgreeViewController.swift */; };
+		78B614362A8A3AAC0011D7AE /* writePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B614352A8A3AAC0011D7AE /* writePostViewController.swift */; };
+		78B6143B2A8A3BF60011D7AE /* manageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B6143A2A8A3BF60011D7AE /* manageStoryboard.storyboard */; };
+		78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6143D2A8A3C1E0011D7AE /* ManageViewController.swift */; };
 		78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8332A7A31F800F77FD7 /* AppDelegate.swift */; };
 		78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8352A7A31F800F77FD7 /* SceneDelegate.swift */; };
 		78DAA8382A7A31F800F77FD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8372A7A31F800F77FD7 /* ViewController.swift */; };
@@ -17,10 +29,12 @@
 		78DAA8552A7A31F900F77FD7 /* GeumjiogyeopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8542A7A31F900F77FD7 /* GeumjiogyeopUITests.swift */; };
 		78DAA8572A7A31F900F77FD7 /* GeumjiogyeopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8562A7A31F900F77FD7 /* GeumjiogyeopUITestsLaunchTests.swift */; };
 		78DAA8702A7A3BDB00F77FD7 /* loginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DAA86F2A7A3BDB00F77FD7 /* loginStoryboard.storyboard */; };
-		78DAA8732A7A3C3D00F77FD7 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8712A7A3BF200F77FD7 /* loginViewController.swift */; };
 		78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8752A7B8A9B00F77FD7 /* borderStyle.swift */; };
 		78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DAA8772A7B96BF00F77FD7 /* todayViewController.swift */; };
 		78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */; };
+		A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */; };
+		DBF338E0D4391B03AD6874A3 /* Pods_GeumjiogyeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */; };
+		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +55,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0171ED1FED75DFF83BA58B2B /* Pods-GeumjiogyeopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeumjiogyeopTests.debug.xcconfig"; path = "Target Support Files/Pods-GeumjiogyeopTests/Pods-GeumjiogyeopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1851E742552972EBAA1DE180 /* Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		191D17C0A74BE878F638094A /* Pods-Geumjiogyeop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop.release.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop.release.xcconfig"; sourceTree = "<group>"; };
+		26F08E3C1A19B7C518187973 /* Pods-Geumjiogyeop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop.debug.xcconfig"; sourceTree = "<group>"; };
+		3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeumjiogyeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop_GeumjiogyeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78311C742A8553EE000A4C58 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightPaddingLabel.swift; sourceTree = "<group>"; };
+		78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftPaddingLabel.swift; sourceTree = "<group>"; };
+		78767FE22A8BCCA100E628CF /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		78B6142A2A877B850011D7AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78B6142F2A87D89A0011D7AE /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		78B614312A87E2D70011D7AE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		78B614332A87E5280011D7AE /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
+		78B614352A8A3AAC0011D7AE /* writePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writePostViewController.swift; sourceTree = "<group>"; };
+		78B6143A2A8A3BF60011D7AE /* manageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = manageStoryboard.storyboard; sourceTree = "<group>"; };
+		78B6143D2A8A3C1E0011D7AE /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
 		78DAA8302A7A31F800F77FD7 /* Geumjiogyeop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geumjiogyeop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DAA8332A7A31F800F77FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78DAA8352A7A31F800F77FD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +87,11 @@
 		78DAA8542A7A31F900F77FD7 /* GeumjiogyeopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeumjiogyeopUITests.swift; sourceTree = "<group>"; };
 		78DAA8562A7A31F900F77FD7 /* GeumjiogyeopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeumjiogyeopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		78DAA86F2A7A3BDB00F77FD7 /* loginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = loginStoryboard.storyboard; path = Geumjiogyeop/login/loginStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		78DAA8712A7A3BF200F77FD7 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = Geumjiogyeop/login/loginViewController.swift; sourceTree = SOURCE_ROOT; };
 		78DAA8752A7B8A9B00F77FD7 /* borderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderStyle.swift; sourceTree = "<group>"; };
 		78DAA8772A7B96BF00F77FD7 /* todayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayViewController.swift; sourceTree = "<group>"; };
 		78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
+		CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeumjiogyeopTests.release.xcconfig"; path = "Target Support Files/Pods-GeumjiogyeopTests/Pods-GeumjiogyeopTests.release.xcconfig"; sourceTree = "<group>"; };
+		D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B6142E2A877BEB0011D7AE /* FirebaseAnalytics in Frameworks */,
+				A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF338E0D4391B03AD6874A3 /* Pods_GeumjiogyeopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +116,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1361989F295E01C974661536 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */,
+				77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */,
+				56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78B614372A8A3BB90011D7AE /* manage */ = {
+			isa = PBXGroup;
+			children = (
+				78311C742A8553EE000A4C58 /* DetailViewController.swift */,
+				78B6143A2A8A3BF60011D7AE /* manageStoryboard.storyboard */,
+				78B6143D2A8A3C1E0011D7AE /* ManageViewController.swift */,
+				78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */,
+				78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */,
+			);
+			path = manage;
+			sourceTree = "<group>";
+		};
 		78DAA8272A7A31F800F77FD7 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +152,8 @@
 				78DAA8492A7A31F900F77FD7 /* GeumjiogyeopTests */,
 				78DAA8532A7A31F900F77FD7 /* GeumjiogyeopUITests */,
 				78DAA8312A7A31F800F77FD7 /* Products */,
+				876B937A1C920C9BAACC0B4E /* Pods */,
+				1361989F295E01C974661536 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +170,7 @@
 		78DAA8322A7A31F800F77FD7 /* Geumjiogyeop */ = {
 			isa = PBXGroup;
 			children = (
+				78B614372A8A3BB90011D7AE /* manage */,
 				78DAA8742A7A3C4700F77FD7 /* login */,
 				78DAA8662A7A395B00F77FD7 /* report */,
 				78DAA8682A7A39DD00F77FD7 /* today */,
@@ -124,6 +186,7 @@
 				78DAA83C2A7A31F800F77FD7 /* Assets.xcassets */,
 				78DAA83E2A7A31F800F77FD7 /* LaunchScreen.storyboard */,
 				78DAA8412A7A31F800F77FD7 /* Info.plist */,
+				78B6142A2A877B850011D7AE /* GoogleService-Info.plist */,
 			);
 			path = Geumjiogyeop;
 			sourceTree = "<group>";
@@ -155,6 +218,8 @@
 		78DAA8642A7A38BE00F77FD7 /* signUp */ = {
 			isa = PBXGroup;
 			children = (
+				78B614312A87E2D70011D7AE /* SignUpViewController.swift */,
+				78B614332A87E5280011D7AE /* AgreeViewController.swift */,
 			);
 			path = signUp;
 			sourceTree = "<group>";
@@ -178,6 +243,8 @@
 			children = (
 				78DAA8772A7B96BF00F77FD7 /* todayViewController.swift */,
 				78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */,
+				78B614352A8A3AAC0011D7AE /* writePostViewController.swift */,
+				78767FE22A8BCCA100E628CF /* ModifyViewController.swift */,
 			);
 			path = today;
 			sourceTree = "<group>";
@@ -200,10 +267,23 @@
 			isa = PBXGroup;
 			children = (
 				78DAA86F2A7A3BDB00F77FD7 /* loginStoryboard.storyboard */,
+				78B6142F2A87D89A0011D7AE /* loginViewController.swift */,
 				78DAA8752A7B8A9B00F77FD7 /* borderStyle.swift */,
-				78DAA8712A7A3BF200F77FD7 /* loginViewController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		876B937A1C920C9BAACC0B4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26F08E3C1A19B7C518187973 /* Pods-Geumjiogyeop.debug.xcconfig */,
+				191D17C0A74BE878F638094A /* Pods-Geumjiogyeop.release.xcconfig */,
+				D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */,
+				1851E742552972EBAA1DE180 /* Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig */,
+				0171ED1FED75DFF83BA58B2B /* Pods-GeumjiogyeopTests.debug.xcconfig */,
+				CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,15 +293,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78DAA85A2A7A31F900F77FD7 /* Build configuration list for PBXNativeTarget "Geumjiogyeop" */;
 			buildPhases = (
+				DB67BB40EC2D5A6C3C1199E9 /* [CP] Check Pods Manifest.lock */,
 				78DAA82C2A7A31F800F77FD7 /* Sources */,
 				78DAA82D2A7A31F800F77FD7 /* Frameworks */,
 				78DAA82E2A7A31F800F77FD7 /* Resources */,
+				D4776A69D4E6D5FF18DFD1A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Geumjiogyeop;
+			packageProductDependencies = (
+				78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */,
+			);
 			productName = Geumjiogyeop;
 			productReference = 78DAA8302A7A31F800F77FD7 /* Geumjiogyeop.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +315,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78DAA85D2A7A31F900F77FD7 /* Build configuration list for PBXNativeTarget "GeumjiogyeopTests" */;
 			buildPhases = (
+				32C35D0863279D3E3B6B2725 /* [CP] Check Pods Manifest.lock */,
 				78DAA8422A7A31F900F77FD7 /* Sources */,
 				78DAA8432A7A31F900F77FD7 /* Frameworks */,
 				78DAA8442A7A31F900F77FD7 /* Resources */,
@@ -248,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78DAA8602A7A31F900F77FD7 /* Build configuration list for PBXNativeTarget "GeumjiogyeopUITests" */;
 			buildPhases = (
+				3E195B664FA8F212A9C23A5C /* [CP] Check Pods Manifest.lock */,
 				78DAA84C2A7A31F900F77FD7 /* Sources */,
 				78DAA84D2A7A31F900F77FD7 /* Frameworks */,
 				78DAA84E2A7A31F900F77FD7 /* Resources */,
+				6D9AF0C3EFA8C123EA005702 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +382,9 @@
 				Base,
 			);
 			mainGroup = 78DAA8272A7A31F800F77FD7;
+			packageReferences = (
+				78B6142C2A877BEB0011D7AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 78DAA8312A7A31F800F77FD7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,11 +401,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B6143B2A8A3BF60011D7AE /* manageStoryboard.storyboard in Resources */,
 				78DAA8402A7A31F800F77FD7 /* LaunchScreen.storyboard in Resources */,
 				78DAA83D2A7A31F800F77FD7 /* Assets.xcassets in Resources */,
 				78DAA83B2A7A31F800F77FD7 /* Main.storyboard in Resources */,
 				78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */,
 				78DAA8702A7A3BDB00F77FD7 /* loginStoryboard.storyboard in Resources */,
+				78B6142B2A877B850011D7AE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,14 +427,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32C35D0863279D3E3B6B2725 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeumjiogyeopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E195B664FA8F212A9C23A5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Geumjiogyeop-GeumjiogyeopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D9AF0C3EFA8C123EA005702 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4776A69D4E6D5FF18DFD1A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB67BB40EC2D5A6C3C1199E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Geumjiogyeop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78DAA82C2A7A31F800F77FD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */,
+				78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */,
 				78DAA8382A7A31F800F77FD7 /* ViewController.swift in Sources */,
+				78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */,
+				78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */,
+				78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */,
 				78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */,
+				78B614362A8A3AAC0011D7AE /* writePostViewController.swift in Sources */,
 				78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */,
+				78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */,
+				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
+				78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */,
 				78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */,
 				78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */,
 			);
@@ -361,7 +566,6 @@
 			files = (
 				78DAA8572A7A31F900F77FD7 /* GeumjiogyeopUITestsLaunchTests.swift in Sources */,
 				78DAA8552A7A31F900F77FD7 /* GeumjiogyeopUITests.swift in Sources */,
-				78DAA8732A7A3C3D00F77FD7 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +720,7 @@
 		};
 		78DAA85B2A7A31F900F77FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F08E3C1A19B7C518187973 /* Pods-Geumjiogyeop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -543,6 +748,7 @@
 		};
 		78DAA85C2A7A31F900F77FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191D17C0A74BE878F638094A /* Pods-Geumjiogyeop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -570,6 +776,7 @@
 		};
 		78DAA85E2A7A31F900F77FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0171ED1FED75DFF83BA58B2B /* Pods-GeumjiogyeopTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -589,6 +796,7 @@
 		};
 		78DAA85F2A7A31F900F77FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -608,6 +816,7 @@
 		};
 		78DAA8612A7A31F900F77FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +834,7 @@
 		};
 		78DAA8622A7A31F900F77FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1851E742552972EBAA1DE180 /* Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,6 +890,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78B6142C2A877BEB0011D7AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78B6142C2A877BEB0011D7AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78DAA8282A7A31F800F77FD7 /* Project object */;
 }
