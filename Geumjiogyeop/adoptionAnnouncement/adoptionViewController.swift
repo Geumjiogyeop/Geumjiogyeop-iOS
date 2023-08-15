@@ -33,6 +33,8 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
         case male
     }
     
+    var posts: String = "dkdkdk"
+    
     let regions: [Region] = [
         Region(title: "all", localizedTitle: "지역"),
         Region(title: "seoul", localizedTitle: "서울특별시"),
@@ -65,8 +67,8 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
         adoptionCollectionView.dataSource = self
         adoptionCollectionView.delegate = self
         let layout = UICollectionViewFlowLayout()
-                layout.scrollDirection = .vertical
-                adoptionCollectionView.collectionViewLayout = layout
+        layout.scrollDirection = .vertical
+        adoptionCollectionView.collectionViewLayout = layout
         adoptionCollectionView.register(adoptionCell.self, forCellWithReuseIdentifier: "adoptionCell")
     }
 
@@ -75,28 +77,28 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
          
          // 컬렉션 뷰 가로 크기 설정
          if let flowLayout = adoptionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-             flowLayout.itemSize = CGSize(width: adoptionCollectionView.bounds.width - 48, height: 100) // 가로 크기 설정 (-40은 좌우 마진 20씩을 고려한 값)
+             flowLayout.itemSize = CGSize(width: adoptionCollectionView.bounds.width - 48, height: 100)
          }
      }
     
+    //컬렉션뷰 아이템 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }
-    
+
+    //셀 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as! adoptionCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as? adoptionCell else {
+            return UICollectionViewCell()
+        }
         
-        
-        //cell.adoptionNameLabel.text = "dkdk"
+        cell.adoptionNameLabel.text = "name"
+        cell.adoptionNameLabel.textColor = UIColor.red
         cell.layer.borderWidth = 1.0
         cell.layer.borderColor = UIColor.red.cgColor
-       
-        
-        cell.awakeFromNib()
-        
+
         return cell
     }
-
     
     func setPopupButton() {
         setAdoptionStatusMenu()
@@ -258,21 +260,4 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
 
-}
-
-class adoptionCell: UICollectionViewCell{
-    @IBOutlet weak var adoptionImageView: UIImageView!
-    @IBOutlet weak var adoptionNameLabel: UILabel!
-    @IBOutlet weak var adoptionInfomationLabel: UILabel!
-    
-    override func awakeFromNib() {
-            super.awakeFromNib()
-            
-//        adoptionImageView.image = UIImage(named: "test") // 예시로 "defaultImage" 이미지를 사용
-//        adoptionNameLabel.text = "Default Name"
-//        adoptionInfomationLabel.text = "Default Information"
-        // 셀의 테두리 색을 빨간색으로 설정
-                layer.borderWidth = 1.0
-                layer.borderColor = UIColor.red.cgColor
-    }
 }

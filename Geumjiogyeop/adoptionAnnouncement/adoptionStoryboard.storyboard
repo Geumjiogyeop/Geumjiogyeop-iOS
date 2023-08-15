@@ -330,16 +330,10 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="345" height="100"/>
                                         <connections>
-                                            <outlet property="adoptionImageView" destination="zUT-Lu-ye7" id="9r5-3d-4VQ"/>
-                                            <outlet property="adoptionInfomationLabel" destination="aFi-Xp-74I" id="Mbt-Id-9Ss"/>
-                                            <outlet property="adoptionNameLabel" destination="h2z-YY-VeM" id="fQL-G9-SVr"/>
+                                            <outlet property="adoptionNameLabel" destination="h2z-YY-VeM" id="Xi3-uH-HH7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="pRa-pM-sSx"/>
-                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="GdA-fb-S2A"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

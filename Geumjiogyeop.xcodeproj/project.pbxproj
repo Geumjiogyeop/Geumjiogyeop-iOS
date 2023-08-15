@@ -33,6 +33,7 @@
 		EDEF37112A896CE6002C0AEB /* signUpServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37102A896CE6002C0AEB /* signUpServiceViewController.swift */; };
 		EDEF37132A89734F002C0AEB /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37122A89734F002C0AEB /* roundedButton.swift */; };
 		EDEF37152A897DC9002C0AEB /* defaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37142A897DC9002C0AEB /* defaultButton.swift */; };
+		EDEF37172A8BE62F002C0AEB /* adoptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37162A8BE62F002C0AEB /* adoptionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		EDEF37102A896CE6002C0AEB /* signUpServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpServiceViewController.swift; sourceTree = "<group>"; };
 		EDEF37122A89734F002C0AEB /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
 		EDEF37142A897DC9002C0AEB /* defaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaultButton.swift; sourceTree = "<group>"; };
+		EDEF37162A8BE62F002C0AEB /* adoptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				EDC650762A87CC7700652E86 /* adoptionViewController.swift */,
 				EDC650782A87CC9200652E86 /* adoptionStoryboard.storyboard */,
 				EDC6AF342A87DD07001C45E7 /* CategoryButton.swift */,
+				EDEF37162A8BE62F002C0AEB /* adoptionCell.swift */,
 			);
 			path = adoptionAnnouncement;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */,
 				EDEF37132A89734F002C0AEB /* roundedButton.swift in Sources */,
 				EDEF37152A897DC9002C0AEB /* defaultButton.swift in Sources */,
+				EDEF37172A8BE62F002C0AEB /* adoptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
