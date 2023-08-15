@@ -57,7 +57,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
 //                    if let postId = json["id"] as? String,
 //                       let imageUrlString = json["imageUrl"] as? String,
 //                        let imagesArray = json["images"] as? [String] {
-        
+//        
 //        // Assume there is only one image URL in the imagesArray
 //        if let imageUrlString = imagesArray.first,
 //           let imageUrl = URL(string: imageUrlString) {
@@ -137,7 +137,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         let selectedPost = posts[indexPath.item]
         
         // 스토리보드에서 DetailViewController의 식별자를 설정하세요.
-        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as? DetailViewController {
             detailVC.postId = selectedPost.postID // postId 전달
             navigationController?.pushViewController(detailVC, animated: true)
             print(detailVC.postId)

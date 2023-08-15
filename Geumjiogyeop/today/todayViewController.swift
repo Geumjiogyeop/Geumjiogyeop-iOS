@@ -18,6 +18,9 @@ class todayCollectionView: UICollectionViewCell {
     @IBOutlet weak var recommendLabel: UILabel!
     @IBOutlet weak var recommendImgView: UIImageView!
     @IBOutlet weak var userIconStackView: UIStackView!
+    
+    @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var modifyBtn: UIButton!
 }
 
 class todayViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
@@ -141,13 +144,14 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             cell.recommendImgView.isUserInteractionEnabled = true
             cell.recommendImgView.addGestureRecognizer(tapGesture)
             
-            cell.userIconStackView.isHidden = true
+            let deleteTapGesture = UITapGestureRecognizer(target: self, action: #selector(deleteBtnViewTapped(_:)))
+            cell.deleteBtn.addGestureRecognizer(deleteTapGesture)
             
-//            if 접속한 id와 게시글의 id가 같으면 (userID== ?) {
-//                    cell.userIconStackView.isHidden = true
-//                } else {
-//                    cell.userIconStackView.isHidden = false
-//                }
+            let modifyTapGesture = UITapGestureRecognizer(target: self, action: #selector(modifyBtnViewTapped(_:)))
+            cell.modifyBtn.addGestureRecognizer(modifyTapGesture)
+            
+            cell.userIconStackView.isHidden = false
+            
 
             return cell
         }
@@ -171,7 +175,26 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         
         return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
-    
+    @objc func deleteBtnViewTapped(_ sender: UITapGestureRecognizer){
+        if let delete = sender.view as? UIButton{
+            let location = sender.location(in: collectionView)
+            if let indexPath = collectionView.indexPathForItem(at: location){
+                if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView{
+                    print("delete 선택")
+                }
+            }
+        }
+    }
+    @objc func modifyBtnViewTapped(_ sender: UITapGestureRecognizer){
+        if let modify = sender.view as? UIButton{
+            let location = sender.location(in: collectionView)
+            if let indexPath = collectionView.indexPathForItem(at: location){
+                if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView{
+                    print("modify 선택")
+                }
+            }
+        }
+    }
     @objc func recommendImgViewTapped(_ sender: UITapGestureRecognizer) {
         if let imageView = sender.view as? UIImageView {
             let location = sender.location(in: collectionView)

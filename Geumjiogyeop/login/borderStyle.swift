@@ -24,4 +24,38 @@ class CategoryButton: UIButton {
            
         }
 }
+class borderTextView : UITextView {
+    
+
+    override func awakeFromNib() {
+            super.awakeFromNib()
+            configureButton()
+        }
+        
+        private func configureButton() {
+            layer.cornerRadius = 5
+            layer.masksToBounds = true
+            layer.borderWidth = 1
+            layer.borderColor = UIColor.lightGray.cgColor
+           
+        }
+}
+class borderTextField : UITextField {
+    
+
+    override func awakeFromNib() {
+            super.awakeFromNib()
+            configureButton()
+        }
+        
+        private func configureButton() {
+            layer.cornerRadius = 5
+            layer.masksToBounds = true
+            layer.borderWidth = 1
+            layer.borderColor = UIColor.lightGray.cgColor
+           
+        }
+}
+
+
 
