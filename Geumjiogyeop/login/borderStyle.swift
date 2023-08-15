@@ -7,55 +7,35 @@
 
 import UIKit
 
-@IBDesignable
-class CategoryButton: UIButton {
+extension UIView {
     
-
-    override func awakeFromNib() {
-            super.awakeFromNib()
-            configureButton()
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
         }
-        
-        private func configureButton() {
-            layer.cornerRadius = 5
-            layer.masksToBounds = true
-            layer.borderWidth = 1
-            layer.borderColor = UIColor.orange.cgColor
-           
+        get {
+            return layer.borderWidth
         }
-}
-class borderTextView : UITextView {
+    }
     
-
-    override func awakeFromNib() {
-            super.awakeFromNib()
-            configureButton()
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
         }
-        
-        private func configureButton() {
-            layer.cornerRadius = 5
-            layer.masksToBounds = true
-            layer.borderWidth = 1
-            layer.borderColor = UIColor.lightGray.cgColor
-           
+        get {
+            return layer.cornerRadius
         }
-}
-class borderTextField : UITextField {
+    }
     
-
-    override func awakeFromNib() {
-            super.awakeFromNib()
-            configureButton()
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
         }
-        
-        private func configureButton() {
-            layer.cornerRadius = 5
-            layer.masksToBounds = true
-            layer.borderWidth = 1
-            layer.borderColor = UIColor.lightGray.cgColor
-           
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
         }
+    }
+    
 }
-
-
-
