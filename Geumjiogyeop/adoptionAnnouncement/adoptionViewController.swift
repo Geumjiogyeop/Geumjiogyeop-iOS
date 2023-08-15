@@ -1,6 +1,21 @@
 import UIKit
 
+class adoptionCell: UICollectionViewCell {
+    @IBOutlet weak var adoptionNameLabel: UILabel!
+//    {
+//
+//        didSet {
+//            if adoptionNameLabel == nil {
+//                print("Label set to nil!")
+//                // ^ SET A BREAKPOINT IN THIS LINE
+//            }
+//        }
+//    }
+    
+}
+
 class adoptionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    @IBOutlet weak var adoptionCell: UICollectionView!
     
 
     @IBOutlet weak var adoptionavalableButton: CategoryButton!
@@ -69,7 +84,7 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         adoptionCollectionView.collectionViewLayout = layout
-        adoptionCollectionView.register(adoptionCell.self, forCellWithReuseIdentifier: "adoptionCell")
+//        adoptionCollectionView.register(adoptionCell.self, forCellWithReuseIdentifier: "adoptionCell")
     }
 
     override func viewDidLayoutSubviews() {
@@ -88,12 +103,16 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
 
     //셀 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as? adoptionCell else {
+//            return UICollectionViewCell()
+//        }
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as? adoptionCell else {
-            return UICollectionViewCell()
-        }
+                        return UICollectionViewCell()
+                    }
         
-        cell.adoptionNameLabel.text = "name"
-        cell.adoptionNameLabel.textColor = UIColor.red
+        cell.adoptionNameLabel?.text = "name"
+        print(cell.adoptionNameLabel?.text)
+        cell.adoptionNameLabel?.textColor = UIColor.red
         cell.layer.borderWidth = 1.0
         cell.layer.borderColor = UIColor.red.cgColor
 

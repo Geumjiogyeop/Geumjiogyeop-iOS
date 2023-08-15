@@ -7,14 +7,14 @@
 
 import UIKit
 
-class adoptionCell: UICollectionViewCell {
-    @IBOutlet weak var adoptionNameLabel: UILabel!{
-        didSet {
-            if adoptionNameLabel == nil {
-                print("Label set to nil!")
-                // ^ SET A BREAKPOINT IN THIS LINE
-            }
-        }
-    }
-    
-}
+//class adoptionCell: UICollectionViewCell {
+//    @IBOutlet weak var adoptionNameLabel: UILabel!{
+//        didSet {
+//            if adoptionNameLabel == nil {
+//                print("Label set to nil!")
+//                // ^ SET A BREAKPOINT IN THIS LINE
+//            }
+//        }
+//    }
+//    
+//}

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,9 +13,6 @@
     <customFonts key="customFonts">
         <array key="NanumGothic.otf">
             <string>NanumGothicOTF</string>
-        </array>
-        <array key="NanumGothicBold.otf">
-            <string>NanumGothicOTFBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -47,10 +43,10 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gbJ-Ox-WxH">
-                                                <rect key="frame" x="0.0" y="0.0" width="360" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="37"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOf-UI-QHl" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="37"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="37"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="15"/>
                                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
@@ -68,7 +64,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qcy-Fy-0uc" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="143" y="0.0" width="59" height="37"/>
+                                                        <rect key="frame" x="137" y="0.0" width="56" height="37"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="15"/>
                                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
@@ -86,7 +82,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pra-YU-0Uo" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="222" y="0.0" width="59" height="37"/>
+                                                        <rect key="frame" x="213" y="0.0" width="56" height="37"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="15"/>
                                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
@@ -104,7 +100,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zp3-c0-750" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="301" y="0.0" width="59" height="37"/>
+                                                        <rect key="frame" x="289" y="0.0" width="56" height="37"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="15"/>
                                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
@@ -153,19 +149,19 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8I8-l0-71R">
-                                        <rect key="frame" x="151.66666666666663" y="39.999999999999993" width="201.33333333333337" height="100.33333333333331"/>
+                                        <rect key="frame" x="167" y="39.999999999999993" width="186" height="102.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저를 금지옥엽으로 키워주실 주인님을 찾아요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jam-rL-csC">
-                                                <rect key="frame" x="0.0" y="0.0" width="201.33333333333334" height="37.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sMS-Pp-WIY">
-                                                <rect key="frame" x="0.0" y="62.666666666666657" width="181.33333333333334" height="37.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="64.666666666666657" width="171.33333333333334" height="37.666666666666657"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="aFb-TD-gMT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="16.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="16.333333333333332"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TID-6k-qBz">
                                                                 <rect key="frame" x="0.0" y="0.99999999999999822" width="15" height="15.000000000000002"/>
@@ -176,7 +172,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaq-gh-mGg">
-                                                                <rect key="frame" x="10" y="0.0" width="171.33333333333334" height="16.333333333333332"/>
+                                                                <rect key="frame" x="10" y="0.0" width="161.33333333333334" height="16.333333333333332"/>
                                                                 <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="입양 전에 꼭 읽어주세요!" titleAlignment="leading">
@@ -187,7 +183,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="Cg9-Xq-a3N">
-                                                        <rect key="frame" x="0.0" y="21.333333333333343" width="181.33333333333334" height="16.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="21.333333333333343" width="171.33333333333334" height="16.333333333333329"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qfc-3M-Q8E">
                                                                 <rect key="frame" x="0.0" y="0.99999999999999822" width="15" height="15.000000000000002"/>
@@ -198,7 +194,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-tE-yAy">
-                                                                <rect key="frame" x="10" y="0.0" width="171.33333333333334" height="16.333333333333332"/>
+                                                                <rect key="frame" x="10" y="0.0" width="161.33333333333334" height="16.333333333333332"/>
                                                                 <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="공고를 올리고 싶으신가요?" titleAlignment="leading">
@@ -252,16 +248,16 @@
                                                     <rect key="frame" x="100" y="0.0" width="219" height="100"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-34-vMi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="19"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="20.333333333333332"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-YY-VeM">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="19"/>
-                                                                    <fontDescription key="fontDescription" name="NanumGothicOTFBold" family="NanumGothicOTF" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gender / age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFi-Xp-74I">
-                                                                    <rect key="frame" x="52.33333333333335" y="0.0" width="88.666666666666686" height="19"/>
+                                                                    <rect key="frame" x="50.333333333333336" y="0.0" width="85.333333333333314" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -269,7 +265,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="s6e-7L-GhM">
-                                                            <rect key="frame" x="0.0" y="27" width="219" height="20.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="27.666666666666671" width="219" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-fZ-J1W">
                                                                     <rect key="frame" x="0.0" y="2.9999999999999982" width="14" height="15.000000000000002"/>
@@ -291,13 +287,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messege" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ht-fe-sly">
-                                                            <rect key="frame" x="0.0" y="55.333333333333336" width="60" height="16.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="55" width="60.666666666666664" height="17.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7d-bX-8HO">
-                                                            <rect key="frame" x="0.0" y="80" width="86" height="20"/>
+                                                            <rect key="frame" x="0.0" y="80" width="81.666666666666671" height="20"/>
                                                             <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="CJU-sL-nqv"/>
@@ -351,6 +347,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adoptionCell" destination="Zm0-Mr-ZIO" id="hLW-Ni-XJ1"/>
                         <outlet property="adoptionCollectionView" destination="Zm0-Mr-ZIO" id="ko2-MC-gEi"/>
                         <outlet property="adoptionavalableButton" destination="nOf-UI-QHl" id="B5L-rR-EhS"/>
                         <outlet property="genderButton" destination="zp3-c0-750" id="4Fa-Y3-5OL"/>
@@ -365,16 +362,16 @@
     </scenes>
     <designables>
         <designable name="Qcy-Fy-0uc">
-            <size key="intrinsicContentSize" width="59" height="37"/>
+            <size key="intrinsicContentSize" width="56" height="38"/>
         </designable>
         <designable name="nOf-UI-QHl">
-            <size key="intrinsicContentSize" width="123" height="37"/>
+            <size key="intrinsicContentSize" width="117" height="38"/>
         </designable>
         <designable name="pra-YU-0Uo">
-            <size key="intrinsicContentSize" width="59" height="37"/>
+            <size key="intrinsicContentSize" width="56" height="38"/>
         </designable>
         <designable name="zp3-c0-750">
-            <size key="intrinsicContentSize" width="59" height="37"/>
+            <size key="intrinsicContentSize" width="56" height="38"/>
         </designable>
     </designables>
     <resources>
