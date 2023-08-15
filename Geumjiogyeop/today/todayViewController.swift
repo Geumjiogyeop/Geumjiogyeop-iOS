@@ -36,9 +36,9 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     var posts: [(image: UIImage, title: String, date: String,content: String,userID: String,postID: String,likes: Int,editable: Bool)] = [
         (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
         (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: false),
-        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
-        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
+        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"3",likes: 123,editable: true),
+        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"4",likes: 123,editable: true),
+        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"5",likes: 123,editable: true),
         (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true)
     ]
     
@@ -208,13 +208,15 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         }
     }
 
-    @objc func modifyBtnViewTapped(_ sender: UITapGestureRecognizer){
-        if let modify = sender.view as? UIButton{
+    @objc func modifyBtnViewTapped(_ sender: UITapGestureRecognizer) {
+        if let modify = sender.view as? UIButton {
             let location = sender.location(in: collectionView)
-            if let indexPath = collectionView.indexPathForItem(at: location){
-                if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView{
+            if let indexPath = collectionView.indexPathForItem(at: location) {
+                if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView {
                     print("modify 선택")
+                    let postID = posts[indexPath.item].postID
                     if let nextVC = storyboard?.instantiateViewController(withIdentifier: "ModifyViewController") as? ModifyViewController {
+                        nextVC.postID = postID
                         navigationController?.pushViewController(nextVC, animated: true)
                     }
                 }

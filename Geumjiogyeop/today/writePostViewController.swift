@@ -45,7 +45,6 @@ class writePostViewController: UIViewController {
             let parameters: [String: Any] = [
                 "title": title,
                 "content": content
-                // 추가적인 파라미터가 있다면 여기에 추가
             ]
             
             let url = "http://175.45.194.93/today/"
