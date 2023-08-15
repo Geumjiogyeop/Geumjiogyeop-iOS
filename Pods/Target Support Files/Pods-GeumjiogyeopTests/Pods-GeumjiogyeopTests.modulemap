@@ -1,0 +1,6 @@
+framework module Pods_GeumjiogyeopTests {
+  umbrella header "Pods-GeumjiogyeopTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
