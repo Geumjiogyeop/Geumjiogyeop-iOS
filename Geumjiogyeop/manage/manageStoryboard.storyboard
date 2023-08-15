@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcm-NU-4JC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ROA-We-sDF">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -79,52 +78,73 @@
                                 <rect key="frame" x="20" y="58.999999999999972" width="353" height="501.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha1-be-zyR">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-Ms-bLO" customClass="LeftPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="34.333333333333336"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="XBw-cu-8If"/>
+                                                    <constraint firstAttribute="width" constant="280" id="XBw-cu-8If"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-Uc-Xa5">
-                                                <rect key="frame" x="300" y="0.0" width="53" height="24"/>
+                                                <rect key="frame" x="280" y="0.0" width="73" height="34.333333333333336"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wsw-zo-Ogv">
-                                                        <rect key="frame" x="0.0" y="-0.66666666666666785" width="19" height="24.333333333333336"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.line" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vrq-dW-IX3">
-                                                        <rect key="frame" x="29" y="2.9999999999999982" width="24" height="19"/>
-                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-1L-QBW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="deleteBtn:" destination="ROA-We-sDF" eventType="touchUpInside" id="e9H-XF-LqP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud5-Lw-Xlf">
+                                                        <rect key="frame" x="43" y="0.0" width="30" height="34.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="zVK-jY-VfL"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="pencil.line" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="modifyBtn:" destination="ROA-We-sDF" eventType="touchUpInside" id="jr2-hm-AUY"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XyW-nJ-2Bo">
-                                        <rect key="frame" x="0.0" y="39" width="353" height="203"/>
+                                        <rect key="frame" x="0.0" y="49.333333333333314" width="353" height="203"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TQP-O6-h1u">
-                                        <rect key="frame" x="0.0" y="257" width="353" height="32.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="267.33333333333331" width="353" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAl-FU-cOe" customClass="LeftPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="316.66666666666669" height="32.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="42"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-Mu-as5">
-                                                <rect key="frame" x="326.66666666666669" y="0.0" width="26.333333333333314" height="32.333333333333336"/>
+                                                <rect key="frame" x="323" y="0.0" width="30" height="42"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="rIV-tD-CJh" customClass="RightBtnPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-0.33333333333333215" width="26.333333333333332" height="20.333333333333332"/>
-                                                        <imageReference key="image" image="hand.thumbsup" catalog="system" symbolScale="default"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-cc-3DL" customClass="RightPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="20.333333333333314" width="26.333333333333332" height="12"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-rK-rLE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="VTr-hk-lZG"/>
+                                                            <constraint firstAttribute="height" constant="30" id="WcO-Nc-mZN"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="recommendBtn:" destination="ROA-We-sDF" eventType="touchUpInside" id="nDN-dR-Xkx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-cc-3DL" customClass="RightPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="30" width="30" height="12"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                         <color key="textColor" red="1" green="0.58823529409999997" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -133,7 +153,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dM-cu-V2H" customClass="LeftPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="304.33333333333331" width="353" height="165"/>
+                                        <rect key="frame" x="0.0" y="324.33333333333331" width="353" height="145"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" systemColor="placeholderTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -161,6 +181,8 @@
                         <outlet property="contentLabel" destination="0dM-cu-V2H" id="63Y-SY-H1R"/>
                         <outlet property="dateLabel" destination="DKk-p0-ryV" id="ev5-jq-UlX"/>
                         <outlet property="imageView" destination="XyW-nJ-2Bo" id="41l-OU-9Lh"/>
+                        <outlet property="recommendBtn" destination="O3i-rK-rLE" id="IS5-lX-FYI"/>
+                        <outlet property="recommendLabel" destination="jZ7-cc-3DL" id="Of6-Bs-xR1"/>
                         <outlet property="titleLabel" destination="xAl-FU-cOe" id="IY8-gn-rHV"/>
                         <outlet property="userLabel" destination="rdw-Ms-bLO" id="2Vb-3k-2qL"/>
                     </connections>

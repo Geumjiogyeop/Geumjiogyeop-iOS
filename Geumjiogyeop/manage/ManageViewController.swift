@@ -138,9 +138,9 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         
         // 스토리보드에서 DetailViewController의 식별자를 설정하세요.
         if let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as? DetailViewController {
-            detailVC.postId = selectedPost.postID // postId 전달
+            detailVC.postID = selectedPost.postID // postId 전달
             navigationController?.pushViewController(detailVC, animated: true)
-            print(detailVC.postId)
+            print(detailVC.postID)
         }
     }
     

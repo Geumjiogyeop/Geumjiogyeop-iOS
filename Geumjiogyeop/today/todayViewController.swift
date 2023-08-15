@@ -33,13 +33,13 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     
     var clickRecommend = 1
     
-    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String)] = [
-        (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다"),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다")
+    var posts: [(image: UIImage, title: String, date: String,content: String,userID: String,postID: String,likes: Int,editable: Bool)] = [
+        (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
+        (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: false),
+        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
+        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
+        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
+        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true)
     ]
     
 //    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String)] = []
@@ -73,13 +73,17 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
 //                                   let title = json["title"] as? String,
 //                                   let date = json["created_at"] as? String,
 //                                   let content = json["content"] as? String,
+//                                     let postID = json["id"] as? String,
+//                                    let likes = json["likes"] as? Int,
+//                                    let editable = json["editable"] as? Bool,
 //                                   let imageUrlString = json["imageUrl"] as? String,
 //                                   let imageUrl = URL(string: imageUrlString),
 //                                   let imageData = try? Data(contentsOf: imageUrl),
 //                                   let image = UIImage(data: imageData)
 //                                     {
 //                                    let userID = username+userid
-//                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID))
+//                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID,postID: postID,likes: likes,editable: editable))
+//
 //                                }
 //                            }
 //
@@ -144,13 +148,20 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             cell.recommendImgView.isUserInteractionEnabled = true
             cell.recommendImgView.addGestureRecognizer(tapGesture)
             
+            cell.recommendLabel.text = "\(post.likes)"
+            
             let deleteTapGesture = UITapGestureRecognizer(target: self, action: #selector(deleteBtnViewTapped(_:)))
             cell.deleteBtn.addGestureRecognizer(deleteTapGesture)
             
             let modifyTapGesture = UITapGestureRecognizer(target: self, action: #selector(modifyBtnViewTapped(_:)))
             cell.modifyBtn.addGestureRecognizer(modifyTapGesture)
             
-            cell.userIconStackView.isHidden = false
+            if post.editable == true{
+                cell.userIconStackView.isHidden = false
+            }else if post.editable == false{
+                cell.userIconStackView.isHidden = true
+            }
+            
             
 
             return cell
@@ -175,16 +186,28 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         
         return CGSize(width: collectionView.frame.width, height: cellHeight)
     }
-    @objc func deleteBtnViewTapped(_ sender: UITapGestureRecognizer){
-        if let delete = sender.view as? UIButton{
+    @objc func deleteBtnViewTapped(_ sender: UITapGestureRecognizer) {
+        if let delete = sender.view as? UIButton {
             let location = sender.location(in: collectionView)
-            if let indexPath = collectionView.indexPathForItem(at: location){
-                if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView{
+            if let indexPath = collectionView.indexPathForItem(at: location) {
+                if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView {
                     print("delete 선택")
+                    let postID = posts[indexPath.item].postID
+                    let deleteURL = "http://175.45.194.93/\(postID)/"
+                    AF.request(deleteURL, method: .delete).responseJSON { response in
+                        switch response.result {
+                        case .success(let value):
+                            print("Delete success: \(value)")
+                            // 서버 응답을 처리하는 코드 추가
+                        case .failure(let error):
+                            print("Delete failure: \(error)")
+                        }
+                    }
                 }
             }
         }
     }
+
     @objc func modifyBtnViewTapped(_ sender: UITapGestureRecognizer){
         if let modify = sender.view as? UIButton{
             let location = sender.location(in: collectionView)
@@ -206,9 +229,31 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                         if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
                             clickedCell.recommendImgView.image = newImage
                         }
+                        let postID = posts[indexPath.item].postID
+                        let likeURL = "http://175.45.194.93/\(postID)/like/"
+                        AF.request(likeURL, method: .patch).responseJSON { response in
+                            switch response.result {
+                            case .success(let value):
+                                print("Delete success: \(value)")
+                                // 서버 응답을 처리하는 코드 추가
+                            case .failure(let error):
+                                print("Delete failure: \(error)")
+                            }
+                        }
                     } else {
                         if let newImage = UIImage(systemName: "hand.thumbsup") {
                             clickedCell.recommendImgView.image = newImage
+                        }
+                        let postID = posts[indexPath.item].postID
+                        let likeURL = "http://175.45.194.93/\(postID)/like/"
+                        AF.request(likeURL, method: .patch).responseJSON { response in
+                            switch response.result {
+                            case .success(let value):
+                                print("Delete success: \(value)")
+                                // 서버 응답을 처리하는 코드 추가
+                            case .failure(let error):
+                                print("Delete failure: \(error)")
+                            }
                         }
                     }
                 }
