@@ -61,7 +61,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         if isCilck == true{
             print("조건 성립함")
             alamofire()
-            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "phoneViewController") as? SignUpViewController {
+            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "loginView") as? loginViewController {
                 print("??")
                 navigationController?.pushViewController(nextVC, animated: true)
             }
@@ -143,7 +143,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // HTTP 네트워킹을 통해 전송 할 데이터
        
         let parameters: [String: Any] = [
-            "phonenumber": "010-8624-3239",
+            "phonenumber": "01086243239",
             "password" : password!,
             "name": name!,
             "birthday": birthbay!,
