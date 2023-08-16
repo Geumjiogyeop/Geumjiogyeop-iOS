@@ -117,6 +117,7 @@
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="TAY-4y-odQ">
                                                                             <rect key="frame" x="0.0" y="-0.33333333333333215" width="30" height="30"/>
+                                                                            <color key="tintColor" systemColor="systemGray2Color"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="30" id="2Gd-k3-l7a"/>
                                                                                 <constraint firstAttribute="width" constant="30" id="oHF-0t-S1D"/>
