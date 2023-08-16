@@ -386,7 +386,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="womanBtn:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="Rml-Tj-VO8"/>
+                                                    <action selector="womanBtn:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="8pR-Mt-Zg0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egk-uB-OQd" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
@@ -399,7 +399,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="manBtn:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="k0x-Le-6Dc"/>
+                                                    <action selector="manBtn:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="HRx-px-n0A"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -423,7 +423,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="local:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="zaq-gA-NaH"/>
+                                                    <action selector="local:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="lGg-GZ-2Yv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-Wx-KX9" customClass="CategoryButton" customModule="Geumjiogyeop" customModuleProvider="target">
@@ -436,7 +436,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="foreign:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="cOg-XX-dJe"/>
+                                                    <action selector="foreign:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="UE6-XX-TC9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -451,7 +451,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="nexttophone:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="JhT-D6-ahR"/>
+                                    <action selector="nexttophone:" destination="zHg-p9-TjJ" eventType="touchUpInside" id="0HV-ge-y3b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -468,14 +468,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" id="W1z-53-erX"/>
                     <connections>
-                        <outlet property="birthTextField" destination="rA5-Fd-hsn" id="gSe-zC-WaI"/>
-                        <outlet property="foreign" destination="jOa-Wx-KX9" id="W4l-pO-jaN"/>
-                        <outlet property="local" destination="9jD-Xc-AmU" id="bCg-VH-z9r"/>
-                        <outlet property="manBtn" destination="egk-uB-OQd" id="zCS-Ar-sEK"/>
-                        <outlet property="nameTextField" destination="aqs-WD-yT9" id="DoN-SK-vda"/>
-                        <outlet property="nexttophone" destination="5Tj-yT-kJr" id="Plr-ws-Ezq"/>
-                        <outlet property="pwTextField" destination="uop-lC-6KQ" id="OO5-fm-aqk"/>
-                        <outlet property="womanBtn" destination="d2V-gX-lMG" id="sqO-9P-2h7"/>
+                        <outlet property="birthTextField" destination="rA5-Fd-hsn" id="xKg-zu-gon"/>
+                        <outlet property="foreign" destination="jOa-Wx-KX9" id="OHn-mV-fiI"/>
+                        <outlet property="local" destination="9jD-Xc-AmU" id="kc7-P5-pY0"/>
+                        <outlet property="manBtn" destination="egk-uB-OQd" id="BhY-jI-IRh"/>
+                        <outlet property="nameTextField" destination="aqs-WD-yT9" id="bMp-Xp-v8t"/>
+                        <outlet property="nexttophone" destination="5Tj-yT-kJr" id="QQI-h1-ewm"/>
+                        <outlet property="pwTextField" destination="uop-lC-6KQ" id="qXo-kd-7pL"/>
+                        <outlet property="womanBtn" destination="d2V-gX-lMG" id="pYY-kB-dKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sf1-al-9Tj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
