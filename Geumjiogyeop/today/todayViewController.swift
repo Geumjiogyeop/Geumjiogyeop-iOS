@@ -224,7 +224,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             present(alert, animated: true, completion: nil)
         updateData()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 alert.dismiss(animated: true, completion: nil)
             }
       
@@ -261,6 +261,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                         // 이미지 뷰 클릭 시 실행될 코드
                         if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
                             clickedCell.recommendImgView.image = newImage
+                            clickedCell.recommendImgView.tintColor = UIColor.lightGray
                         }
                         let postID = posts[indexPath.item].postID
                         let likeURL = "http://175.45.194.93/today/\(postID)/like/"
@@ -276,6 +277,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                     } else {
                         if let newImage = UIImage(systemName: "hand.thumbsup") {
                             clickedCell.recommendImgView.image = newImage
+                            clickedCell.recommendImgView.tintColor = UIColor.lightGray
                         }
                         let postID = posts[indexPath.item].postID
                         let likeURL = "http://175.45.194.93/today/\(postID)/like/"
