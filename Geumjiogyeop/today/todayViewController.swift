@@ -33,16 +33,16 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     
     var clickRecommend = 1
     
-    var posts: [(image: UIImage, title: String, date: String,content: String,userID: String,postID: String,likes: Int,editable: Bool)] = [
-        (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
-        (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: false),
-        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"3",likes: 123,editable: true),
-        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"4",likes: 123,editable: true),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"5",likes: 123,editable: true),
-        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true)
-    ]
-    
-//    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String)] = []
+//    var posts: [(image: UIImage, title: String, date: String,content: String,userID: String,postID: String,likes: Int,editable: Bool)] = [
+//        (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
+//        (userID: "이자민#2222",image: UIImage(named: "logo")!, title: "두 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: false),
+//        (userID: "이장혁#3333",image: UIImage(named: "logo")!, title: "세 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"3",likes: 123,editable: true),
+//        (userID: "김예란#4444",image: UIImage(named: "logo")!, title: "네 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"4",likes: 123,editable: true),
+//        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"5",likes: 123,editable: true),
+//        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true)
+//    ]
+//
+    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String,postID: Int,likes: Int,editable: Bool)] = []
     
     
     override func viewDidLoad() {
@@ -62,39 +62,42 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         collectionView.collectionViewLayout = flowLayout
         
         
-//        AF.request("http://175.45.194.93/today").responseJSON { response in
-//                    switch response.result {
-//                    case .success(let value):
-//                        if let jsonArray = value as? [[String: Any]] {
-//                            for json in jsonArray {
-//                                if let writer = json["writer"] as? [String: Any],
-//                                   let username = writer["username"] as? String,
-//                                   let userid = writer["id"] as? String,
-//                                   let title = json["title"] as? String,
-//                                   let date = json["created_at"] as? String,
-//                                   let content = json["content"] as? String,
-//                                     let postID = json["id"] as? String,
-//                                    let likes = json["likes"] as? Int,
-//                                    let editable = json["editable"] as? Bool,
-//                                   let imageUrlString = json["imageUrl"] as? String,
-//                                   let imageUrl = URL(string: imageUrlString),
-//                                   let imageData = try? Data(contentsOf: imageUrl),
-//                                   let image = UIImage(data: imageData)
-//                                     {
-//                                    let userID = username+userid
-//                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID,postID: postID,likes: likes,editable: editable))
-//
-//                                }
-//                            }
-//
-//                            // 데이터 가져오기 완료 후, collectionView를 리로드하거나 UI 업데이트
-//                            self.collectionView.reloadData()
-//                        }
-//                    case .failure(let error):
-//                        print("Error: \(error)")
-//                    }
-//                }
-        
+        AF.request("http://175.45.194.93/today").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = value as? [[String: Any]] {
+                    for json in jsonArray {
+                        if let imagesArray = json["images"] as? [[String: Any]],
+                           let imageUrlString = imagesArray.first?["image"] as? String,
+                           let imageUrl = URL(string: imageUrlString)
+                        {
+                            AF.request(imageUrl).responseData { response in
+                                if let imageData = response.data,
+                                    let image = UIImage(data: imageData)
+                                {
+                                    let writer = json["writer"] as? [String: Any] ?? [:]
+                                    let username = writer["name"] as? String ?? "Unknown"
+                                    let userid = writer["user_id"] as? Int ?? 0
+                                    let title = json["title"] as? String ?? "No Title"
+                                    let date = json["created_at"] as? String ?? "Unknown Date"
+                                    let content = json["content"] as? String ?? "No Content"
+                                    let postID = json["id"] as? Int ?? 0
+                                    let likes = json["likes"] as? Int ?? 0
+                                    let editable = json["editable"] as? Bool ?? false
+                                    
+                                    let userID = username + "#\(userid)"
+                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable))
+                                    self.collectionView.reloadData()
+                                }
+                            }
+                        }
+                    }
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+
         
         let fixedBtn = UIButton()
         if let image = UIImage(named: "fixedBtn"){
@@ -193,7 +196,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                 if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView {
                     print("delete 선택")
                     let postID = posts[indexPath.item].postID
-                    let deleteURL = "http://175.45.194.93/\(postID)/"
+                    let deleteURL = "http://175.45.194.93/today/\(postID)/"
                     AF.request(deleteURL, method: .delete).responseJSON { response in
                         switch response.result {
                         case .success(let value):
@@ -235,7 +238,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                             clickedCell.recommendImgView.image = newImage
                         }
                         let postID = posts[indexPath.item].postID
-                        let likeURL = "http://175.45.194.93/\(postID)/like/"
+                        let likeURL = "http://175.45.194.93/today/\(postID)/like/"
                         AF.request(likeURL, method: .patch).responseJSON { response in
                             switch response.result {
                             case .success(let value):
@@ -250,7 +253,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                             clickedCell.recommendImgView.image = newImage
                         }
                         let postID = posts[indexPath.item].postID
-                        let likeURL = "http://175.45.194.93/\(postID)/like/"
+                        let likeURL = "http://175.45.194.93/today/\(postID)/like/"
                         AF.request(likeURL, method: .patch).responseJSON { response in
                             switch response.result {
                             case .success(let value):

@@ -20,6 +20,17 @@ class loginViewController: UIViewController {
     @IBAction func loginBtn(_ sender: UIButton) {
            performLogin()
        }
+    
+//    @IBAction func gotoLoginBtn(_ sender: UIButton) {
+//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "loginView") as? loginViewController else{
+//            print("로그인못해ㅠ")
+//            return
+//        }
+//        navigationController?.pushViewController(vc, animated: true)
+//        print("로그인할래!")
+//        
+//    }
+    
        
        func performLogin() {
            guard let phone = phonenumTextField.text, !phone.isEmpty,
@@ -29,7 +40,7 @@ class loginViewController: UIViewController {
            }
            
            let parameters: [String: Any] = [
-               "phonenumber": phone,
+               "identifier": phone,
                "password": password
            ]
            
@@ -41,8 +52,11 @@ class loginViewController: UIViewController {
                        // 로그인 성공 시 처리
                        let json = JSON(value)
                        print(json)
-                       
-                       // 로그인 성공 후 화면 전환 등의 작업 수행
+                       DispatchQueue.main.async {
+                           if let nextVC = UIStoryboard(name: "todayStoryboard", bundle: nil).instantiateViewController(withIdentifier: "todayViewController") as? todayViewController {
+                               self.navigationController?.pushViewController(nextVC, animated: true)
+                           }
+                       }
                    case .failure(let error):
                        // 로그인 실패 시 처리
                        print("Login Error: \(error)")
