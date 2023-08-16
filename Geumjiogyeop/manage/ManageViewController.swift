@@ -48,7 +48,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
 
         collectionView.collectionViewLayout = flowLayout
         
-        AF.request("http://175.45.194.93/today/my").responseJSON { response in
+        AF.request("http://175.45.194.93/today/my/").responseJSON { response in
             switch response.result {
             case .success(let value):
                 if let jsonArray = value as? [[String: Any]] {
