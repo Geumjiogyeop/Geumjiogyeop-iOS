@@ -76,6 +76,12 @@ class writePostViewController: UIViewController {
                             print("성공")
                             print(parameters)
                             print("Upload success: \(value)")
+                            self.showModificationAlert()
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                        self.navigationController?.popViewController(animated: true)
+                                    }
+                            
                             // Handle server response
                         case .failure(let error):
                             print("Upload failure: \(error)")
@@ -84,6 +90,14 @@ class writePostViewController: UIViewController {
                 } else {
                     print("Failed to convert image to data")
                 }
+        }
+    func showModificationAlert() {
+            let alert = UIAlertController(title: nil, message: "수정되었습니다.", preferredStyle: .alert)
+            present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alert.dismiss(animated: true, completion: nil)
+            }
         }
 }
 extension writePostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
