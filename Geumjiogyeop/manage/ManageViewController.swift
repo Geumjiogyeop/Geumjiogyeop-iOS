@@ -191,4 +191,56 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         let writeViewController = storyboard.instantiateViewController(withIdentifier: "WriteViewController")
         self.navigationController?.pushViewController(writeViewController, animated: true)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 뷰가 나타날 때마다 데이터 업데이트
+        updateData()
+    }
+    
+    func updateData() {
+        AF.request("http://175.45.194.93/my/").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = value as? [[String: Any]] {
+                    var newPosts: [(image: UIImage,postID:Int,userID: String,date: String, content: String, likes:Int, beforetitle: String)] = []
+                    
+                    for json in jsonArray {
+                        if let imagesArray = json["images"] as? [[String: Any]],
+                           let imageUrlString = imagesArray.first?["image"] as? String,
+                           let imageUrl = URL(string: imageUrlString)
+                        {
+                            AF.request(imageUrl).responseData { response in
+                                if let imageData = response.data,
+                                    let image = UIImage(data: imageData)
+                                {
+                                    let writer = json["writer"] as? [String: Any] ?? [:]
+                                    let username = writer["name"] as? String ?? "Unknown"
+                                    let userid = writer["user_id"] as? Int ?? 0
+                                    let title = json["title"] as? String ?? "No Title"
+                                    let date = json["created_at"] as? String ?? "Unknown Date"
+                                    let content = json["content"] as? String ?? "No Content"
+                                    let postID = json["id"] as? Int ?? 0
+                                    let likes = json["likes"] as? Int ?? 0
+                                    let editable = json["editable"] as? Bool ?? false
+                                    
+                                    let userID = username + "#\(userid)"
+                                    newPosts.append((image: image, postID: postID,userID: userID,date: date, content: content, likes:likes,beforetitle: title))
+                                    
+                                    // 마지막 데이터까지 추가되었을 때만 기존 데이터를 업데이트하고 화면을 갱신
+                                   
+                                }
+                                self.posts = newPosts
+                                self.collectionView.reloadData()
+                            }
+                        }
+                    }
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+
 }

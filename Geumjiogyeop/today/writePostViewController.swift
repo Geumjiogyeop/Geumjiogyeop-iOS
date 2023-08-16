@@ -78,7 +78,7 @@ class writePostViewController: UIViewController {
                             print("Upload success: \(value)")
                             self.showModificationAlert()
                                     
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         self.navigationController?.popViewController(animated: true)
                                     }
                             
@@ -95,8 +95,24 @@ class writePostViewController: UIViewController {
             let alert = UIAlertController(title: nil, message: "글을 등록하였습니다.", preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 alert.dismiss(animated: true, completion: nil)
+            }
+        }
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            
+            // 뷰가 사라질 때 데이터 업데이트
+            updateTodayData()
+        }
+        
+        func updateTodayData() {
+            // "Today" 화면의 데이터를 업데이트
+            if let todayVC = navigationController?.viewControllers.first(where: { $0 is todayViewController }) as? todayViewController {
+                todayVC.updateData()
+            }
+            if let todayVC = navigationController?.viewControllers.first(where: { $0 is ManageViewController }) as? ManageViewController {
+                todayVC.updateData()
             }
         }
 }

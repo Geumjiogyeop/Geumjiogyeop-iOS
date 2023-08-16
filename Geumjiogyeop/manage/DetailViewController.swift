@@ -45,18 +45,21 @@ class DetailViewController: UIViewController {
         dateLabel.text = date
     }
     @IBAction func deleteBtn(_ sender: UIButton) {
-        let deleteURL = "http://175.45.194.93/\(postID)/"
+        let deleteURL = "http://175.45.194.93/today/\(postID)/"
         AF.request(deleteURL, method: .delete).responseJSON { response in
             switch response.result {
             case .success(let value):
                 print("Delete success: \(value)")
                 self.showDeleteModificationAlert()
-                // 서버 응답을 처리하는 코드 추가
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.navigationController?.popViewController(animated: true)
+                }
             case .failure(let error):
                 print("Delete failure: \(error)")
             }
         }
     }
+
     func showDeleteModificationAlert() {
             let alert = UIAlertController(title: nil, message: "삭제되었습니다.", preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
@@ -109,6 +112,19 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            
+            // 뷰가 사라질 때 데이터 업데이트
+            updateTodayData()
+        }
+        
+        func updateTodayData() {
+           
+            if let todayVC = navigationController?.viewControllers.first(where: { $0 is ManageViewController }) as? ManageViewController {
+                todayVC.updateData()
+            }
+        }
 
     
 }

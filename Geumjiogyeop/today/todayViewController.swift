@@ -268,6 +268,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                         AF.request(likeURL, method: .patch).responseJSON { response in
                             switch response.result {
                             case .success(let value):
+                                self.updateData()
                                 print("Delete success: \(value)")
                                 // 서버 응답을 처리하는 코드 추가
                             case .failure(let error):
@@ -284,6 +285,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                         AF.request(likeURL, method: .patch).responseJSON { response in
                             switch response.result {
                             case .success(let value):
+                                self.updateData()
                                 print("Delete success: \(value)")
                                 // 서버 응답을 처리하는 코드 추가
                             case .failure(let error):
@@ -302,6 +304,12 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         if let nextVC = storyboard?.instantiateViewController(withIdentifier: "WriteViewController") as? writePostViewController {
             navigationController?.pushViewController(nextVC, animated: true)
         }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 뷰가 나타날 때마다 데이터 업데이트
+        updateData()
     }
     
     func updateData() {
@@ -334,11 +342,10 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                                     newPosts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable))
                                     
                                     // 마지막 데이터까지 추가되었을 때만 기존 데이터를 업데이트하고 화면을 갱신
-                                    if newPosts.count == jsonArray.count {
-                                        self.posts = newPosts
-                                        self.collectionView.reloadData()
-                                    }
+                                   
                                 }
+                                self.posts = newPosts
+                                self.collectionView.reloadData()
                             }
                         }
                     }
@@ -349,11 +356,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // 뷰가 나타날 때마다 데이터 업데이트
-        updateData()
-    }
+    
+    
 
 }
