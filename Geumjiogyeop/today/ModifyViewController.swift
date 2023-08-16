@@ -29,42 +29,8 @@ class ModifyViewController: UIViewController {
         self.contentTextView.text = content
         self.titleTextField.text = beforetitle
         
-        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+        let saveButton = UIBarButtonItem(title: "수정하기", style: .plain, target: self, action: #selector(saveButtonTapped))
                 navigationItem.rightBarButtonItem = saveButton
-       
-//        AF.request("http://175.45.194.93/today/\(postID!)").validate().responseJSON { response in
-//            switch response.result {
-//            case .success(let value):
-//                if let jsonArray = value as? [[String: Any]], let json = jsonArray.first {
-//                    let imagesArray = json["images"] as? [[String: Any]] ?? []
-//                    if let imageUrlString = imagesArray.first?["image"] as? String,
-//                       let imageUrl = URL(string: imageUrlString)
-//                    {
-//                        AF.request(imageUrl).responseData { imageResponse in
-//                            if let imageData = imageResponse.data, let image = UIImage(data: imageData) {
-//                                let writer = json["writer"] as? [String: Any] ?? [:]
-//                                let username = writer["name"] as? String ?? "Unknown"
-//                                let userid = writer["user_id"] as? Int ?? 0
-//                                let title = json["title"] as? String ?? "No Title"
-//                                let date = json["created_at"] as? String ?? "Unknown Date"
-//                                let content = json["content"] as? String ?? "No Content"
-//                                let postID = json["id"] as? Int ?? 0
-//                                let likes = json["likes"] as? Int ?? 0
-//                                let editable = json["editable"] as? Bool ?? false
-//
-//                                DispatchQueue.main.async {
-//                                    self.imageView.image = image
-//                                    self.contentTextView.text = content
-//                                    self.titleTextField.text = title
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            case .failure(let error):
-//                print("Error: \(error)")
-//            }
-//        }
 
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pickImage))
@@ -77,14 +43,6 @@ class ModifyViewController: UIViewController {
     }
     
     @objc func saveButtonTapped() {
-            // 여기에 버튼을 눌렀을 때 실행할 코드를 작성합니다.
-        }
-    
-    @objc func pickImage(){
-        self.present(self.imagePicker, animated: true)
-    }
-    
-    @IBAction func modifyButtonTapped(_ sender: UIBarButtonItem) {
         guard let title = titleTextField.text, !title.isEmpty,
               let content = contentTextView.text, !content.isEmpty,
               let image = imageView.image,
@@ -99,7 +57,7 @@ class ModifyViewController: UIViewController {
             // 기타 수정할 필드들 추가
         ]
         
-        let url = "http://175.45.194.93/today/\(postID)"
+        let url = "http://175.45.194.93/today/\(postID)/"
         
         if let imageData = image.jpegData(compressionQuality: 0.5) {
             AF.upload(
@@ -128,6 +86,31 @@ class ModifyViewController: UIViewController {
                 }
             }
         }
+        
+        showModificationAlert()
+        DispatchQueue.main.asyncAfter(deadline: .now()+6) {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+
+        }
+    
+    func showModificationAlert() {
+            let alert = UIAlertController(title: nil, message: "수정되었습니다.", preferredStyle: .alert)
+            present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
+   
+    
+    @objc func pickImage(){
+        self.present(self.imagePicker, animated: true)
+    }
+    
+    @IBAction func modifyButtonTapped(_ sender: UIBarButtonItem) {
+       
 
     }
 

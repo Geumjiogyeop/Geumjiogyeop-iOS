@@ -47,6 +47,8 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let moveBtn = UIBarButtonItem(title: "내 글로 이동", style: .plain, target: self, action: #selector(moveButtonTapped))
+                navigationItem.rightBarButtonItem = moveBtn
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -119,6 +121,11 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         
                 
         
+    }
+    @objc func moveButtonTapped(){
+        if let nextVC = UIStoryboard(name: "manageStoryboard", bundle: nil).instantiateViewController(withIdentifier: "manageViewController") as? ManageViewController {
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 
         
@@ -201,6 +208,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                         switch response.result {
                         case .success(let value):
                             print("Delete success: \(value)")
+                            self.showDeleteModificationAlert()
                             // 서버 응답을 처리하는 코드 추가
                         case .failure(let error):
                             print("Delete failure: \(error)")
@@ -210,6 +218,14 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             }
         }
     }
+    func showDeleteModificationAlert() {
+            let alert = UIAlertController(title: nil, message: "글이 삭제되었습니다.", preferredStyle: .alert)
+            present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
 
     @objc func modifyBtnViewTapped(_ sender: UITapGestureRecognizer) {
         if let modify = sender.view as? UIButton {

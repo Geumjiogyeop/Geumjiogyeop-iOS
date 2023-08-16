@@ -92,7 +92,7 @@ class writePostViewController: UIViewController {
                 }
         }
     func showModificationAlert() {
-            let alert = UIAlertController(title: nil, message: "수정되었습니다.", preferredStyle: .alert)
+            let alert = UIAlertController(title: nil, message: "글을 등록하였습니다.", preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

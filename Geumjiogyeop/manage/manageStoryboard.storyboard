@@ -12,7 +12,7 @@
         <!--오늘도 금지옥엽-->
         <scene sceneID="fgj-SV-SXf">
             <objects>
-                <viewController id="Lw2-Ap-g16" customClass="ManageViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="manageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lw2-Ap-g16" customClass="ManageViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RON-DN-Uqm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

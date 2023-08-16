@@ -22,11 +22,11 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
     
     var clickRecommend = 1
     
-    var posts: [(image: UIImage,postID:String)] = [
-        (postID: "1",image: UIImage(named: "testImg")!),(postID: "2",image: UIImage(named: "testImg")!),(postID: "3",image: UIImage(named: "testImg")!),(postID: "4",image: UIImage(named: "testImg")!),(postID: "5",image: UIImage(named: "testImg")!),(postID: "6",image: UIImage(named: "testImg")!),(postID: "7",image: UIImage(named: "testImg")!),(postID: "8",image: UIImage(named: "testImg")!),(postID: "9",image: UIImage(named: "testImg")!),(postID: "10",image: UIImage(named: "testImg")!),(postID: "11",image: UIImage(named: "testImg")!),(postID: "12",image: UIImage(named: "testImg")!)
-    ]
+//    var posts: [(image: UIImage,postID:String)] = [
+//        (postID: "1",image: UIImage(named: "testImg")!),(postID: "2",image: UIImage(named: "testImg")!),(postID: "3",image: UIImage(named: "testImg")!),(postID: "4",image: UIImage(named: "testImg")!),(postID: "5",image: UIImage(named: "testImg")!),(postID: "6",image: UIImage(named: "testImg")!),(postID: "7",image: UIImage(named: "testImg")!),(postID: "8",image: UIImage(named: "testImg")!),(postID: "9",image: UIImage(named: "testImg")!),(postID: "10",image: UIImage(named: "testImg")!),(postID: "11",image: UIImage(named: "testImg")!),(postID: "12",image: UIImage(named: "testImg")!)
+//    ]
     
-//    var posts: [(image: UIImage,postID:String)] = []
+    var posts: [(image: UIImage,postID:Int,userID: String,date: String, content: String, likes:Int, beforetitle: String)] = []
     
     
     override func viewDidLoad() {
@@ -48,7 +48,41 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
 
         collectionView.collectionViewLayout = flowLayout
         
-        
+        AF.request("http://175.45.194.93/today/my").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = value as? [[String: Any]] {
+                    for json in jsonArray {
+                        if let imagesArray = json["images"] as? [[String: Any]],
+                           let imageUrlString = imagesArray.first?["image"] as? String,
+                           let imageUrl = URL(string: imageUrlString)
+                        {
+                            AF.request(imageUrl).responseData { response in
+                                if let imageData = response.data,
+                                    let image = UIImage(data: imageData)
+                                {
+                                    let writer = json["writer"] as? [String: Any] ?? [:]
+                                    let username = writer["name"] as? String ?? "Unknown"
+                                    let userid = writer["user_id"] as? Int ?? 0
+                                    let title = json["title"] as? String ?? "No Title"
+                                    let date = json["created_at"] as? String ?? "Unknown Date"
+                                    let content = json["content"] as? String ?? "No Content"
+                                    let postID = json["id"] as? Int ?? 0
+                                    let likes = json["likes"] as? Int ?? 0
+                                    let editable = json["editable"] as? Bool ?? false
+                                    
+                                    let userID = username + "#\(userid)"
+                                    self.posts.append((image: image, postID: postID,userID: userID,date: date, content: content, likes:likes,beforetitle: title))
+                                    self.collectionView.reloadData()
+                                }
+                            }
+                        }
+                    }
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
 //       AF.request("http://175.45.194.93/today/my").responseJSON { response in
 //        switch response.result {
 //        case .success(let value):
@@ -57,11 +91,11 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
 //                    if let postId = json["id"] as? String,
 //                       let imageUrlString = json["imageUrl"] as? String,
 //                        let imagesArray = json["images"] as? [String] {
-//        
+//
 //        // Assume there is only one image URL in the imagesArray
 //        if let imageUrlString = imagesArray.first,
 //           let imageUrl = URL(string: imageUrlString) {
-//            
+//
 //            AF.request(imageUrl).responseData { response in
 //                switch response.result {
 //                case .success(let imageData):
@@ -138,6 +172,12 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
         
         if let nextVC = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as? DetailViewController {
             nextVC.postID = selectedPost.postID
+            nextVC.userID = selectedPost.userID
+            nextVC.date = selectedPost.date
+            nextVC.content = selectedPost.content
+            nextVC.likes = selectedPost.likes
+            nextVC.beforetitle = selectedPost.beforetitle
+            
             print(nextVC.postID)
             navigationController?.pushViewController(nextVC, animated: true)
         }
