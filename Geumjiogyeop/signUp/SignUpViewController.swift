@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+//
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     var name : String?
