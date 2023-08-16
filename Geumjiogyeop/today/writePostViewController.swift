@@ -46,6 +46,18 @@ class writePostViewController: UIViewController {
                 "title": title,
                 "content": content
             ]
+        AF.request("http://175.45.194.93/user/view", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+                .validate() // 응답을 검증하여 성공적인 응답인지 확인
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        // 요청이 성공한 경우 처리
+                        print("Success: \(value)")
+                    case .failure(let error):
+                        // 요청이 실패한 경우 처리
+                        print("Error: \(error)")
+                    }
+                }
             
             let url = "http://175.45.194.93/today/"
             
@@ -62,6 +74,7 @@ class writePostViewController: UIViewController {
                             
                         case .success(let value):
                             print("성공")
+                            print(parameters)
                             print("Upload success: \(value)")
                             // Handle server response
                         case .failure(let error):

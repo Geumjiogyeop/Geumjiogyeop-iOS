@@ -17,38 +17,55 @@ class ModifyViewController: UIViewController {
     
     let imagePicker = UIImagePickerController()
     
-    var postID: String?
+    var postID: Int!
+    var beforetitle: String!
+    var content: String!
+    var image: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(postID)
+        print(postID!)
+        self.imageView.image = image
+        self.contentTextView.text = content
+        self.titleTextField.text = beforetitle
         
-        
-//        /AF.request("http://175.45.194.93/today").responseJSON { response in
-            //                    switch response.result {
-            //                    case .success(let value):
-            //                        if let jsonArray = value as? [[String: Any]] {
-            //                            for json in jsonArray {
-            //                                if let title = json["title"] as? String,
-            //                                   let content = json["content"] as? String,
-            //                                   let imageUrlString = json["imageUrl"] as? String,
-            //                                   let imageUrl = URL(string: imageUrlString),
-            //                                   let imageData = try? Data(contentsOf: imageUrl),
-            //                                   let image = UIImage(data: imageData)
-            //                                     {
-            //                                    self.imageView.setImage = image
-//        self.contentTextView = content
-//        self.titleTextField = title
-            //
-            //                                }
-            //                            }
-            //
-            //                            // 데이터 가져오기 완료 후, collectionView를 리로드하거나 UI 업데이트
-            //                            self.reloadData()
-            //                        }
-            //                    case .failure(let error):
-            //                        print("Error: \(error)")
-            //                    }
-            //                }
+        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+                navigationItem.rightBarButtonItem = saveButton
+       
+//        AF.request("http://175.45.194.93/today/\(postID!)").validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                if let jsonArray = value as? [[String: Any]], let json = jsonArray.first {
+//                    let imagesArray = json["images"] as? [[String: Any]] ?? []
+//                    if let imageUrlString = imagesArray.first?["image"] as? String,
+//                       let imageUrl = URL(string: imageUrlString)
+//                    {
+//                        AF.request(imageUrl).responseData { imageResponse in
+//                            if let imageData = imageResponse.data, let image = UIImage(data: imageData) {
+//                                let writer = json["writer"] as? [String: Any] ?? [:]
+//                                let username = writer["name"] as? String ?? "Unknown"
+//                                let userid = writer["user_id"] as? Int ?? 0
+//                                let title = json["title"] as? String ?? "No Title"
+//                                let date = json["created_at"] as? String ?? "Unknown Date"
+//                                let content = json["content"] as? String ?? "No Content"
+//                                let postID = json["id"] as? Int ?? 0
+//                                let likes = json["likes"] as? Int ?? 0
+//                                let editable = json["editable"] as? Bool ?? false
+//
+//                                DispatchQueue.main.async {
+//                                    self.imageView.image = image
+//                                    self.contentTextView.text = content
+//                                    self.titleTextField.text = title
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            case .failure(let error):
+//                print("Error: \(error)")
+//            }
+//        }
+
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pickImage))
                 imageView.addGestureRecognizer(tapGesture)
@@ -58,6 +75,10 @@ class ModifyViewController: UIViewController {
         self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
     }
+    
+    @objc func saveButtonTapped() {
+            // 여기에 버튼을 눌렀을 때 실행할 코드를 작성합니다.
+        }
     
     @objc func pickImage(){
         self.present(self.imagePicker, animated: true)
@@ -84,7 +105,7 @@ class ModifyViewController: UIViewController {
             AF.upload(
                 multipartFormData: { multipartFormData in
                     // 이미지 데이터를 파라미터에 추가
-                    multipartFormData.append(imageData, withName: "images", fileName: "image.jpg", mimeType: "image/jpeg")
+                    multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
                     
                     // 기타 파라미터들을 추가
                     for (key, value) in parameters {

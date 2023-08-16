@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+//
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     var name : String?
@@ -142,7 +143,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // HTTP 네트워킹을 통해 전송 할 데이터
        
         let parameters: [String: Any] = [
-            "phonenumber": "010-1234-5678",
+            "phonenumber": "010-8624-3239",
             "password" : password!,
             "name": name!,
             "birthday": birthbay!,
