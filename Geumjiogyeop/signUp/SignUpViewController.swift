@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var gender : Bool?
     var is_foreigner : Bool?
     var isCilck = false
+    var phonenumber : String?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthTextField: UITextField!
@@ -27,6 +28,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var local: UIButton!
     @IBOutlet weak var foreign: UIButton!
     
+  
     override func viewDidLoad() {
             super.viewDidLoad()
 
@@ -37,7 +39,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
         nexttophone.isEnabled = false
         nexttophone.backgroundColor = UIColor(hex: 0xEBEBEB) // 배경색을 원하는 색상으로 변경해주세요.
-        nexttophone.setTitle("다음", for: .normal)
+        nexttophone.setTitle("가입완료", for: .normal)
         nexttophone.setTitleColor(UIColor.white, for: .normal)
         
         }
@@ -55,6 +57,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             updateNextButtonState()
         }
     
+   
     @IBAction func nexttophone(_ sender: UIButton) {
         print("isCiick")
         print(isCilck)
@@ -128,13 +131,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                let _ = is_foreigner {
                 nexttophone.isEnabled = true
                 nexttophone.backgroundColor = UIColor(hex: 0xFFA24B) // 배경색을 원하는 색상으로 변경해주세요. 변경이 안됌!!!!!!
-                nexttophone.setTitle("다음", for: .normal)
+                nexttophone.setTitle("가입완료", for: .normal)
                 nexttophone.setTitleColor(UIColor.white, for: .normal)
                 isCilck = true
             } else {
                 nexttophone.isEnabled = false
                 nexttophone.backgroundColor = UIColor(hex: 0xEBEBEB) // 배경색을 원하는 색상으로 변경해주세요.
-                nexttophone.setTitle("다음", for: .normal)
+                nexttophone.setTitle("가입완료", for: .normal)
                 nexttophone.setTitleColor(UIColor.white, for: .normal)
                 isCilck = false
             }
@@ -143,7 +146,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // HTTP 네트워킹을 통해 전송 할 데이터
        
         let parameters: [String: Any] = [
-            "phonenumber": "01086243239",
+            "phonenumber": phonenumber!,
             "password" : password!,
             "name": name!,
             "birthday": birthbay!,

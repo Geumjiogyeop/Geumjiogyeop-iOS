@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     var likes: Int?
     var beforetitle: String?
     var image: UIImage?
+    var phoneumber: String?
     
     var clickRecommend = 1
     
@@ -88,10 +89,12 @@ class DetailViewController: UIViewController {
             // 이미지 뷰 클릭 시 실행될 코드
             if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
                 sender.setImage(newImage, for: .normal)
+                sender.tintColor = UIColor.lightGray
             }
         } else {
             if let newImage = UIImage(systemName: "hand.thumbsup") {
                 sender.setImage(newImage, for: .normal)
+                sender.tintColor = UIColor.lightGray
             }
         }
         let likeURL = "http://175.45.194.93/\(postID)/like/"

@@ -152,9 +152,9 @@
                                                             <action selector="recommendBtn:" destination="ROA-We-sDF" eventType="touchUpInside" id="nDN-dR-Xkx"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-cc-3DL" customClass="RightPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-cc-3DL" customClass="RightPaddingLabel" customModule="Geumjiogyeop" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="30" width="30" height="12"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="10"/>
                                                         <color key="textColor" red="1" green="0.58823529409999997" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

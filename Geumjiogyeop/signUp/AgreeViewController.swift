@@ -42,7 +42,7 @@ class AgreeViewController: UIViewController {
         print(isagreeclick)
         if isagreeclick == true {
             print("화면 전환")
-            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserInfoViewController") as? SignUpViewController {
+            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "phoneViewController") as? PhoneViewController {
                 navigationController?.pushViewController(nextVC, animated: true)
             }
         }

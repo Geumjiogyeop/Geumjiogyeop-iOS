@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78311C742A8553EE000A4C58 /* DetailViewController.swift */; };
+		7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */; };
 		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
 		78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */; };
 		78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FE22A8BCCA100E628CF /* ModifyViewController.swift */; };
@@ -61,6 +62,7 @@
 		56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeumjiogyeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop_GeumjiogyeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78311C742A8553EE000A4C58 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightPaddingLabel.swift; sourceTree = "<group>"; };
 		78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftPaddingLabel.swift; sourceTree = "<group>"; };
 		78767FE22A8BCCA100E628CF /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				78B614312A87E2D70011D7AE /* SignUpViewController.swift */,
 				78B614332A87E5280011D7AE /* AgreeViewController.swift */,
+				7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */,
 			);
 			path = signUp;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */,
 				78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */,
 				78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */,
+				7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */,
 				78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */,
 				78B614362A8A3AAC0011D7AE /* writePostViewController.swift in Sources */,
 				78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */,
