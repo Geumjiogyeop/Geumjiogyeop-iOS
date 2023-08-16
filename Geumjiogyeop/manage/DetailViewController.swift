@@ -25,6 +25,7 @@ class DetailViewController: UIViewController {
     var content: String?
     var likes: Int?
     var beforetitle: String?
+    var image: UIImage?
     
     var clickRecommend = 1
     
@@ -38,7 +39,9 @@ class DetailViewController: UIViewController {
         contentLabel.text = content
         contentLabel.numberOfLines = 0
         contentLabel.sizeToFit()
-        recommendLabel.text = "\(likes)"
+        recommendLabel.text = "\(likes!)"
+        imageView.image = image
+        dateLabel.text = date
     }
     @IBAction func deleteBtn(_ sender: UIButton) {
         let deleteURL = "http://175.45.194.93/\(postID)/"
@@ -57,12 +60,26 @@ class DetailViewController: UIViewController {
             let alert = UIAlertController(title: nil, message: "삭제되었습니다.", preferredStyle: .alert)
             present(alert, animated: true, completion: nil)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 alert.dismiss(animated: true, completion: nil)
             }
         }
     
     @IBAction func modifyBtn(_ sender: UIButton) {
+        if let postID = self.postID,
+           let postImage = self.image,
+           let postTitle = self.beforetitle,
+           let postContent = self.content {
+            
+            let storyboard = UIStoryboard(name: "todayStoryboard", bundle: nil)
+            if let nextVC = storyboard.instantiateViewController(withIdentifier: "ModifyViewController") as? ModifyViewController {
+                nextVC.postID = postID
+                nextVC.image = postImage
+                nextVC.beforetitle = postTitle
+                nextVC.content = postContent
+                navigationController?.pushViewController(nextVC, animated: true)
+            }
+        }
     }
 
     @IBAction func recommendBtn(_ sender: UIButton) {

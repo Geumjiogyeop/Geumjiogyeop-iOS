@@ -224,7 +224,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             present(alert, animated: true, completion: nil)
         updateData()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 alert.dismiss(animated: true, completion: nil)
             }
       

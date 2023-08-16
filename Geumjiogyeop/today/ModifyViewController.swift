@@ -111,7 +111,7 @@ class ModifyViewController: UIViewController, UITextFieldDelegate,UITextViewDele
                 print("Success: \(value)")
                 // 서버 응답을 처리하는 코드 추가
                 self.showModificationAlert()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.navigationController?.popViewController(animated: true)
                 }
             case .failure(let error):

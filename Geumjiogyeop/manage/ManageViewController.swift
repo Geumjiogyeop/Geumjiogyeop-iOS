@@ -177,6 +177,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
             nextVC.content = selectedPost.content
             nextVC.likes = selectedPost.likes
             nextVC.beforetitle = selectedPost.beforetitle
+            nextVC.image = selectedPost.image
             
             print(nextVC.postID)
             navigationController?.pushViewController(nextVC, animated: true)
