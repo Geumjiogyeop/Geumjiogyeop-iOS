@@ -218,8 +218,14 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                 if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView {
                     print("modify 선택")
                     let postID = posts[indexPath.item].postID
+                    let postImage = posts[indexPath.item].image
+                    let postTitle = posts[indexPath.item].title
+                    let postContent = posts[indexPath.item].content
                     if let nextVC = storyboard?.instantiateViewController(withIdentifier: "ModifyViewController") as? ModifyViewController {
                         nextVC.postID = postID
+                        nextVC.image = postImage
+                        nextVC.beforetitle = postTitle
+                        nextVC.content = postContent
                         navigationController?.pushViewController(nextVC, animated: true)
                     }
                 }
