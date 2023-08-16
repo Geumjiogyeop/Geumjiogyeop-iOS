@@ -11,7 +11,6 @@
 		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
 		78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */; };
 		78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FE22A8BCCA100E628CF /* ModifyViewController.swift */; };
-		78B6142B2A877B850011D7AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78B6142A2A877B850011D7AE /* GoogleService-Info.plist */; };
 		78B6142E2A877BEB0011D7AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */; };
 		78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6142F2A87D89A0011D7AE /* loginViewController.swift */; };
 		78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B614312A87E2D70011D7AE /* SignUpViewController.swift */; };
@@ -34,6 +33,16 @@
 		78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */; };
 		A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */; };
 		DBF338E0D4391B03AD6874A3 /* Pods_GeumjiogyeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */; };
+		EDEF374C2A8CEEDE002C0AEB /* myPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEF374B2A8CEEDE002C0AEB /* myPageStoryboard.storyboard */; };
+		EDEF374E2A8CEF18002C0AEB /* borderClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF374D2A8CEF18002C0AEB /* borderClass.swift */; };
+		EDEF37502A8CEF32002C0AEB /* defaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF374F2A8CEF32002C0AEB /* defaultButton.swift */; };
+		EDEF37522A8CEF47002C0AEB /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37512A8CEF47002C0AEB /* roundedButton.swift */; };
+		EDEF37542A8CEF62002C0AEB /* signUpServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37532A8CEF62002C0AEB /* signUpServiceViewController.swift */; };
+		EDEF37562A8CEF85002C0AEB /* myPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37552A8CEF85002C0AEB /* myPageViewController.swift */; };
+		EDEF37582A8CEF9C002C0AEB /* serviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37572A8CEF9C002C0AEB /* serviceInfoViewController.swift */; };
+		EDEF375B2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEF375A2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard */; };
+		EDEF375D2A8CF058002C0AEB /* adoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF375C2A8CF058002C0AEB /* adoptionViewController.swift */; };
+		EDEF375F2A8CF072002C0AEB /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF375E2A8CF072002C0AEB /* CategoryButton.swift */; };
 		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +75,6 @@
 		78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightPaddingLabel.swift; sourceTree = "<group>"; };
 		78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftPaddingLabel.swift; sourceTree = "<group>"; };
 		78767FE22A8BCCA100E628CF /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
-		78B6142A2A877B850011D7AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78B6142F2A87D89A0011D7AE /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		78B614312A87E2D70011D7AE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		78B614332A87E5280011D7AE /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +100,16 @@
 		78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
 		CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeumjiogyeopTests.release.xcconfig"; path = "Target Support Files/Pods-GeumjiogyeopTests/Pods-GeumjiogyeopTests.release.xcconfig"; sourceTree = "<group>"; };
 		D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDEF374B2A8CEEDE002C0AEB /* myPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = myPageStoryboard.storyboard; path = Geumjiogyeop/myPageStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		EDEF374D2A8CEF18002C0AEB /* borderClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = borderClass.swift; path = Geumjiogyeop/borderClass.swift; sourceTree = SOURCE_ROOT; };
+		EDEF374F2A8CEF32002C0AEB /* defaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = defaultButton.swift; path = Geumjiogyeop/defaultButton.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37512A8CEF47002C0AEB /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = roundedButton.swift; path = Geumjiogyeop/roundedButton.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37532A8CEF62002C0AEB /* signUpServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = signUpServiceViewController.swift; path = Geumjiogyeop/signUpServiceViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37552A8CEF85002C0AEB /* myPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myPageViewController.swift; path = Geumjiogyeop/myPageViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37572A8CEF9C002C0AEB /* serviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = serviceInfoViewController.swift; path = Geumjiogyeop/serviceInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF375A2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = adoptionStoryboard.storyboard; sourceTree = "<group>"; };
+		EDEF375C2A8CF058002C0AEB /* adoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptionViewController.swift; sourceTree = "<group>"; };
+		EDEF375E2A8CF072002C0AEB /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +188,7 @@
 		78DAA8322A7A31F800F77FD7 /* Geumjiogyeop */ = {
 			isa = PBXGroup;
 			children = (
+				EDEF37592A8CEFB0002C0AEB /* adoption */,
 				78B614372A8A3BB90011D7AE /* manage */,
 				78DAA8742A7A3C4700F77FD7 /* login */,
 				78DAA8662A7A395B00F77FD7 /* report */,
@@ -186,7 +205,6 @@
 				78DAA83C2A7A31F800F77FD7 /* Assets.xcassets */,
 				78DAA83E2A7A31F800F77FD7 /* LaunchScreen.storyboard */,
 				78DAA8412A7A31F800F77FD7 /* Info.plist */,
-				78B6142A2A877B850011D7AE /* GoogleService-Info.plist */,
 			);
 			path = Geumjiogyeop;
 			sourceTree = "<group>";
@@ -252,6 +270,13 @@
 		78DAA8692A7A39EB00F77FD7 /* myPage */ = {
 			isa = PBXGroup;
 			children = (
+				EDEF374B2A8CEEDE002C0AEB /* myPageStoryboard.storyboard */,
+				EDEF374D2A8CEF18002C0AEB /* borderClass.swift */,
+				EDEF374F2A8CEF32002C0AEB /* defaultButton.swift */,
+				EDEF37512A8CEF47002C0AEB /* roundedButton.swift */,
+				EDEF37532A8CEF62002C0AEB /* signUpServiceViewController.swift */,
+				EDEF37552A8CEF85002C0AEB /* myPageViewController.swift */,
+				EDEF37572A8CEF9C002C0AEB /* serviceInfoViewController.swift */,
 			);
 			path = myPage;
 			sourceTree = "<group>";
@@ -284,6 +309,16 @@
 				CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDEF37592A8CEFB0002C0AEB /* adoption */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF375A2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard */,
+				EDEF375C2A8CF058002C0AEB /* adoptionViewController.swift */,
+				EDEF375E2A8CF072002C0AEB /* CategoryButton.swift */,
+			);
+			path = adoption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,8 +441,9 @@
 				78DAA83D2A7A31F800F77FD7 /* Assets.xcassets in Resources */,
 				78DAA83B2A7A31F800F77FD7 /* Main.storyboard in Resources */,
 				78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */,
+				EDEF375B2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard in Resources */,
 				78DAA8702A7A3BDB00F77FD7 /* loginStoryboard.storyboard in Resources */,
-				78B6142B2A877B850011D7AE /* GoogleService-Info.plist in Resources */,
+				EDEF374C2A8CEEDE002C0AEB /* myPageStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,20 +571,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEF37522A8CEF47002C0AEB /* roundedButton.swift in Sources */,
 				78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */,
 				78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */,
+				EDEF375D2A8CF058002C0AEB /* adoptionViewController.swift in Sources */,
 				78DAA8382A7A31F800F77FD7 /* ViewController.swift in Sources */,
 				78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */,
 				78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */,
+				EDEF37542A8CEF62002C0AEB /* signUpServiceViewController.swift in Sources */,
 				78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */,
 				78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */,
 				78B614362A8A3AAC0011D7AE /* writePostViewController.swift in Sources */,
+				EDEF37562A8CEF85002C0AEB /* myPageViewController.swift in Sources */,
 				78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */,
 				78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */,
 				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
+				EDEF37582A8CEF9C002C0AEB /* serviceInfoViewController.swift in Sources */,
 				78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */,
 				78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */,
+				EDEF374E2A8CEF18002C0AEB /* borderClass.swift in Sources */,
+				EDEF375F2A8CF072002C0AEB /* CategoryButton.swift in Sources */,
 				78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */,
+				EDEF37502A8CEF32002C0AEB /* defaultButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
