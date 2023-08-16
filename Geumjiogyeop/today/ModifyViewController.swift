@@ -28,6 +28,9 @@ class ModifyViewController: UIViewController {
         self.imageView.image = image
         self.contentTextView.text = content
         self.titleTextField.text = beforetitle
+        
+        let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+                navigationItem.rightBarButtonItem = saveButton
        
 //        AF.request("http://175.45.194.93/today/\(postID!)").validate().responseJSON { response in
 //            switch response.result {
@@ -72,6 +75,10 @@ class ModifyViewController: UIViewController {
         self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
     }
+    
+    @objc func saveButtonTapped() {
+            // 여기에 버튼을 눌렀을 때 실행할 코드를 작성합니다.
+        }
     
     @objc func pickImage(){
         self.present(self.imagePicker, animated: true)

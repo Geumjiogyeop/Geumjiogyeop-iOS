@@ -364,9 +364,7 @@
                             <constraint firstItem="jYr-hh-WJX" firstAttribute="leading" secondItem="KEL-vi-zhb" secondAttribute="leading" constant="20" id="uQh-EK-40j"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Gnd-oD-OiV"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contentTextView" destination="JOf-O7-Ib7" id="UDA-gI-rtW"/>
