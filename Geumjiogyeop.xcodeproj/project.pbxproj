@@ -11,7 +11,6 @@
 		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
 		78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDF2A8A790600E628CF /* LeftPaddingLabel.swift */; };
 		78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FE22A8BCCA100E628CF /* ModifyViewController.swift */; };
-		78B6142E2A877BEB0011D7AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */; };
 		78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6142F2A87D89A0011D7AE /* loginViewController.swift */; };
 		78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B614312A87E2D70011D7AE /* SignUpViewController.swift */; };
 		78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B614332A87E5280011D7AE /* AgreeViewController.swift */; };
@@ -117,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B6142E2A877BEB0011D7AE /* FirebaseAnalytics in Frameworks */,
 				A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +338,6 @@
 			);
 			name = Geumjiogyeop;
 			packageProductDependencies = (
-				78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */,
 			);
 			productName = Geumjiogyeop;
 			productReference = 78DAA8302A7A31F800F77FD7 /* Geumjiogyeop.app */;
@@ -945,14 +942,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		78B6142D2A877BEB0011D7AE /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 78B6142C2A877BEB0011D7AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78DAA8282A7A31F800F77FD7 /* Project object */;
 }
