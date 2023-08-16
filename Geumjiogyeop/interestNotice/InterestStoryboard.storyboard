@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58y-mx-N50">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LSM-Hm-48f">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -165,16 +165,16 @@
             </objects>
             <point key="canvasLocation" x="670.99236641221376" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Interest-->
         <scene sceneID="tGb-P9-0tL">
             <objects>
-                <viewController id="LSM-Hm-48f" sceneMemberID="viewController">
+                <viewController id="LSM-Hm-48f" userLabel="Interest" customClass="InterestViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OQM-fp-MMV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nD0-jf-6Ca">
-                                <rect key="frame" x="0.0" y="59" width="390" height="24"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nD0-jf-6Ca">
+                                <rect key="frame" x="0.0" y="59" width="390" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="관심 공고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpo-i7-cCJ">
                                         <rect key="frame" x="163" y="2" width="64" height="21"/>
@@ -221,7 +221,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xOa-rT-MN0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LikeCell" reuseIdentifier="LikeCell" id="xOa-rT-MN0" customClass="LikeCell" customModule="Geumjiogyeop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="udD-BA-Fjx">
@@ -285,6 +285,14 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="361" height="100"/>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="B92-vR-Cgh" id="byh-H0-51f"/>
+                                            <outlet property="commentLabel" destination="X3N-Av-avE" id="Ief-r9-3LP"/>
+                                            <outlet property="genderLabel" destination="uVq-vK-j8G" id="twL-ZU-AzC"/>
+                                            <outlet property="locationLabel" destination="rAe-RG-tjb" id="bWZ-vG-jID"/>
+                                            <outlet property="mainImage" destination="fbI-U4-dst" id="rCr-LY-DAC"/>
+                                            <outlet property="nameLabel" destination="Tm4-Bc-QlR" id="dPX-ez-N14"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -298,6 +306,9 @@
                             <constraint firstItem="nD0-jf-6Ca" firstAttribute="trailing" secondItem="ksA-wg-VHv" secondAttribute="trailing" id="OLl-IQ-HfK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ajy-Qq-hGs" id="EPf-5o-dB4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VB5-ja-YKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
