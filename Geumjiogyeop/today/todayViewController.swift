@@ -47,6 +47,8 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let moveBtn = UIBarButtonItem(title: "내 글로 이동", style: .plain, target: self, action: #selector(moveButtonTapped))
+                navigationItem.rightBarButtonItem = moveBtn
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -119,6 +121,11 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         
                 
         
+    }
+    @objc func moveButtonTapped(){
+        if let nextVC = UIStoryboard(name: "manageStoryboard", bundle: nil).instantiateViewController(withIdentifier: "manageViewController") as? ManageViewController {
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 
         
@@ -201,7 +208,8 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                         switch response.result {
                         case .success(let value):
                             print("Delete success: \(value)")
-                            // 서버 응답을 처리하는 코드 추가
+                            self.showDeleteModificationAlert() // Move the alert display here
+                            self.updateData() // Update the data and reload collection view
                         case .failure(let error):
                             print("Delete failure: \(error)")
                         }
@@ -210,6 +218,17 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             }
         }
     }
+
+    func showDeleteModificationAlert() {
+            let alert = UIAlertController(title: nil, message: "글이 삭제되었습니다.", preferredStyle: .alert)
+            present(alert, animated: true, completion: nil)
+        updateData()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                alert.dismiss(animated: true, completion: nil)
+            }
+      
+        }
 
     @objc func modifyBtnViewTapped(_ sender: UITapGestureRecognizer) {
         if let modify = sender.view as? UIButton {
@@ -282,4 +301,57 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             navigationController?.pushViewController(nextVC, animated: true)
         }
     }
+    
+    func updateData() {
+        AF.request("http://175.45.194.93/today").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = value as? [[String: Any]] {
+                    var newPosts: [(image: UIImage, title: String, date: String, content: String, userID: String, postID: Int, likes: Int, editable: Bool)] = []
+                    
+                    for json in jsonArray {
+                        if let imagesArray = json["images"] as? [[String: Any]],
+                           let imageUrlString = imagesArray.first?["image"] as? String,
+                           let imageUrl = URL(string: imageUrlString)
+                        {
+                            AF.request(imageUrl).responseData { response in
+                                if let imageData = response.data,
+                                    let image = UIImage(data: imageData)
+                                {
+                                    let writer = json["writer"] as? [String: Any] ?? [:]
+                                    let username = writer["name"] as? String ?? "Unknown"
+                                    let userid = writer["user_id"] as? Int ?? 0
+                                    let title = json["title"] as? String ?? "No Title"
+                                    let date = json["created_at"] as? String ?? "Unknown Date"
+                                    let content = json["content"] as? String ?? "No Content"
+                                    let postID = json["id"] as? Int ?? 0
+                                    let likes = json["likes"] as? Int ?? 0
+                                    let editable = json["editable"] as? Bool ?? false
+                                    
+                                    let userID = username + "#\(userid)"
+                                    newPosts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable))
+                                    
+                                    // 마지막 데이터까지 추가되었을 때만 기존 데이터를 업데이트하고 화면을 갱신
+                                    if newPosts.count == jsonArray.count {
+                                        self.posts = newPosts
+                                        self.collectionView.reloadData()
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 뷰가 나타날 때마다 데이터 업데이트
+        updateData()
+    }
+
 }

@@ -18,8 +18,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recommendLabel: UILabel!
     @IBOutlet weak var recommendBtn: UIButton!
     
-    var postID: String?
+    var postID: Int?
     var editable: Bool?
+    var userID: String?
+    var date: String?
+    var content: String?
+    var likes: Int?
+    var beforetitle: String?
     
     var clickRecommend = 1
     
@@ -28,51 +33,12 @@ class DetailViewController: UIViewController {
         if let postID = postID {
                     print(postID)
         }
-        
-//        AF.request("http://175.45.194.93/today/\(postID)").responseJSON { response in
-       //                    switch response.result {
-       //                    case .success(let value):
-       //                        if let jsonArray = value as? [[String: Any]] {
-       //                            for json in jsonArray {
-       //                                if let writer = json["writer"] as? [String: Any],
-       //                                   let username = writer["username"] as? String,
-       //                                   let userid = writer["id"] as? String,
-       //                                   let title = json["title"] as? String,
-       //                                   let date = json["created_at"] as? String,
-       //                                   let content = json["content"] as? String,
-//                                          let postID = json["id"] as? String,
-        //                                    let likes = json["likes"] as? Int,
-        //                                    let editable = json["editable"] as? Bool,
-       //                                   let imageUrlString = json["imageUrl"] as? String,
-       //                                   let imageUrl = URL(string: imageUrlString),
-       //                                   let imageData = try? Data(contentsOf: imageUrl),
-       //                                   let image = UIImage(data: imageData)
-       //                                     {
-       //                                    let userID = username+userid
-//                                           self.userLabel.text = userID
-                                    //        self.imageView = image
-                                    //        self.titleLabel = title
-                                    //        self.contentLabel = content
-                                    //        self.dateLabel = date
-//                                             self.postID = postID
-//                                             self.likes = "\(likes)"
-//                                             self.editable = editable
-                                                
-       //                                }
-       //                            }
-       //
-       //                            // 데이터 가져오기 완료 후, collectionView를 리로드하거나 UI 업데이트
-       //                            self.collectionView.reloadData()
-       //                        }
-       //                    case .failure(let error):
-       //                        print("Error: \(error)")
-       //                    }
-       //                }
-        
+        userLabel.text = userID
+        titleLabel.text = beforetitle
+        contentLabel.text = content
         contentLabel.numberOfLines = 0
         contentLabel.sizeToFit()
-        
-//        recommendLabel.text = likes
+        recommendLabel.text = "\(likes)"
     }
     @IBAction func deleteBtn(_ sender: UIButton) {
         let deleteURL = "http://175.45.194.93/\(postID)/"
@@ -80,12 +46,21 @@ class DetailViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 print("Delete success: \(value)")
+                self.showDeleteModificationAlert()
                 // 서버 응답을 처리하는 코드 추가
             case .failure(let error):
                 print("Delete failure: \(error)")
             }
         }
     }
+    func showDeleteModificationAlert() {
+            let alert = UIAlertController(title: nil, message: "삭제되었습니다.", preferredStyle: .alert)
+            present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
     
     @IBAction func modifyBtn(_ sender: UIButton) {
     }
