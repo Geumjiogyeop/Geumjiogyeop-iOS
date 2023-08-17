@@ -19,6 +19,7 @@
 		29BEDB872A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BEDB862A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard */; };
 		29BEDB892A8E1CE800C9B1A9 /* adoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB882A8E1CE800C9B1A9 /* adoptionViewController.swift */; };
 		29BEDB8B2A8E1D0400C9B1A9 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB8A2A8E1D0400C9B1A9 /* CategoryButton.swift */; };
+		29FD683C2A8E7F4000AB786C /* webKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD683B2A8E7F4000AB786C /* webKitViewController.swift */; };
 		78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78311C742A8553EE000A4C58 /* DetailViewController.swift */; };
 		7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */; };
 		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
@@ -84,6 +85,7 @@
 		29BEDB862A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = adoptionStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		29BEDB882A8E1CE800C9B1A9 /* adoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptionViewController.swift; sourceTree = SOURCE_ROOT; };
 		29BEDB8A2A8E1D0400C9B1A9 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = SOURCE_ROOT; };
+		29FD683B2A8E7F4000AB786C /* webKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webKitViewController.swift; sourceTree = SOURCE_ROOT; };
 		3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeumjiogyeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop_GeumjiogyeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +295,7 @@
 				29BEDB7E2A8E17C400C9B1A9 /* myPageViewController.swift */,
 				29BEDB802A8E17F000C9B1A9 /* serviceInfoViewController.swift */,
 				29BEDB842A8E18C800C9B1A9 /* signUpServiceViewController.swift */,
+				29FD683B2A8E7F4000AB786C /* webKitViewController.swift */,
 			);
 			path = myPage;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				29BEDB7D2A8E17A500C9B1A9 /* defaultButton.swift in Sources */,
 				29BEDB792A8E175400C9B1A9 /* roundedButton.swift in Sources */,
 				78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */,
+				29FD683C2A8E7F4000AB786C /* webKitViewController.swift in Sources */,
 				78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */,
 				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
 				78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */,
