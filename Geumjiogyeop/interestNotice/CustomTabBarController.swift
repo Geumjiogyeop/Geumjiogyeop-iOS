@@ -12,6 +12,7 @@ class CustomTabBarController: UITabBarController {
                 
                 // Adjust the title size
                 item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 100)
+                item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 100)
             }
         }
     }
