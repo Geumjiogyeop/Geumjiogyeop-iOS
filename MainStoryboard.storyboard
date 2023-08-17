@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Ne-MA-6ZI">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,6 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Storyboard Reference-->
+        <scene sceneID="WIN-yg-kVW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="todayViewController" id="GXd-df-Bcx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Cp0-Zs-vdV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="os8-g6-2Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2905" y="-1365"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="H15-3F-Ji6">
             <objects>
@@ -31,6 +41,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="전체 보기"/>
+                                                <connections>
+                                                    <segue destination="GXd-df-Bcx" kind="show" id="T9a-Sm-4EL"/>
+                                                </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-2Z-LHz">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="382"/>
@@ -222,6 +235,9 @@
                                                 <rect key="frame" x="24" y="985.33333333333326" width="345" height="34.333333333333371"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="전채 보기"/>
+                                                <connections>
+                                                    <segue destination="aIf-Y5-3fk" kind="show" id="7pc-og-j4H"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhP-ES-EwL">
                                                 <rect key="frame" x="273" y="877" width="75" height="35"/>
@@ -352,6 +368,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beA-Hi-uel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="560" y="706"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="rIo-VF-ecB">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="manageViewController" id="aIf-Y5-3fk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Ge-aH-pCw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpx-EN-L3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2906" y="-1137"/>
         </scene>
     </scenes>
     <resources>
