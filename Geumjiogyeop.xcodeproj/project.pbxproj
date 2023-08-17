@@ -16,6 +16,9 @@
 		29BEDB7F2A8E17C400C9B1A9 /* myPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB7E2A8E17C400C9B1A9 /* myPageViewController.swift */; };
 		29BEDB812A8E17F000C9B1A9 /* serviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB802A8E17F000C9B1A9 /* serviceInfoViewController.swift */; };
 		29BEDB852A8E18C800C9B1A9 /* signUpServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB842A8E18C800C9B1A9 /* signUpServiceViewController.swift */; };
+		29BEDB872A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BEDB862A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard */; };
+		29BEDB892A8E1CE800C9B1A9 /* adoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB882A8E1CE800C9B1A9 /* adoptionViewController.swift */; };
+		29BEDB8B2A8E1D0400C9B1A9 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEDB8A2A8E1D0400C9B1A9 /* CategoryButton.swift */; };
 		78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78311C742A8553EE000A4C58 /* DetailViewController.swift */; };
 		7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */; };
 		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
@@ -42,9 +45,6 @@
 		78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */; };
 		78EDE7982A8DED5800B041FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDE7972A8DED5800B041FA /* MainViewController.swift */; };
 		78EDE79D2A8DEDCA00B041FA /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDE79C2A8DEDCA00B041FA /* InterestViewController.swift */; };
-		78EDE7B12A8DF33800B041FA /* adoptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78EDE7AE2A8DF33800B041FA /* adoptionStoryboard.storyboard */; };
-		78EDE7B22A8DF33800B041FA /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDE7AF2A8DF33800B041FA /* CategoryButton.swift */; };
-		78EDE7B32A8DF33800B041FA /* adoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDE7B02A8DF33800B041FA /* adoptionViewController.swift */; };
 		A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */; };
 		DBF338E0D4391B03AD6874A3 /* Pods_GeumjiogyeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */; };
 		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
@@ -81,6 +81,9 @@
 		29BEDB7E2A8E17C400C9B1A9 /* myPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		29BEDB802A8E17F000C9B1A9 /* serviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serviceInfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		29BEDB842A8E18C800C9B1A9 /* signUpServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpServiceViewController.swift; sourceTree = SOURCE_ROOT; };
+		29BEDB862A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = adoptionStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		29BEDB882A8E1CE800C9B1A9 /* adoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptionViewController.swift; sourceTree = SOURCE_ROOT; };
+		29BEDB8A2A8E1D0400C9B1A9 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = SOURCE_ROOT; };
 		3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeumjiogyeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop_GeumjiogyeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,9 +117,6 @@
 		78DAA87B2A7B97C300F77FD7 /* todayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
 		78EDE7972A8DED5800B041FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		78EDE79C2A8DEDCA00B041FA /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
-		78EDE7AE2A8DF33800B041FA /* adoptionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = adoptionStoryboard.storyboard; sourceTree = "<group>"; };
-		78EDE7AF2A8DF33800B041FA /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
-		78EDE7B02A8DF33800B041FA /* adoptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adoptionViewController.swift; sourceTree = "<group>"; };
 		CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeumjiogyeopTests.release.xcconfig"; path = "Target Support Files/Pods-GeumjiogyeopTests/Pods-GeumjiogyeopTests.release.xcconfig"; sourceTree = "<group>"; };
 		D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,9 +300,9 @@
 		78EDE7AD2A8DF33800B041FA /* adoption */ = {
 			isa = PBXGroup;
 			children = (
-				78EDE7AE2A8DF33800B041FA /* adoptionStoryboard.storyboard */,
-				78EDE7AF2A8DF33800B041FA /* CategoryButton.swift */,
-				78EDE7B02A8DF33800B041FA /* adoptionViewController.swift */,
+				29BEDB8A2A8E1D0400C9B1A9 /* CategoryButton.swift */,
+				29BEDB862A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard */,
+				29BEDB882A8E1CE800C9B1A9 /* adoptionViewController.swift */,
 			);
 			name = adoption;
 			path = ../../../../Downloads/jamin/adoption;
@@ -436,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B6143B2A8A3BF60011D7AE /* manageStoryboard.storyboard in Resources */,
-				78EDE7B12A8DF33800B041FA /* adoptionStoryboard.storyboard in Resources */,
+				29BEDB872A8E1CCA00C9B1A9 /* adoptionStoryboard.storyboard in Resources */,
 				78DAA8402A7A31F800F77FD7 /* LaunchScreen.storyboard in Resources */,
 				78DAA83D2A7A31F800F77FD7 /* Assets.xcassets in Resources */,
 				29BEDB732A8E107B00C9B1A9 /* MainStoryboard.storyboard in Resources */,
@@ -578,12 +578,11 @@
 				78DAA8382A7A31F800F77FD7 /* ViewController.swift in Sources */,
 				29BEDB812A8E17F000C9B1A9 /* serviceInfoViewController.swift in Sources */,
 				78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */,
+				29BEDB892A8E1CE800C9B1A9 /* adoptionViewController.swift in Sources */,
 				78EDE79D2A8DEDCA00B041FA /* InterestViewController.swift in Sources */,
 				78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */,
-				78EDE7B32A8DF33800B041FA /* adoptionViewController.swift in Sources */,
 				78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */,
 				7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */,
-				78EDE7B22A8DF33800B041FA /* CategoryButton.swift in Sources */,
 				29BEDB852A8E18C800C9B1A9 /* signUpServiceViewController.swift in Sources */,
 				78EDE7982A8DED5800B041FA /* MainViewController.swift in Sources */,
 				78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */,
@@ -596,6 +595,7 @@
 				78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */,
 				78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */,
 				29BEDB7B2A8E178600C9B1A9 /* borderClass.swift in Sources */,
+				29BEDB8B2A8E1D0400C9B1A9 /* CategoryButton.swift in Sources */,
 				78DAA8762A7B8A9B00F77FD7 /* borderStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
