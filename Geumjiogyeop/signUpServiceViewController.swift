@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class signUpServiceViewController: UIViewController {
 
@@ -24,6 +27,7 @@ class signUpServiceViewController: UIViewController {
         }
     }
     
+    
 }
 
 
@@ -37,3 +41,6 @@ class firstStepViewController: UIViewController {
     }
 
 }
+
+
+

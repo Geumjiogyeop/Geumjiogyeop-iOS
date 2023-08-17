@@ -53,7 +53,7 @@ class loginViewController: UIViewController {
                        let json = JSON(value)
                        print(json)
                        DispatchQueue.main.async {
-                           if let nextVC = UIStoryboard(name: "todayStoryboard", bundle: nil).instantiateViewController(withIdentifier: "todayViewController") as? todayViewController {
+                           if let nextVC = UIStoryboard(name: "myPageStoryboard", bundle: nil).instantiateViewController(withIdentifier: "myPageViewController") as? myPageViewController {
                                self.navigationController?.pushViewController(nextVC, animated: true)
                            }
                        }

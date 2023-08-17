@@ -43,6 +43,15 @@
 		EDEF375B2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEF375A2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard */; };
 		EDEF375D2A8CF058002C0AEB /* adoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF375C2A8CF058002C0AEB /* adoptionViewController.swift */; };
 		EDEF375F2A8CF072002C0AEB /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF375E2A8CF072002C0AEB /* CategoryButton.swift */; };
+		EDEF37612A8E1876002C0AEB /* webKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37602A8E1876002C0AEB /* webKitViewController.swift */; };
+		EDEF37632A8E18E9002C0AEB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEF37622A8E18E9002C0AEB /* WebKit.framework */; };
+		EDEF37652A8E27F9002C0AEB /* secondStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37642A8E27F9002C0AEB /* secondStepViewController.swift */; };
+		EDEF37672A8E33BD002C0AEB /* inputInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37662A8E33BD002C0AEB /* inputInformationViewController.swift */; };
+		EDEF37692A8E35A6002C0AEB /* letterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37682A8E35A6002C0AEB /* letterViewController.swift */; };
+		EDEF376B2A8E98D2002C0AEB /* myAdoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF376A2A8E98D2002C0AEB /* myAdoptionViewController.swift */; };
+		EDEF376D2A8EA6EB002C0AEB /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF376C2A8EA6EB002C0AEB /* RoundedImageView.swift */; };
+		EDEF376F2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF376E2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift */; };
+		EDEF37712A8EB956002C0AEB /* myListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37702A8EB956002C0AEB /* myListViewController.swift */; };
 		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +120,15 @@
 		EDEF375A2A8CEFD7002C0AEB /* adoptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = adoptionStoryboard.storyboard; sourceTree = "<group>"; };
 		EDEF375C2A8CF058002C0AEB /* adoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptionViewController.swift; sourceTree = "<group>"; };
 		EDEF375E2A8CF072002C0AEB /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		EDEF37602A8E1876002C0AEB /* webKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webKitViewController.swift; path = Geumjiogyeop/webKitViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37622A8E18E9002C0AEB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EDEF37642A8E27F9002C0AEB /* secondStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = secondStepViewController.swift; path = Geumjiogyeop/secondStepViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37662A8E33BD002C0AEB /* inputInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = inputInformationViewController.swift; path = Geumjiogyeop/inputInformationViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37682A8E35A6002C0AEB /* letterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = letterViewController.swift; path = Geumjiogyeop/letterViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF376A2A8E98D2002C0AEB /* myAdoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myAdoptionViewController.swift; path = Geumjiogyeop/myAdoptionViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF376C2A8EA6EB002C0AEB /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundedImageView.swift; path = Geumjiogyeop/RoundedImageView.swift; sourceTree = SOURCE_ROOT; };
+		EDEF376E2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = detailMyAdoptionViewController.swift; path = Geumjiogyeop/detailMyAdoptionViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37702A8EB956002C0AEB /* myListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myListViewController.swift; path = Geumjiogyeop/myListViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEF37632A8E18E9002C0AEB /* WebKit.framework in Frameworks */,
 				A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +163,7 @@
 		1361989F295E01C974661536 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDEF37622A8E18E9002C0AEB /* WebKit.framework */,
 				3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */,
 				77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */,
 				56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */,
@@ -278,6 +298,14 @@
 				EDEF37532A8CEF62002C0AEB /* signUpServiceViewController.swift */,
 				EDEF37552A8CEF85002C0AEB /* myPageViewController.swift */,
 				EDEF37572A8CEF9C002C0AEB /* serviceInfoViewController.swift */,
+				EDEF37602A8E1876002C0AEB /* webKitViewController.swift */,
+				EDEF37642A8E27F9002C0AEB /* secondStepViewController.swift */,
+				EDEF37662A8E33BD002C0AEB /* inputInformationViewController.swift */,
+				EDEF37682A8E35A6002C0AEB /* letterViewController.swift */,
+				EDEF376A2A8E98D2002C0AEB /* myAdoptionViewController.swift */,
+				EDEF376C2A8EA6EB002C0AEB /* RoundedImageView.swift */,
+				EDEF376E2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift */,
+				EDEF37702A8EB956002C0AEB /* myListViewController.swift */,
 			);
 			path = myPage;
 			sourceTree = "<group>";
@@ -572,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDEF37522A8CEF47002C0AEB /* roundedButton.swift in Sources */,
+				EDEF376D2A8EA6EB002C0AEB /* RoundedImageView.swift in Sources */,
 				78767FE32A8BCCA100E628CF /* ModifyViewController.swift in Sources */,
 				78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */,
 				EDEF375D2A8CF058002C0AEB /* adoptionViewController.swift in Sources */,
@@ -579,16 +608,23 @@
 				78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */,
 				78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */,
 				EDEF37542A8CEF62002C0AEB /* signUpServiceViewController.swift in Sources */,
+				EDEF376B2A8E98D2002C0AEB /* myAdoptionViewController.swift in Sources */,
 				78B614322A87E2D70011D7AE /* SignUpViewController.swift in Sources */,
+				EDEF376F2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift in Sources */,
+				EDEF37712A8EB956002C0AEB /* myListViewController.swift in Sources */,
+				EDEF37692A8E35A6002C0AEB /* letterViewController.swift in Sources */,
 				7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */,
 				78DAA8342A7A31F800F77FD7 /* AppDelegate.swift in Sources */,
 				78B614362A8A3AAC0011D7AE /* writePostViewController.swift in Sources */,
+				EDEF37672A8E33BD002C0AEB /* inputInformationViewController.swift in Sources */,
 				EDEF37562A8CEF85002C0AEB /* myPageViewController.swift in Sources */,
 				78DAA8362A7A31F800F77FD7 /* SceneDelegate.swift in Sources */,
 				78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */,
 				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
 				EDEF37582A8CEF9C002C0AEB /* serviceInfoViewController.swift in Sources */,
+				EDEF37652A8E27F9002C0AEB /* secondStepViewController.swift in Sources */,
 				78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */,
+				EDEF37612A8E1876002C0AEB /* webKitViewController.swift in Sources */,
 				78DAA8782A7B96BF00F77FD7 /* todayViewController.swift in Sources */,
 				EDEF374E2A8CEF18002C0AEB /* borderClass.swift in Sources */,
 				EDEF375F2A8CF072002C0AEB /* CategoryButton.swift in Sources */,
@@ -771,6 +807,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJKNV9KXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geumjiogyeop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -799,6 +836,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJKNV9KXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geumjiogyeop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

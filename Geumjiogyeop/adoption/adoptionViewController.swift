@@ -1,23 +1,21 @@
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class adoptionCell: UICollectionViewCell {
-    @IBOutlet weak var adoptionNameLabel: UILabel!
-//    {
-//
-//        didSet {
-//            if adoptionNameLabel == nil {
-//                print("Label set to nil!")
-//                // ^ SET A BREAKPOINT IN THIS LINE
-//            }
-//        }
-//    }
-    
+struct AllAdoption: Codable {
+    let adoption_id: Int
+    let name: String
+    let gender: String
+    let age: Int
+    let center: String
+    let introduction: String
+    let photo: String
+    let likes: Int
 }
 
 class adoptionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    
-    //@IBOutlet weak var adoptionCell: UICollectionView!
+
     
     @IBOutlet weak var adoptionavalableButton: CategoryButton!
     @IBOutlet weak var regionButton: CategoryButton!
@@ -25,6 +23,7 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var genderButton: CategoryButton!
     @IBOutlet weak var adoptionCollectionView: UICollectionView!
 
+    var adoptions: [AllAdoption] = [] // 서버에서 가져온 입양 정보를 저장할 배열
     
     enum AdoptionStatus {
         case all
@@ -79,14 +78,14 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
 
         setPopupButton()
-        // 컬렉션뷰 설정
-        adoptionCollectionView.register(adoptionCell.self, forCellWithReuseIdentifier: "adoptionCell")
         adoptionCollectionView.dataSource = self
         adoptionCollectionView.delegate = self
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         adoptionCollectionView.collectionViewLayout = layout
-       
+        
+        // 서버에서 입양 정보 가져오기
+        getAdoptions()
     }
 
     override func viewDidLayoutSubviews() {
@@ -94,31 +93,69 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
          
          // 컬렉션 뷰 가로 크기 설정
          if let flowLayout = adoptionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-             flowLayout.itemSize = CGSize(width: adoptionCollectionView.bounds.width - 48, height: 100)
+             flowLayout.itemSize = CGSize(width: adoptionCollectionView.bounds.width - 48, height: 150)
          }
      }
     
-    //컬렉션뷰 아이템 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return adoptions.count
     }
-
-    //셀 설정
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as? adoptionCell else {
-//            return UICollectionViewCell()
-//        }
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as? adoptionCell else {
-                        return UICollectionViewCell()
-                    }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionCell", for: indexPath) as! adoptionCell
         
-        //cell.adoptionNameLabel.text = "name"
-        //cell.adoptionNameLabel.textColor = UIColor.red
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor.red.cgColor
-
+        let adoption = adoptions[indexPath.row]
+        cell.adoptionNameLabel.text = adoption.name
+        cell.infoLabel.text = "\(adoption.gender) / \(adoption.age)세"
+        cell.centerLabel.text = adoption.center
+        cell.introductionLabel.text = "\"\(adoption.introduction)\""
+        
+        let baseURL = "http://175.45.194.93"
+        if let imageUrl = URL(string: adoption.photo) {
+                    // 이미지를 비동기적으로 가져오기
+                    AF.request(imageUrl).responseData { response in
+                        switch response.result {
+                        case .success(let imageData):
+                            if let image = UIImage(data: imageData) {
+                                cell.imageView.image = image
+                            } else {
+                                cell.imageView.image = nil
+                            }
+                        case .failure(let error):
+                            print("Image loading error: \(error)")
+                            cell.imageView.image = nil
+                        }
+                    }
+                } else {
+                    cell.imageView.image = nil // 이미지 로딩 실패 시 기본 이미지 또는 빈 이미지 설정
+                }
+        
         return cell
     }
+    
+    // 서버에서 입양 정보 가져오는 함수
+    func getAdoptions() {
+        let url = "http://175.45.194.93/adoption/"
+        
+        AF.request(url, method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = JSON(value).array {
+                    for json in jsonArray {
+                        if let data = try? json.rawData(),
+                           let adoption = try? JSONDecoder().decode(AllAdoption.self, from: data) {
+                            self.adoptions.append(adoption)
+                        }
+                    }
+                    self.adoptionCollectionView.reloadData()
+                }
+                print("API Sucess")
+            case .failure(let error):
+                print("API Failure: \(error)")
+            }
+        }
+    }
+
     
     func setPopupButton() {
         setAdoptionStatusMenu()
@@ -278,6 +315,16 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
             }
         }
     }
+}
+
+class adoptionCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: RoundedImageView!
+    @IBOutlet weak var adoptionNameLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var centerLabel: UILabel!
+    @IBOutlet weak var introductionLabel: UILabel!
+    @IBOutlet weak var availableButton: UIButton!
     
 
+    
 }
