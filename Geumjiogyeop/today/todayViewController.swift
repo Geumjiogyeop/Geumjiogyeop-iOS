@@ -31,7 +31,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     
     
     
-    var clickRecommend = 1
+    var clickRecommend: Int!
     
 //    var posts: [(image: UIImage, title: String, date: String,content: String,userID: String,postID: String,likes: Int,editable: Bool)] = [
 //        (userID: "이서연#1111",image: UIImage(named: "testImg")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true),
@@ -86,9 +86,10 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                                     let postID = json["id"] as? Int ?? 0
                                     let likes = json["likes"] as? Int ?? 0
                                     let editable = json["editable"] as? Bool ?? false
+                                    let isLike = json["isLike"] as? Bool ?? false
                                     
                                     let userID = username + "#\(userid)"
-                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable))
+                                    self.posts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable,isLike: isLike))
                                     self.collectionView.reloadData()
                                 }
                             }
@@ -172,7 +173,17 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                 cell.userIconStackView.isHidden = true
             }
             
-            
+            if post.isLike == true {
+                if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
+                    cell.recommendImgView.image = newImage
+                    cell.recommendImgView.tintColor = UIColor.lightGray
+                }
+            } else {
+                if let newImage = UIImage(systemName: "hand.thumbsup") {
+                    cell.recommendImgView.image = newImage
+                    cell.recommendImgView.tintColor = UIColor.lightGray
+                }
+            }
 
             return cell
         }
@@ -256,47 +267,23 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             let location = sender.location(in: collectionView)
             if let indexPath = collectionView.indexPathForItem(at: location) {
                 if let clickedCell = collectionView.cellForItem(at: indexPath) as? todayCollectionView {
-                    clickRecommend += 1
-                    if clickRecommend % 2 == 0 {
-                        // 이미지 뷰 클릭 시 실행될 코드
-                        if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
-                            clickedCell.recommendImgView.image = newImage
-                            clickedCell.recommendImgView.tintColor = UIColor.lightGray
-                        }
                         let postID = posts[indexPath.item].postID
                         let likeURL = "http://175.45.194.93/today/\(postID)/like/"
                         AF.request(likeURL, method: .patch).responseJSON { response in
                             switch response.result {
                             case .success(let value):
-                                self.updateData()
+                                
                                 print("Delete success: \(value)")
                                 // 서버 응답을 처리하는 코드 추가
                             case .failure(let error):
                                 print("Delete failure: \(error)")
                             }
-                        }
-                    } else {
-                        if let newImage = UIImage(systemName: "hand.thumbsup") {
-                            clickedCell.recommendImgView.image = newImage
-                            clickedCell.recommendImgView.tintColor = UIColor.lightGray
-                        }
-                        let postID = posts[indexPath.item].postID
-                        let likeURL = "http://175.45.194.93/today/\(postID)/like/"
-                        AF.request(likeURL, method: .patch).responseJSON { response in
-                            switch response.result {
-                            case .success(let value):
-                                self.updateData()
-                                print("Delete success: \(value)")
-                                // 서버 응답을 처리하는 코드 추가
-                            case .failure(let error):
-                                print("Delete failure: \(error)")
-                            }
+                            self.updateData()
                         }
                     }
                 }
             }
         }
-    }
 
     
     @objc func fixedBtnTapped() {

@@ -57,8 +57,8 @@ class DetailViewController: UIViewController {
         }
     }
     @IBAction func deleteBtn(_ sender: UIButton) {
-        let deleteURL = "http://175.45.194.93/today/\(postID)/"
-        AF.request(deleteURL, method: .delete).responseJSON { response in
+        let deleteURL = "http://175.45.194.93/today/\(postID!)/"
+        AF.request(deleteURL, method: .delete).responseData { response in
             switch response.result {
             case .success(let value):
                 print("Delete success: \(value)")
@@ -99,19 +99,6 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func recommendBtn(_ sender: UIButton) {
-        clickRecommend += 1
-        if clickRecommend % 2 == 0 {
-            // 이미지 뷰 클릭 시 실행될 코드
-            if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
-                sender.setImage(newImage, for: .normal)
-                sender.tintColor = UIColor.lightGray
-            }
-        } else {
-            if let newImage = UIImage(systemName: "hand.thumbsup") {
-                sender.setImage(newImage, for: .normal)
-                sender.tintColor = UIColor.lightGray
-            }
-        }
         let likeURL = "http://175.45.194.93/\(postID)/like/"
         
         AF.request(likeURL, method: .patch).responseJSON { response in
@@ -123,6 +110,7 @@ class DetailViewController: UIViewController {
                 print("Like failure: \(error)")
             }
         }
+        updateTodayData()
     }
     override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)

@@ -206,7 +206,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
             switch response.result {
             case .success(let value):
                 if let jsonArray = value as? [[String: Any]] {
-                    var newPosts: [(image: UIImage,postID:Int,userID: String,date: String, content: String, likes:Int, beforetitle: String)] = []
+                    var newPosts: [(image: UIImage,postID:Int,userID: String,date: String, content: String, likes:Int, beforetitle: String,isLike: Bool)] = []
                     
                     for json in jsonArray {
                         if let imagesArray = json["images"] as? [[String: Any]],
@@ -226,9 +226,10 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
                                     let postID = json["id"] as? Int ?? 0
                                     let likes = json["likes"] as? Int ?? 0
                                     let editable = json["editable"] as? Bool ?? false
+                                    let isLike = json["isLike"] as? Bool ?? false
                                     
                                     let userID = username + "#\(userid)"
-                                    newPosts.append((image: image, postID: postID,userID: userID,date: date, content: content, likes:likes,beforetitle: title))
+                                    newPosts.append((image: image, postID: postID,userID: userID,date: date, content: content, likes:likes,beforetitle: title,isLike: isLike))
                                     
                                     // 마지막 데이터까지 추가되었을 때만 기존 데이터를 업데이트하고 화면을 갱신
                                    
