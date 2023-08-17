@@ -5,7 +5,6 @@
 //  Created by 이서연 on 2023/08/17.
 //
 
-MainViewController
 
 import UIKit
 import Alamofire

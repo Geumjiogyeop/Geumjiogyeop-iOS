@@ -31,7 +31,13 @@ class loginViewController: UIViewController {
 //        
 //    }
     
-       
+    @IBAction func nologinBtn(_ sender: UIButton) {
+//        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+//                let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "mainViewController") as! UITabBarController
+//                mainTabBarController.modalPresentationStyle = .fullScreen
+//                present(mainTabBarController, animated: true, completion: nil)
+    }
+    
        func performLogin() {
            guard let phone = phonenumTextField.text, !phone.isEmpty,
                  let password = pwTextField.text, !password.isEmpty else {
@@ -53,7 +59,10 @@ class loginViewController: UIViewController {
                        let json = JSON(value)
                        print(json)
                        DispatchQueue.main.async {
-                           if let nextVC = UIStoryboard(name: "todayStoryboard", bundle: nil).instantiateViewController(withIdentifier: "todayViewController") as? todayViewController {
+//                           if let nextVC = UIStoryboard(name: "todayStoryboard", bundle: nil).instantiateViewController(withIdentifier: "todayViewController") as? todayViewController {
+//                               self.navigationController?.pushViewController(nextVC, animated: true)
+//                           }
+                           if let nextVC = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(withIdentifier: "mainViewController") as? todayViewController {
                                self.navigationController?.pushViewController(nextVC, animated: true)
                            }
                        }
