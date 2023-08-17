@@ -42,7 +42,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
 //        (userID: "이자민#1234",image: UIImage(named: "logo")!, title: "첫 번째 게시물", date: "2023-08-03",content: "도롱이는 잘 적응하고 지내고 있습니다:) 저희 가족에 행운이ㅏ 찾아온 것 같아요 감사합니다",postID:"1",likes: 123,editable: true)
 //    ]
 //
-    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String,postID: Int,likes: Int,editable: Bool)] = []
+    var posts: [(image: UIImage, title: String, date: String,content: String,userID:String,postID: Int,likes: Int,editable: Bool,isLike: Bool)] = []
     
     
     override func viewDidLoad() {
@@ -317,7 +317,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
             switch response.result {
             case .success(let value):
                 if let jsonArray = value as? [[String: Any]] {
-                    var newPosts: [(image: UIImage, title: String, date: String, content: String, userID: String, postID: Int, likes: Int, editable: Bool)] = []
+                    var newPosts: [(image: UIImage, title: String, date: String, content: String, userID: String, postID: Int, likes: Int, editable: Bool,isLike: Bool)] = []
                     
                     for json in jsonArray {
                         if let imagesArray = json["images"] as? [[String: Any]],
@@ -337,9 +337,10 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
                                     let postID = json["id"] as? Int ?? 0
                                     let likes = json["likes"] as? Int ?? 0
                                     let editable = json["editable"] as? Bool ?? false
+                                    let isLike = json["isLike"] as? Bool ?? false
                                     
                                     let userID = username + "#\(userid)"
-                                    newPosts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable))
+                                    newPosts.append((image: image, title: title, date: date, content: content, userID: userID, postID: postID, likes: likes, editable: editable,isLike:isLike))
                                     
                                     // 마지막 데이터까지 추가되었을 때만 기존 데이터를 업데이트하고 화면을 갱신
                                    

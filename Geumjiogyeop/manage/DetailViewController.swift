@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     var beforetitle: String?
     var image: UIImage?
     var phoneumber: String?
+    var isLike: Bool?
     
     var clickRecommend = 1
     
@@ -43,6 +44,17 @@ class DetailViewController: UIViewController {
         recommendLabel.text = "\(likes!)"
         imageView.image = image
         dateLabel.text = date
+        if isLike == true {
+            if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
+                recommendBtn.setImage(newImage, for: .normal)
+                recommendBtn.tintColor = UIColor.lightGray
+            }
+        } else{
+            if let newImage = UIImage(systemName: "hand.thumbsup") {
+                recommendBtn.setImage(newImage, for: .normal)
+                recommendBtn.tintColor = UIColor.lightGray
+            }
+        }
     }
     @IBAction func deleteBtn(_ sender: UIButton) {
         let deleteURL = "http://175.45.194.93/today/\(postID)/"

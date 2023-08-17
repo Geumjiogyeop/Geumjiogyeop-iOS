@@ -26,7 +26,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
 //        (postID: "1",image: UIImage(named: "testImg")!),(postID: "2",image: UIImage(named: "testImg")!),(postID: "3",image: UIImage(named: "testImg")!),(postID: "4",image: UIImage(named: "testImg")!),(postID: "5",image: UIImage(named: "testImg")!),(postID: "6",image: UIImage(named: "testImg")!),(postID: "7",image: UIImage(named: "testImg")!),(postID: "8",image: UIImage(named: "testImg")!),(postID: "9",image: UIImage(named: "testImg")!),(postID: "10",image: UIImage(named: "testImg")!),(postID: "11",image: UIImage(named: "testImg")!),(postID: "12",image: UIImage(named: "testImg")!)
 //    ]
     
-    var posts: [(image: UIImage,postID:Int,userID: String,date: String, content: String, likes:Int, beforetitle: String)] = []
+    var posts: [(image: UIImage,postID:Int,userID: String,date: String, content: String, likes:Int, beforetitle: String,isLike: Bool)] = []
     
     
     override func viewDidLoad() {
@@ -70,9 +70,10 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
                                     let postID = json["id"] as? Int ?? 0
                                     let likes = json["likes"] as? Int ?? 0
                                     let editable = json["editable"] as? Bool ?? false
+                                    let isLike = json["isLike"] as? Bool ?? false
                                     
                                     let userID = username + "#\(userid)"
-                                    self.posts.append((image: image, postID: postID,userID: userID,date: date, content: content, likes:likes,beforetitle: title))
+                                    self.posts.append((image: image, postID: postID,userID: userID,date: date, content: content, likes:likes,beforetitle: title, isLike:isLike))
                                     self.collectionView.reloadData()
                                 }
                             }
@@ -178,6 +179,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
             nextVC.likes = selectedPost.likes
             nextVC.beforetitle = selectedPost.beforetitle
             nextVC.image = selectedPost.image
+            nextVC.isLike = selectedPost.isLike
             
             print(nextVC.postID)
             navigationController?.pushViewController(nextVC, animated: true)
