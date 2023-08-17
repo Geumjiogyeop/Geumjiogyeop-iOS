@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
+        <!--todayViewController-->
         <scene sceneID="WIN-yg-kVW">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="todayViewController" id="GXd-df-Bcx" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="todayViewController" storyboardName="todayViewController" referencedIdentifier="todayViewController" id="GXd-df-Bcx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Cp0-Zs-vdV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="os8-g6-2Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -23,7 +23,7 @@
         <!--Main View Controller-->
         <scene sceneID="H15-3F-Ji6">
             <objects>
-                <viewController id="3Ne-MA-6ZI" customClass="MainViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="3Ne-MA-6ZI" customClass="MainViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GNj-o9-2tx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,6 +243,9 @@
                                                 <rect key="frame" x="273" y="877" width="75" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <segue destination="wV2-5r-TCE" kind="show" id="cNv-if-yXa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -369,15 +372,25 @@
             </objects>
             <point key="canvasLocation" x="560" y="706"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--manageViewController-->
         <scene sceneID="rIo-VF-ecB">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="manageViewController" id="aIf-Y5-3fk" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="manageViewController" storyboardName="manageViewController" referencedIdentifier="manageViewController" id="aIf-Y5-3fk" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0Ge-aH-pCw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpx-EN-L3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2906" y="-1137"/>
+        </scene>
+        <!--webKitViewController-->
+        <scene sceneID="CQX-oi-gCu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="webKitViewController" storyboardName="webKitViewController" referencedIdentifier="webKitViewController" id="wV2-5r-TCE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ozE-73-Zh2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0el-Bm-UMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2659" y="-770"/>
         </scene>
     </scenes>
     <resources>
