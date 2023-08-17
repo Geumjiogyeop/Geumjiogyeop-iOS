@@ -37,3 +37,35 @@ class firstStepViewController: UIViewController {
     }
 
 }
+
+class secondStepViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "반려동물 정보 입력"
+        navigationController?.navigationBar.tintColor = UIColor.black
+        // Do any additional setup after loading the view.
+    }
+
+}
+
+class inputInformationViewController: UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "반려동물 정보 입력"
+        navigationController?.navigationBar.tintColor = UIColor.black
+        // Do any additional setup after loading the view.
+    }
+}
+
+
+class letterViewController: UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "편지쓰기"
+        navigationController?.navigationBar.tintColor = UIColor.black
+        // Do any additional setup after loading the view.
+    }
+}
