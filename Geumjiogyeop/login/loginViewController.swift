@@ -24,17 +24,19 @@ class loginViewController: UIViewController {
            performLogin()
        }
     
-//    @IBAction func gotoLoginBtn(_ sender: UIButton) {
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "loginView") as? loginViewController else{
-//            print("로그인못해ㅠ")
-//            return
-//        }
-//        navigationController?.pushViewController(vc, animated: true)
-//        print("로그인할래!")
-//        
-//    }
+
     
-       
+    @IBAction func noLogin(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+                
+                // Instantiate the tab bar controller from the second storyboard
+                if let tabBarController = storyboard.instantiateInitialViewController() as? UITabBarController {
+                    tabBarController.modalPresentationStyle = .fullScreen
+                    // Present the tab bar controller
+                    self.present(tabBarController, animated: true, completion: nil)
+                }
+    }
+    
        func performLogin() {
            guard let phone = phonenumTextField.text, !phone.isEmpty,
                  let password = pwTextField.text, !password.isEmpty else {
@@ -56,9 +58,14 @@ class loginViewController: UIViewController {
                        let json = JSON(value)
                        print(json)
                        DispatchQueue.main.async {
-                           if let nextVC = UIStoryboard(name: "todayStoryboard", bundle: nil).instantiateViewController(withIdentifier: "todayViewController") as? todayViewController {
-                               self.navigationController?.pushViewController(nextVC, animated: true)
-                           }
+                           let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+                                   
+                                   // Instantiate the tab bar controller from the second storyboard
+                                   if let tabBarController = storyboard.instantiateInitialViewController() as? UITabBarController {
+                                       tabBarController.modalPresentationStyle = .fullScreen
+                                       // Present the tab bar controller
+                                       self.present(tabBarController, animated: true, completion: nil)
+                                   }
                        }
                    case .failure(let error):
                        // 로그인 실패 시 처리
