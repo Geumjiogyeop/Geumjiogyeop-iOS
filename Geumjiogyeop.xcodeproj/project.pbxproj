@@ -52,6 +52,7 @@
 		EDEF376D2A8EA6EB002C0AEB /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF376C2A8EA6EB002C0AEB /* RoundedImageView.swift */; };
 		EDEF376F2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF376E2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift */; };
 		EDEF37712A8EB956002C0AEB /* myListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37702A8EB956002C0AEB /* myListViewController.swift */; };
+		EDEF37732A8F4AD1002C0AEB /* kakaoWebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF37722A8F4AD1002C0AEB /* kakaoWebKitViewController.swift */; };
 		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		EDEF376C2A8EA6EB002C0AEB /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundedImageView.swift; path = Geumjiogyeop/RoundedImageView.swift; sourceTree = SOURCE_ROOT; };
 		EDEF376E2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = detailMyAdoptionViewController.swift; path = Geumjiogyeop/detailMyAdoptionViewController.swift; sourceTree = SOURCE_ROOT; };
 		EDEF37702A8EB956002C0AEB /* myListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myListViewController.swift; path = Geumjiogyeop/myListViewController.swift; sourceTree = SOURCE_ROOT; };
+		EDEF37722A8F4AD1002C0AEB /* kakaoWebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = kakaoWebKitViewController.swift; path = Geumjiogyeop/kakaoWebKitViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 				EDEF376C2A8EA6EB002C0AEB /* RoundedImageView.swift */,
 				EDEF376E2A8EB05A002C0AEB /* detailMyAdoptionViewController.swift */,
 				EDEF37702A8EB956002C0AEB /* myListViewController.swift */,
+				EDEF37722A8F4AD1002C0AEB /* kakaoWebKitViewController.swift */,
 			);
 			path = myPage;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */,
 				EDEF375D2A8CF058002C0AEB /* adoptionViewController.swift in Sources */,
 				78DAA8382A7A31F800F77FD7 /* ViewController.swift in Sources */,
+				EDEF37732A8F4AD1002C0AEB /* kakaoWebKitViewController.swift in Sources */,
 				78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */,
 				78B6143E2A8A3C1E0011D7AE /* ManageViewController.swift in Sources */,
 				EDEF37542A8CEF62002C0AEB /* signUpServiceViewController.swift in Sources */,

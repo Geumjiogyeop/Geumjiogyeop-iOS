@@ -12,6 +12,14 @@ class detailMyAdoptionViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var introductionLabel: UILabel!
+    @IBOutlet weak var breedLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var isNeutralized: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var letterTextView: UITextView!
     
     var adoption: Adoption? // 선택한 입양 정보를 저장할 변수
     override func viewDidLoad() {
@@ -22,10 +30,16 @@ class detailMyAdoptionViewController: UIViewController {
         // 선택한 입양 정보가 있다면 화면에 표시
         if let selectedAdoption = adoption {
             nameLabel.text = selectedAdoption.name
-//            infoLabel.text = "\(selectedAdoption.gender) / \(selectedAdoption.age)세"
-//            introductionLabel.text = selectedAdoption.introduction
-//            dateLabel.text = selectedAdoption.created_at
-            // 나머지 정보도 필요한대로 화면에 표시
+            introductionLabel.text = selectedAdoption.introduction
+            dateLabel.text = selectedAdoption.created_at
+            breedLabel.text = "\( selectedAdoption.breed)"
+            genderLabel.text = selectedAdoption.gender
+            ageLabel.text = "\( selectedAdoption.age)"
+            weightLabel.text = "\( selectedAdoption.weight)"
+            isNeutralized.text = "\( selectedAdoption.is_neutralized)"
+            letterTextView.text = selectedAdoption.letter
+            
+            
             
             // 이미지 설정 (이미지 경로가 문자열로 오는 경우 처리 필요)
             let baseURL = "http://175.45.194.93"
