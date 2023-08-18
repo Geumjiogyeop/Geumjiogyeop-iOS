@@ -32,7 +32,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
     
-    let images: [String] = ["logo", "Today", "location", "report_btn"]
+    let images: [String] = ["main1", "main2"]
     
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var adoptionButton: UIButton!
@@ -242,7 +242,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
             
             let imageView = UIImageView(frame: cell.contentView.bounds)
-            imageView.contentMode = .scaleAspectFit
             imageView.image = UIImage(named: images[indexPath.item])
             cell.contentView.addSubview(imageView)
             

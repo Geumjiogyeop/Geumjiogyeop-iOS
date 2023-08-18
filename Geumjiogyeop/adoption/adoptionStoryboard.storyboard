@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="1022.1374045801526" y="3.5211267605633805"/>
         </scene>
-        <!--Adoption View Controller-->
+        <!--오늘도-->
         <scene sceneID="bU8-GE-SF9">
             <objects>
                 <viewController storyboardIdentifier="adoptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K3W-ZB-wmb" customClass="adoptionViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
@@ -285,7 +285,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-8u-GYT">
-                                <rect key="frame" x="0.0" y="378" width="393" height="440"/>
+                                <rect key="frame" x="0.0" y="378" width="393" height="391"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aCe-te-Jl3">
                                     <size key="itemSize" width="366" height="128"/>
@@ -419,6 +419,8 @@
                             <constraint firstItem="uJf-I9-XHz" firstAttribute="top" secondItem="Y3H-cb-ulH" secondAttribute="bottom" id="tWk-ER-sdp"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="오늘도" image="calendar" catalog="system" id="xNC-Vn-gaq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="adoptionCollectionView" destination="aA1-8u-GYT" id="zjo-UZ-lF2"/>
                         <outlet property="adoptionavalableButton" destination="DHe-bT-gP2" id="ngq-yR-r9b"/>
@@ -447,6 +449,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="dog" width="489" height="525"/>
         <image name="heart" catalog="system" width="128" height="107"/>

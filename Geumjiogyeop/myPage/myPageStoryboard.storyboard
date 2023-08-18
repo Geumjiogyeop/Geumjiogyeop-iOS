@@ -246,11 +246,13 @@
                             <constraint firstItem="JqX-FD-sZU" firstAttribute="leading" secondItem="C7C-lz-nIK" secondAttribute="leading" constant="24" id="vU8-vh-AMB"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="내정보" image="person" catalog="system" id="ShR-1D-41U"/>
                     <navigationItem key="navigationItem" title="내 정보" id="fFP-Wh-ISj">
                         <barButtonItem key="rightBarButtonItem" image="bookmark" catalog="system" id="sZZ-Iq-Iha">
                             <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="serviceInfoLabel" destination="8ER-KT-OP1" id="nrD-OD-ehk"/>
                         <outlet property="serviceInfoView" destination="c3E-Lf-Wsg" id="YbL-4F-7RG"/>
@@ -353,7 +355,7 @@
             </objects>
             <point key="canvasLocation" x="6023.6641221374048" y="26.760563380281692"/>
         </scene>
-        <!--Sign Up Service View Controller-->
+        <!--내정보-->
         <scene sceneID="qxD-of-2l5">
             <objects>
                 <viewController storyboardIdentifier="signUpService" id="zfF-1s-ptO" customClass="signUpServiceViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
@@ -451,7 +453,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq4-Wp-Sg9" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                <rect key="frame" x="24" y="743" width="345" height="45"/>
+                                <rect key="frame" x="24" y="694" width="345" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Jeu-Nj-ja6"/>
@@ -477,13 +479,15 @@
                             <constraint firstItem="vJb-H5-nmo" firstAttribute="leading" secondItem="T7v-cU-v0y" secondAttribute="leading" constant="34" id="lV5-99-sIV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="내정보" image="person" catalog="system" id="McJ-3K-TAF"/>
                     <navigationItem key="navigationItem" id="eaz-LL-vfW"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwX-rr-aCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544.2748091603053" y="26.760563380281692"/>
         </scene>
-        <!--Service Info View Controller-->
+        <!--내정보-->
         <scene sceneID="58L-vr-9jy">
             <objects>
                 <viewController storyboardIdentifier="serviceInfoView" id="jVc-TX-gOW" customClass="serviceInfoViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
@@ -492,10 +496,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-cH-lRy">
-                                <rect key="frame" x="0.0" y="59" width="379.66666666666669" height="2441"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="2441"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-wW-QoN">
-                                        <rect key="frame" x="0.0" y="0.0" width="379.66666666666669" height="2155"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2155"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klV-bY-8No">
                                                 <rect key="frame" x="24" y="68.333333333333329" width="37" height="17.666666666666671"/>
@@ -504,13 +508,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금지옥엽 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEO-rm-L6y">
-                                                <rect key="frame" x="24" y="14.999999999999998" width="331.66666666666669" height="23.333333333333329"/>
+                                                <rect key="frame" x="24" y="14.999999999999998" width="345" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumGothicOTFBold" family="NanumGothicOTF" pointSize="20"/>
                                                 <color key="textColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XiI-9T-fpK">
-                                                <rect key="frame" x="24" y="146" width="331.66666666666669" height="39.666666666666657"/>
+                                                <rect key="frame" x="24" y="146" width="345" height="39.666666666666657"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-PB-jUM">
                                                         <rect key="frame" x="0.0" y="2.3333333333333321" width="15" height="15.000000000000004"/>
@@ -521,7 +525,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2번째줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-Pn-3H8">
-                                                        <rect key="frame" x="19" y="0.0" width="312.66666666666669" height="39.666666666666664"/>
+                                                        <rect key="frame" x="19" y="0.0" width="326" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -529,13 +533,13 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goods" translatesAutoresizingMaskIntoConstraints="NO" id="rXF-HV-eJf">
-                                                <rect key="frame" x="24" y="225.66666666666669" width="331.66666666666669" height="211"/>
+                                                <rect key="frame" x="24" y="225.66666666666669" width="345" height="211"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="211" id="X7k-Fe-iP6"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sXs-Wf-JBe">
-                                                <rect key="frame" x="24" y="536.66666666666663" width="331.66666666666669" height="39.666666666666629"/>
+                                                <rect key="frame" x="24" y="536.66666666666663" width="345" height="39.666666666666629"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rkr-Uw-lUM">
                                                         <rect key="frame" x="0.0" y="2.3333333333333321" width="15" height="15.000000000000004"/>
@@ -546,7 +550,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2번째줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9Q-Fe-R6p">
-                                                        <rect key="frame" x="19" y="0.0" width="312.66666666666669" height="39.666666666666664"/>
+                                                        <rect key="frame" x="19" y="0.0" width="326" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -561,7 +565,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CtP-3h-SMP">
-                                                <rect key="frame" x="24" y="1320.3333333333333" width="331.66666666666669" height="39.666666666666742"/>
+                                                <rect key="frame" x="24" y="1320.3333333333333" width="345" height="39.666666666666742"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dZx-wI-myt">
                                                         <rect key="frame" x="0.0" y="2.3333333333333321" width="15" height="15.000000000000004"/>
@@ -572,7 +576,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2번째줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2a-nY-n1i">
-                                                        <rect key="frame" x="19" y="0.0" width="312.66666666666669" height="39.666666666666664"/>
+                                                        <rect key="frame" x="19" y="0.0" width="326" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -580,13 +584,13 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoSample" translatesAutoresizingMaskIntoConstraints="NO" id="SX7-4G-eno">
-                                                <rect key="frame" x="20" y="1400" width="339.66666666666669" height="300"/>
+                                                <rect key="frame" x="20" y="1400" width="353" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="VXs-Kn-69k"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sor-GB-Li4" customClass="borderClass" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="1850" width="331.66666666666669" height="180"/>
+                                                <rect key="frame" x="24" y="1850" width="345" height="180"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="geg-dU-wOh">
                                                         <rect key="frame" x="29.999999999999996" y="30" width="60.666666666666657" height="120"/>
@@ -660,7 +664,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZIY-uE-aZC">
-                                                        <rect key="frame" x="179" y="60" width="122.66666666666669" height="60"/>
+                                                        <rect key="frame" x="192.33333333333334" y="60" width="122.66666666666666" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩129,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4z-5z-3eD">
                                                                 <rect key="frame" x="62.333333333333343" y="0.0" width="60.333333333333343" height="18.333333333333332"/>
@@ -689,10 +693,10 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dkV-Mc-o74">
-                                                <rect key="frame" x="199.99999999999997" y="1837" width="119.66666666666666" height="25.666666666666742"/>
+                                                <rect key="frame" x="200" y="1837" width="133" height="25.666666666666742"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHh-A6-obc" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="25.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="25.666666666666668"/>
                                                         <color key="backgroundColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -701,7 +705,7 @@
                                                         </buttonConfiguration>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcG-Z0-rc0" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="54.333333333333336" y="0.0" width="65.333333333333314" height="25.666666666666668"/>
+                                                        <rect key="frame" x="59.333333333333321" y="0.0" width="73.666666666666686" height="25.666666666666668"/>
                                                         <color key="backgroundColor" red="1" green="0.42377591129999997" blue="0.22975754740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -712,7 +716,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqB-ps-m4s" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="2080" width="331.66666666666669" height="45"/>
+                                                <rect key="frame" x="24" y="2080" width="345" height="45"/>
                                                 <color key="backgroundColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="99d-62-X4d"/>
@@ -787,7 +791,9 @@
                             <constraint firstItem="QYx-cH-lRy" firstAttribute="leading" secondItem="na5-bR-hBM" secondAttribute="leading" id="bUg-vd-bnp"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="내정보" image="person" catalog="system" id="cg6-dS-f4a"/>
                     <navigationItem key="navigationItem" id="KCn-00-hm8"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="393" height="2500"/>
                     <connections>
                         <outlet property="serviceInfoLabel" destination="klV-bY-8No" id="icE-mM-LRM"/>
@@ -1604,7 +1610,7 @@
             </objects>
             <point key="canvasLocation" x="5203.8167938931292" y="24.647887323943664"/>
         </scene>
-        <!--First Step View Controller-->
+        <!--내정보-->
         <scene sceneID="1Oy-Ff-Jp6">
             <objects>
                 <viewController storyboardIdentifier="firstStep" id="SZu-1g-7Fo" customClass="firstStepViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
@@ -1613,7 +1619,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ot-gW-Il9" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                <rect key="frame" x="24" y="743" width="345" height="45"/>
+                                <rect key="frame" x="24" y="694" width="345" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ahd-NA-fsi"/>
@@ -1636,7 +1642,9 @@
                             <constraint firstItem="0Ot-gW-Il9" firstAttribute="leading" secondItem="UJi-pw-g1Y" secondAttribute="leading" constant="24" id="kGF-hZ-tQp"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="내정보" image="person" catalog="system" id="E0C-Ks-1fY"/>
                     <navigationItem key="navigationItem" id="aSj-dr-fgD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLu-wA-dpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1669,11 +1677,13 @@
             </objects>
             <point key="canvasLocation" x="641.98473282442751" y="-984.50704225352115"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--내정보-->
         <scene sceneID="qHl-9z-rSx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5pe-Lj-j6s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="내정보" image="person" catalog="system" id="5vW-nO-13e"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="meD-00-BoL">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1704,6 +1714,7 @@
         <image name="light.beacon.min" catalog="system" width="128" height="106"/>
         <image name="logo" width="288" height="288"/>
         <image name="pawprint" catalog="system" width="128" height="114"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="photoSample" width="978" height="1092"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
