@@ -1631,7 +1631,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ot-gW-Il9" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                 <rect key="frame" x="24" y="694" width="345" height="45"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="backgroundColor" red="1" green="0.6134040355682373" blue="0.18716159462928772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ahd-NA-fsi"/>
                                 </constraints>
@@ -1644,10 +1644,19 @@
                                     <segue destination="faY-YX-LkR" kind="show" id="Tx1-nn-e5Z"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개발중입니다 :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lh-YH-eqR">
+                                <rect key="frame" x="10" y="317" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UJi-pw-g1Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0lh-YH-eqR" firstAttribute="leading" secondItem="UJi-pw-g1Y" secondAttribute="leading" constant="10" id="FQJ-Ec-C5a"/>
+                            <constraint firstItem="UJi-pw-g1Y" firstAttribute="trailing" secondItem="0lh-YH-eqR" secondAttribute="trailing" constant="10" id="HWK-kL-McN"/>
+                            <constraint firstItem="0lh-YH-eqR" firstAttribute="top" secondItem="UJi-pw-g1Y" secondAttribute="top" constant="258" id="Rd1-ej-biq"/>
                             <constraint firstItem="UJi-pw-g1Y" firstAttribute="trailing" secondItem="0Ot-gW-Il9" secondAttribute="trailing" constant="24" id="ali-ox-8YE"/>
                             <constraint firstItem="UJi-pw-g1Y" firstAttribute="bottom" secondItem="0Ot-gW-Il9" secondAttribute="bottom" constant="30" id="jfl-T1-mp7"/>
                             <constraint firstItem="0Ot-gW-Il9" firstAttribute="leading" secondItem="UJi-pw-g1Y" secondAttribute="leading" constant="24" id="kGF-hZ-tQp"/>
