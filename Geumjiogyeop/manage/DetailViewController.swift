@@ -65,6 +65,14 @@ class DetailViewController: UIViewController {
             case .success(let value):
                 print("Delete success: \(value)")
                 self.showDeleteModificationAlert()
+                
+                // Remove the deleted post from the posts array
+                if let manageViewController = self.navigationController?.viewControllers.first(where: { $0 is ManageViewController }) as? ManageViewController,
+                   let postIndex = manageViewController.posts.firstIndex(where: { $0.postID == self.postID }) {
+                    manageViewController.posts.remove(at: postIndex)
+                    manageViewController.collectionView.reloadData()
+                }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.navigationController?.popViewController(animated: true)
                 }
@@ -73,6 +81,7 @@ class DetailViewController: UIViewController {
             }
         }
     }
+
 
     func showDeleteModificationAlert() {
             let alert = UIAlertController(title: nil, message: "삭제되었습니다.", preferredStyle: .alert)
