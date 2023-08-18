@@ -11,6 +11,17 @@ import Alamofire
 import SwiftyJSON
 
 
+struct AllMain: Codable {
+    let adoption_id: Int
+    let name: String
+    let gender: String
+    let age: Int
+    let center: String
+    let introduction: String
+    let photo: String
+    let likes: Int
+} //ㅇㅇ
+
 class ReviewCell: UICollectionViewCell {
     @IBOutlet weak var reviewImage: UIImageView!
     @IBOutlet weak var reviewLabel: UILabel!
@@ -31,6 +42,51 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
+    
+    var mains: [AllAdoption] = [] // 서버에서 가져온 입양 정보를 저장할 배열 //ㅇㅇ
+    
+    enum MainStatus {
+        case all
+        case available
+        case unavailable
+    } //ㅇㅇ
+    
+    struct Region {
+        let title: String
+        let localizedTitle: String
+    } //ㅇㅇ
+    
+    enum Species {
+        case all
+        case dog
+        case cat
+    } //ㅇㅇ
+    
+    enum Gender{
+        case all
+        case female
+        case male
+    } //ㅇㅇ
+    
+    
+    let regions: [Region] = [
+        Region(title: "all", localizedTitle: "지역"),
+        Region(title: "seoul", localizedTitle: "서울특별시"),
+        Region(title: "gyeonggi", localizedTitle: "경기도"),
+        Region(title: "incheon", localizedTitle: "인천광역시"),
+        Region(title: "daejeon", localizedTitle: "대전광역시"),
+        Region(title: "daegu", localizedTitle: "대구광역시"),
+        Region(title: "busan", localizedTitle: "부산광역시"),
+        Region(title: "ulsan", localizedTitle: "울산광역시"),
+        Region(title: "gangwon", localizedTitle: "강원도"),
+        Region(title: "chungcheongbuk", localizedTitle: "충청북도"),
+        Region(title: "chungcheongnam", localizedTitle: "충청남도"),
+        Region(title: "jeollabuk", localizedTitle: "전라북도"),
+        Region(title: "jeollanam", localizedTitle: "전라남도"),
+        Region(title: "gyeongsangbuk", localizedTitle: "경상북도"),
+        Region(title: "gyeongsangnam", localizedTitle: "경상남도"),
+        Region(title: "jeju", localizedTitle: "제주특별자치도")
+    ] //ㅇㅇ
     
     let images: [String] = ["main1", "main2"]
     
