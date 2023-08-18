@@ -45,6 +45,7 @@ class DetailViewController: UIViewController {
         recommendLabel.text = "\(likes!)"
         imageView.image = image
         dateLabel.text = date
+        
         if isLike == true {
             if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
                 recommendBtn.setImage(newImage, for: .normal)
@@ -100,7 +101,7 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func recommendBtn(_ sender: UIButton) {
-        let likeURL = "http://175.45.194.93/\(postID)/like/"
+        let likeURL = "http://175.45.194.93/today/\(postID!)/like/"
         
         AF.request(likeURL, method: .patch).responseJSON { response in
             switch response.result {
@@ -111,7 +112,53 @@ class DetailViewController: UIViewController {
                 print("Like failure: \(error)")
             }
         }
-        updateTodayData()
+        
+        func updateData() {
+            AF.request("http://175.45.194.93/today/\(postID!)/").responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    if let jsonArray = value as? [[String: Any]] {
+                        var newPosts: [(image: UIImage, title: String, date: String, content: String, userID: String, postID: Int, likes: Int, editable: Bool,isLike: Bool)] = []
+                        
+                        for json in jsonArray {
+                            if let imagesArray = json["images"] as? [[String: Any]],
+                               let imageUrlString = imagesArray.first?["image"] as? String,
+                               let imageUrl = URL(string: imageUrlString)
+                            {
+                                AF.request(imageUrl).responseData { [self] response in
+                                    if let imageData = response.data,
+                                        let image = UIImage(data: imageData)
+                                    {
+                                  
+                                        let postID = json["id"] as? Int ?? 0
+                                        let likes = json["likes"] as? Int ?? 0
+                                        let isLike = json["isLike"] as? Bool ?? false
+                                        self.isLike = isLike
+                                        print(self.isLike)
+                                        
+                                    }
+                                    recommendLabel.text = "\(self.likes!)"
+                                }
+                            }
+                        }
+                    }
+                case .failure(let error):
+                    print("Error: \(error)")
+                }
+            }
+        }
+        
+        if self.isLike == true {
+            if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
+                recommendBtn.setImage(newImage, for: .normal)
+                recommendBtn.tintColor = UIColor.lightGray
+            }
+        } else{
+            if let newImage = UIImage(systemName: "hand.thumbsup") {
+                recommendBtn.setImage(newImage, for: .normal)
+                recommendBtn.tintColor = UIColor.lightGray
+            }
+        }
     }
     override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)
