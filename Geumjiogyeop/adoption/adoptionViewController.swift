@@ -133,6 +133,17 @@ class adoptionViewController: UIViewController, UICollectionViewDataSource, UICo
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedAdoption = adoptions[indexPath.row]
+        
+        // Storyboard에서 adoptionListViewController의 identifier 확인
+        if let adoptionListVC = storyboard?.instantiateViewController(withIdentifier: "detailAdoptionViewController") as? detailAdoptionViewController {
+            adoptionListVC.adoption = selectedAdoption
+            navigationController?.pushViewController(adoptionListVC, animated: true)
+        }
+    }
+
+    
     // 서버에서 입양 정보 가져오는 함수
     func getAdoptions() {
         let url = "http://175.45.194.93/adoption/"
