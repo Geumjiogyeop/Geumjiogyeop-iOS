@@ -87,19 +87,36 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
         
+        let fixedBtn = UIButton()
+        if let image = UIImage(named: "report_btn"){
+            fixedBtn.setImage(image, for: .normal)
+        }
+        fixedBtn.translatesAutoresizingMaskIntoConstraints=false
+        
+        view.addSubview(fixedBtn)
+        
+        let safeArea = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            fixedBtn.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -30),
+            fixedBtn.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -32),
+            fixedBtn.widthAnchor.constraint(equalToConstant: 60),
+            fixedBtn.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        fixedBtn.addTarget(self, action: #selector(imageButtonTapped), for: .touchUpInside)
     
         // Set the image for the button
-               if let image = UIImage(named: "report_btn") {
-                   imageButton.setImage(image, for: .normal)
-               }
-               
-               // Set the size of the image button
-               let buttonWidth: CGFloat = 50
-               let buttonHeight: CGFloat = 50
-               imageButton.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
-               
-               // Add a target for the button
-               imageButton.addTarget(self, action: #selector(imageButtonTapped), for: .touchUpInside)
+//               if let image = UIImage(named: "report_btn") {
+//                   imageButton.setImage(image, for: .normal)
+//               }
+//               
+//               // Set the size of the image button
+//               let buttonWidth: CGFloat = 50
+//               let buttonHeight: CGFloat = 50
+//               imageButton.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
+//               
+//               // Add a target for the button
+//               imageButton.addTarget(self, action: #selector(imageButtonTapped), for: .touchUpInside)
         
         collectionView.dataSource = self
         collectionView.delegate = self
