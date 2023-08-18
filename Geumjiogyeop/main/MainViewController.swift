@@ -10,32 +10,17 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-
-struct AllMain: Codable {
-    let adoption_id: Int
-    let name: String
-    let gender: String
-    let age: Int
-    let center: String
-    let introduction: String
-    let photo: String
-    let likes: Int
-} //ㅇㅇ
-
 class ReviewCell: UICollectionViewCell {
-    @IBOutlet weak var reviewImage: UIImageView!
-    @IBOutlet weak var reviewLabel: UILabel!
-    @IBOutlet weak var dayLabel: UILabel!
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var mainImage: UIImageView!
 }
 
+class adoptionListCell: UICollectionViewCell{
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var introductionLabel: UILabel!
+    
 
+}
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -43,50 +28,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
     
-    var mains: [AllAdoption] = [] // 서버에서 가져온 입양 정보를 저장할 배열 //ㅇㅇ
-    
-    enum MainStatus {
-        case all
-        case available
-        case unavailable
-    } //ㅇㅇ
-    
-    struct Region {
-        let title: String
-        let localizedTitle: String
-    } //ㅇㅇ
-    
-    enum Species {
-        case all
-        case dog
-        case cat
-    } //ㅇㅇ
-    
-    enum Gender{
-        case all
-        case female
-        case male
-    } //ㅇㅇ
-    
-    
-    let regions: [Region] = [
-        Region(title: "all", localizedTitle: "지역"),
-        Region(title: "seoul", localizedTitle: "서울특별시"),
-        Region(title: "gyeonggi", localizedTitle: "경기도"),
-        Region(title: "incheon", localizedTitle: "인천광역시"),
-        Region(title: "daejeon", localizedTitle: "대전광역시"),
-        Region(title: "daegu", localizedTitle: "대구광역시"),
-        Region(title: "busan", localizedTitle: "부산광역시"),
-        Region(title: "ulsan", localizedTitle: "울산광역시"),
-        Region(title: "gangwon", localizedTitle: "강원도"),
-        Region(title: "chungcheongbuk", localizedTitle: "충청북도"),
-        Region(title: "chungcheongnam", localizedTitle: "충청남도"),
-        Region(title: "jeollabuk", localizedTitle: "전라북도"),
-        Region(title: "jeollanam", localizedTitle: "전라남도"),
-        Region(title: "gyeongsangbuk", localizedTitle: "경상북도"),
-        Region(title: "gyeongsangnam", localizedTitle: "경상남도"),
-        Region(title: "jeju", localizedTitle: "제주특별자치도")
-    ] //ㅇㅇ
+    var adoptions: [AllAdoption] = [] // 서버에서 가져온 입양 정보를 저장할 배열 //ㅇㅇ
     
     let images: [String] = ["main1", "main2"]
     
@@ -101,6 +43,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 컬렉션 뷰 가로 크기 설정
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.itemSize = CGSize(width: collectionView.bounds.width - 48, height: 150)
+        }
         // Call the AF.request inside the viewDidLoad method
         AF.request("http://175.45.194.93/today").responseJSON { response in
             switch response.result {
@@ -247,7 +193,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -291,15 +237,31 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             return cell
                 }
         else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "adoptionListCell", for: indexPath) as! adoptionListCell
             
-            for subview in cell.contentView.subviews {
-                subview.removeFromSuperview()
-            }
+            let adoption = adoptions[indexPath.row]
+            cell.nameLabel.text = adoption.name
+            cell.introductionLabel.text = "\"\(adoption.introduction)\""
             
-            let imageView = UIImageView(frame: cell.contentView.bounds)
-            imageView.image = UIImage(named: images[indexPath.item])
-            cell.contentView.addSubview(imageView)
+            let baseURL = "http://175.45.194.93"
+            if let imageUrl = URL(string: adoption.photo) {
+                        // 이미지를 비동기적으로 가져오기
+                        AF.request(imageUrl).responseData { response in
+                            switch response.result {
+                            case .success(let imageData):
+                                if let image = UIImage(data: imageData) {
+                                    cell.imageView.image = image
+                                } else {
+                                    cell.imageView.image = nil
+                                }
+                            case .failure(let error):
+                                print("Image loading error: \(error)")
+                                cell.imageView.image = nil
+                            }
+                        }
+                    } else {
+                        cell.imageView.image = nil // 이미지 로딩 실패 시 기본 이미지 또는 빈 이미지 설정
+                    }
             
             return cell
         }
