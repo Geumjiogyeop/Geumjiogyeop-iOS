@@ -65,6 +65,14 @@ class DetailViewController: UIViewController {
             case .success(let value):
                 print("Delete success: \(value)")
                 self.showDeleteModificationAlert()
+                
+                // Remove the deleted post from the posts array
+                if let manageViewController = self.navigationController?.viewControllers.first(where: { $0 is ManageViewController }) as? ManageViewController,
+                   let postIndex = manageViewController.posts.firstIndex(where: { $0.postID == self.postID }) {
+                    manageViewController.posts.remove(at: postIndex)
+                    manageViewController.collectionView.reloadData()
+                }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.navigationController?.popViewController(animated: true)
                 }
@@ -73,6 +81,7 @@ class DetailViewController: UIViewController {
             }
         }
     }
+
 
     func showDeleteModificationAlert() {
             let alert = UIAlertController(title: nil, message: "삭제되었습니다.", preferredStyle: .alert)
@@ -174,5 +183,60 @@ class DetailViewController: UIViewController {
             }
         }
 
-    
+    func updateDataFromServer() {
+        guard let postID = self.postID else {
+            return
+        }
+
+        let url = "http://175.45.194.93/today/\(postID)/"
+
+        // Make a network request to fetch the updated data
+        AF.request(url).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let jsonArray = value as? [[String: Any]],
+                   let json = jsonArray.first {
+                    // Extract updated data from the JSON response
+                    if let newContent = json["content"] as? String,
+                       let newLikes = json["likes"] as? Int,
+                       let newIsLike = json["isLike"] as? Bool,
+                       let newImageURLString = json["image"] as? String,
+                       let newImageURL = URL(string: newImageURLString),
+                       let newDate = json["date"] as? String
+                    {
+                        // Update UI elements with the new data
+                        self.contentLabel.text = newContent
+                        self.recommendLabel.text = "\(newLikes)"
+                        self.isLike = newIsLike
+
+                        AF.request(newImageURL).responseData { [weak self] response in
+                            if let imageData = response.data,
+                               let image = UIImage(data: imageData)
+                            {
+                                self?.imageView.image = image
+                            }
+                        }
+
+                        self.dateLabel.text = newDate
+
+                        // Update the recommend button based on newIsLike
+                        if newIsLike {
+                            if let newImage = UIImage(systemName: "hand.thumbsup.fill") {
+                                self.recommendBtn.setImage(newImage, for: .normal)
+                                self.recommendBtn.tintColor = UIColor.lightGray
+                            }
+                        } else {
+                            if let newImage = UIImage(systemName: "hand.thumbsup") {
+                                self.recommendBtn.setImage(newImage, for: .normal)
+                                self.recommendBtn.tintColor = UIColor.lightGray
+                            }
+                        }
+                    }
+                }
+            case .failure(let error):
+                print("Error fetching updated data: \(error)")
+            }
+        }
+    }
+
 }

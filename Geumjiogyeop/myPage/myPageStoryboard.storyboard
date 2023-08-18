@@ -496,11 +496,11 @@
             <objects>
                 <viewController storyboardIdentifier="serviceInfoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jVc-TX-gOW" customClass="serviceInfoViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hms-yb-F6x">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="2500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="2490"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-cH-lRy">
-                                <rect key="frame" x="0.0" y="59" width="393" height="2441"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="2490"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-wW-QoN">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="2155"/>
@@ -537,7 +537,7 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goods" translatesAutoresizingMaskIntoConstraints="NO" id="rXF-HV-eJf">
-                                                <rect key="frame" x="24" y="225.66666666666669" width="345" height="211"/>
+                                                <rect key="frame" x="24" y="225.66666666666663" width="345" height="211"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="211" id="X7k-Fe-iP6"/>
                                                 </constraints>
@@ -810,7 +810,7 @@
         <!--My List View Controller-->
         <scene sceneID="sh8-t8-OIG">
             <objects>
-                <viewController storyboardIdentifier="myListViewController" id="Ob6-yP-PQf" customClass="myListViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ob6-yP-PQf" customClass="myListViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="441-xA-YPL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -907,6 +907,15 @@
                                 <color key="textColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjC-uc-WWh">
+                                <rect key="frame" x="322" y="83" width="47" height="34.333333333333343"/>
+                                <color key="tintColor" red="1" green="0.53333333329999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="jVc-TX-gOW" kind="show" id="mY7-M2-WKE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="flN-Wz-2NV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -918,7 +927,9 @@
                             <constraint firstItem="2Ep-oT-E8g" firstAttribute="bottom" secondItem="flN-Wz-2NV" secondAttribute="bottom" id="Lf4-ae-r2M"/>
                             <constraint firstItem="MV4-bZ-JNF" firstAttribute="top" secondItem="flN-Wz-2NV" secondAttribute="top" constant="30" id="TGl-dY-tiZ"/>
                             <constraint firstItem="0Pc-zn-OtH" firstAttribute="leading" secondItem="flN-Wz-2NV" secondAttribute="leading" constant="24" id="Ywy-fC-rw5"/>
+                            <constraint firstItem="rjC-uc-WWh" firstAttribute="top" secondItem="flN-Wz-2NV" secondAttribute="top" constant="24" id="c7F-8W-OEu"/>
                             <constraint firstItem="0Pc-zn-OtH" firstAttribute="top" secondItem="MV4-bZ-JNF" secondAttribute="bottom" constant="15" id="lPK-9J-n3R"/>
+                            <constraint firstItem="flN-Wz-2NV" firstAttribute="trailing" secondItem="rjC-uc-WWh" secondAttribute="trailing" constant="24" id="yq1-an-3Kj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -928,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBy-RT-rLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6982.4427480916029" y="122.53521126760565"/>
+            <point key="canvasLocation" x="2544" y="768"/>
         </scene>
         <!--My Adoption View Controller-->
         <scene sceneID="yO0-bJ-keB">
@@ -1720,6 +1731,7 @@
         <image name="pawprint" catalog="system" width="128" height="114"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="photoSample" width="978" height="1092"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

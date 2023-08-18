@@ -90,20 +90,23 @@ class ModifyViewController: UIViewController, UITextFieldDelegate,UITextViewDele
             headers: nil
         )
         .responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                print("Success: \(value)")
-                // 서버 응답을 처리하는 코드 추가
-                print(title)
-                print(content)
-                self.showModificationAlert()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.navigationController?.popViewController(animated: true)
+                switch response.result {
+                case .success(let value):
+                    print("Success: \(value)")
+                    self.showModificationAlert()
+
+                    // Call the updateDataFromServer method in DetailViewController
+                    if let detailViewController = self.navigationController?.viewControllers.first(where: { $0 is DetailViewController }) as? DetailViewController {
+                        detailViewController.updateDataFromServer()
+                    }
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                case .failure(let error):
+                    print("Error: \(error)")
                 }
-            case .failure(let error):
-                print("Error: \(error)")
             }
-        }
     }
 
 
