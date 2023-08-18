@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295BDAD72A8F7EE100C8B927 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295BDAD62A8F7EE100C8B927 /* MainStoryboard.storyboard */; };
+		295BDAD92A8F7F1400C8B927 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295BDAD82A8F7F1400C8B927 /* MainViewController.swift */; };
+		295BDADB2A8F7F3000C8B927 /* InterestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295BDADA2A8F7F3000C8B927 /* InterestStoryboard.storyboard */; };
+		295BDADD2A8F7F4800C8B927 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295BDADC2A8F7F4800C8B927 /* InterestViewController.swift */; };
 		78311C752A8553EE000A4C58 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78311C742A8553EE000A4C58 /* DetailViewController.swift */; };
 		7840D06D2A8D5547009F7D37 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */; };
 		78767FDE2A8A786400E628CF /* RightPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78767FDD2A8A786400E628CF /* RightPaddingLabel.swift */; };
@@ -76,6 +80,10 @@
 		1851E742552972EBAA1DE180 /* Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		191D17C0A74BE878F638094A /* Pods-Geumjiogyeop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop.release.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop.release.xcconfig"; sourceTree = "<group>"; };
 		26F08E3C1A19B7C518187973 /* Pods-Geumjiogyeop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop/Pods-Geumjiogyeop.debug.xcconfig"; sourceTree = "<group>"; };
+		295BDAD62A8F7EE100C8B927 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		295BDAD82A8F7F1400C8B927 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		295BDADA2A8F7F3000C8B927 /* InterestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterestStoryboard.storyboard; sourceTree = "<group>"; };
+		295BDADC2A8F7F4800C8B927 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeumjiogyeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geumjiogyeop_GeumjiogyeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +175,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		295BDAD42A8F7E6F00C8B927 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				295BDAD62A8F7EE100C8B927 /* MainStoryboard.storyboard */,
+				295BDAD82A8F7F1400C8B927 /* MainViewController.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		295BDAD52A8F7E7B00C8B927 /* interestNotice */ = {
+			isa = PBXGroup;
+			children = (
+				295BDADA2A8F7F3000C8B927 /* InterestStoryboard.storyboard */,
+				295BDADC2A8F7F4800C8B927 /* InterestViewController.swift */,
+			);
+			path = interestNotice;
+			sourceTree = "<group>";
+		};
 		78B614372A8A3BB90011D7AE /* manage */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +230,8 @@
 		78DAA8322A7A31F800F77FD7 /* Geumjiogyeop */ = {
 			isa = PBXGroup;
 			children = (
+				295BDAD52A8F7E7B00C8B927 /* interestNotice */,
+				295BDAD42A8F7E6F00C8B927 /* main */,
 				78EDE7B92A8F76A400B041FA /* adoption */,
 				78EDE7B82A8F769100B041FA /* myPage */,
 				78B614372A8A3BB90011D7AE /* manage */,
@@ -434,8 +462,10 @@
 				78EDE7C22A8F783F00B041FA /* adoptionStoryboard.storyboard in Resources */,
 				78DAA83B2A7A31F800F77FD7 /* Main.storyboard in Resources */,
 				78DAA87C2A7B97C300F77FD7 /* todayStoryboard.storyboard in Resources */,
+				295BDAD72A8F7EE100C8B927 /* MainStoryboard.storyboard in Resources */,
 				78EDE7D62A8F7A6200B041FA /* myPageStoryboard.storyboard in Resources */,
 				78DAA8702A7A3BDB00F77FD7 /* loginStoryboard.storyboard in Resources */,
+				295BDADB2A8F7F3000C8B927 /* InterestStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +599,7 @@
 				78B614302A87D89A0011D7AE /* loginViewController.swift in Sources */,
 				78EDE7C62A8F795B00B041FA /* detailMyAdoptionViewController.swift in Sources */,
 				78EDE7D22A8F7A3000B041FA /* serviceInfoViewController.swift in Sources */,
+				295BDADD2A8F7F4800C8B927 /* InterestViewController.swift in Sources */,
 				78EDE7DE2A8F7AEC00B041FA /* defaultButton.swift in Sources */,
 				78EDE7DC2A8F7ACD00B041FA /* signUpServiceViewController.swift in Sources */,
 				78EDE7D02A8F7A1400B041FA /* inputInformationViewController.swift in Sources */,
@@ -586,6 +617,7 @@
 				78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */,
 				78EDE7CE2A8F79DF00B041FA /* RoundedImageView.swift in Sources */,
 				78EDE7C82A8F797A00B041FA /* kakaoWebKitViewController.swift in Sources */,
+				295BDAD92A8F7F1400C8B927 /* MainViewController.swift in Sources */,
 				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
 				78EDE7D82A8F7A8400B041FA /* myPageViewController.swift in Sources */,
 				78EDE7BE2A8F774600B041FA /* CategoryButton.swift in Sources */,
