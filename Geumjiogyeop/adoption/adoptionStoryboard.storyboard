@@ -206,13 +206,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3H-cb-ulH">
                                 <rect key="frame" x="0.0" y="103" width="393" height="180"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="VOz-2e-2VR">
-                                        <rect key="frame" x="8" y="44" width="160" height="182"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="182" id="Vu1-ls-CWT"/>
-                                            <constraint firstAttribute="width" constant="160" id="dV3-UW-rCu"/>
-                                        </constraints>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-Ai-vDz">
                                         <rect key="frame" x="167" y="39.999999999999993" width="186" height="102.33333333333331"/>
                                         <subviews>
@@ -273,6 +266,13 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="VOz-2e-2VR">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="182"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="182" id="Vu1-ls-CWT"/>
+                                            <constraint firstAttribute="width" constant="160" id="dV3-UW-rCu"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.97136944530000002" blue="0.8896536827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -284,8 +284,8 @@
                                     <constraint firstItem="aXe-Ai-vDz" firstAttribute="top" secondItem="Y3H-cb-ulH" secondAttribute="top" constant="40" id="u2g-mt-7zo"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-8u-GYT">
-                                <rect key="frame" x="0.0" y="378" width="393" height="391"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-8u-GYT">
+                                <rect key="frame" x="-16" y="407" width="393" height="391"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aCe-te-Jl3">
                                     <size key="itemSize" width="366" height="128"/>

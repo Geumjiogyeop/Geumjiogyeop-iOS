@@ -71,6 +71,9 @@
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                                     <fontDescription key="titleFontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="12"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="mytextClick:" destination="oVC-ca-3Pc" eventType="touchUpInside" id="oU4-3e-uex"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edf-I8-0jd">
                                                                 <rect key="frame" x="165.66666666666666" y="0.0" width="76.666666666666657" height="70"/>
@@ -254,6 +257,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="mytextButton" destination="0fb-2P-XCF" id="Zvk-ny-A6V"/>
                         <outlet property="serviceInfoLabel" destination="8ER-KT-OP1" id="nrD-OD-ehk"/>
                         <outlet property="serviceInfoView" destination="c3E-Lf-Wsg" id="YbL-4F-7RG"/>
                         <outlet property="userInfoButton" destination="8xm-bP-Upo" id="Ie3-xR-huZ"/>
@@ -490,7 +494,7 @@
         <!--내정보-->
         <scene sceneID="58L-vr-9jy">
             <objects>
-                <viewController storyboardIdentifier="serviceInfoView" id="jVc-TX-gOW" customClass="serviceInfoViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="serviceInfoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jVc-TX-gOW" customClass="serviceInfoViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hms-yb-F6x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="2500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

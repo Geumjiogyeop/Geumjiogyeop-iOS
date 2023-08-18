@@ -44,6 +44,8 @@ class myPageViewController: UIViewController {
     @IBOutlet weak var serviceInfoView: UIView!
     @IBOutlet weak var serviceInfoLabel: UILabel!
     
+    @IBOutlet weak var mytextButton: UIButton!
+    
     var userInfo: UserInfo?  // 유저 정보를 저장하는 변수
     
     
@@ -63,6 +65,19 @@ class myPageViewController: UIViewController {
         serviceInfoView.addGestureRecognizer(tapGesture)
         
         getUserInfo()
+    }
+    
+    
+    @IBAction func mytextClick(_ sender: UIButton) {
+        // Instantiate the tab bar controller from the specified storyboard
+           let myPagStoyboard = UIStoryboard(name: "manageStoryboard", bundle: nil)
+           if let tabBarController = myPagStoyboard.instantiateViewController(withIdentifier: "manageViewController") as? UIViewController {
+               tabBarController.modalPresentationStyle = .fullScreen
+               // Present the tab bar controller
+               self.present(tabBarController, animated: true, completion: nil)
+           }
+
+
     }
     
     @objc func serviceInfoViewTapped() {

@@ -30,7 +30,6 @@ class Post {
     class LikeCell: UICollectionViewCell {
         @IBOutlet weak var nameLabel: UILabel!
         @IBOutlet weak var genderLabel: UILabel!
-        @IBOutlet weak var ageLabel: UILabel!
         @IBOutlet weak var locationLabel: UILabel!
         @IBOutlet weak var commentLabel: UILabel!
         @IBOutlet weak var mainImage: UIImageView!
@@ -100,7 +99,7 @@ class Post {
            // cell.mainImage?.image = post.image
             cell.nameLabel.text = "Name: " + post.name
             cell.genderLabel.text = "Gender: " + post.gender
-            cell.ageLabel.text = "Age: " + post.age
+            post.age
             cell.locationLabel.text = "Location: " + post.location
             cell.commentLabel.text = post.comment
 
