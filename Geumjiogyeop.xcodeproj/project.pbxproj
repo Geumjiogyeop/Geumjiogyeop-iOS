@@ -170,13 +170,8 @@
 			children = (
 				78B614372A8A3BB90011D7AE /* manage */,
 				78DAA8742A7A3C4700F77FD7 /* login */,
-				78DAA8662A7A395B00F77FD7 /* report */,
 				78DAA8682A7A39DD00F77FD7 /* today */,
-				78DAA86A2A7A39F900F77FD7 /* service */,
-				78DAA8692A7A39EB00F77FD7 /* myPage */,
 				78DAA8642A7A38BE00F77FD7 /* signUp */,
-				78DAA8632A7A389300F77FD7 /* main */,
-				78DAA8672A7A399100F77FD7 /* interestNotice */,
 				78DAA8332A7A31F800F77FD7 /* AppDelegate.swift */,
 				78DAA8352A7A31F800F77FD7 /* SceneDelegate.swift */,
 				78DAA8372A7A31F800F77FD7 /* ViewController.swift */,
@@ -205,13 +200,6 @@
 			path = GeumjiogyeopUITests;
 			sourceTree = "<group>";
 		};
-		78DAA8632A7A389300F77FD7 /* main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = main;
-			sourceTree = "<group>";
-		};
 		78DAA8642A7A38BE00F77FD7 /* signUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,20 +208,6 @@
 				7840D06C2A8D5547009F7D37 /* PhoneViewController.swift */,
 			);
 			path = signUp;
-			sourceTree = "<group>";
-		};
-		78DAA8662A7A395B00F77FD7 /* report */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = report;
-			sourceTree = "<group>";
-		};
-		78DAA8672A7A399100F77FD7 /* interestNotice */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = interestNotice;
 			sourceTree = "<group>";
 		};
 		78DAA8682A7A39DD00F77FD7 /* today */ = {
@@ -245,20 +219,6 @@
 				78767FE22A8BCCA100E628CF /* ModifyViewController.swift */,
 			);
 			path = today;
-			sourceTree = "<group>";
-		};
-		78DAA8692A7A39EB00F77FD7 /* myPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = myPage;
-			sourceTree = "<group>";
-		};
-		78DAA86A2A7A39F900F77FD7 /* service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = service;
 			sourceTree = "<group>";
 		};
 		78DAA8742A7A3C4700F77FD7 /* login */ = {
