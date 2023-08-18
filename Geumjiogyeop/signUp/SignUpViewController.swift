@@ -65,10 +65,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         if isCilck == true{
             print("조건 성립함")
             alamofire()
-            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "loginView") as? loginViewController {
-                print("??")
-                navigationController?.pushViewController(nextVC, animated: true)
-            }
+//            if let nextVC = storyboard?.instantiateViewController(withIdentifier: "loginView") as? loginViewController {
+//                print("??")
+//                navigationController?.pushViewController(nextVC, animated: true)
+//            }
+//            if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+//                let mainVC = storyboard?.instantiateViewController(withIdentifier: "mainViewController") {
+//                // UIWindow의 rootViewController 교체
+//                appDelegate.window?.rootViewController = mainVC
+//            }
         }
     }
     
