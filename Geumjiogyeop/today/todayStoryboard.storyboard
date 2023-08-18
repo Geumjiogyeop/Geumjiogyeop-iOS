@@ -267,6 +267,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2oB-h0-iQT">
                         <barButtonItem key="rightBarButtonItem" title="공유" id="hrL-6j-tdP">
+                            <color key="tintColor" red="1" green="0.58823529409999997" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="submitButtonTapped:" destination="aJ6-bP-mgR" id="9NN-Rm-Xaw"/>
                             </connections>

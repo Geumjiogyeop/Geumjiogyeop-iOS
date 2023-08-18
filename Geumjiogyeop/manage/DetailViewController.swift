@@ -33,6 +33,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
         if let postID = postID {
                     print(postID)
         }

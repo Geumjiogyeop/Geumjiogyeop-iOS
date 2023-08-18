@@ -23,16 +23,26 @@ class ModifyViewController: UIViewController, UITextFieldDelegate,UITextViewDele
     var image: UIImage!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
         navigationController?.delegate = self
         print(postID!)
         self.imageView.image = image
         self.contentTextView.text = content
         self.titleTextField.text = beforetitle
         
-        let saveButton = UIBarButtonItem(title: "수정하기", style: .plain, target: self, action: #selector(saveButtonTapped))
-                navigationItem.rightBarButtonItem = saveButton
+        let saveButton = UIBarButtonItem(title: "수정", style: .plain, target: self, action: #selector(saveButtonTapped))
 
+        // 텍스트 색상 및 스타일 설정
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor(hex: 0xFFA24B), // 원하는 색상으로 변경
+            .font: UIFont.boldSystemFont(ofSize: 17) // 원하는 폰트로 변경
+        ]
+
+        saveButton.setTitleTextAttributes(attributes, for: .normal)
+
+        navigationItem.rightBarButtonItem = saveButton
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pickImage))
                 imageView.addGestureRecognizer(tapGesture)
@@ -44,32 +54,6 @@ class ModifyViewController: UIViewController, UITextFieldDelegate,UITextViewDele
         
         self.titleTextField.delegate = self
         self.contentTextView.delegate = self
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == titleTextField {
-            // 기존 텍스트에서 변경된 부분을 새로운 텍스트로 대체
-            if let currentText = titleTextField.text,
-               let range = Range(range, in: currentText) {
-                let updatedText = currentText.replacingCharacters(in: range, with: string)
-                titleTextField.text = updatedText
-            }
-            return false // false를 반환하여 기존 텍스트가 변경되지 않도록 함
-        }
-        return true
-    }
-
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if textView == contentTextView {
-            // 기존 텍스트에서 변경된 부분을 새로운 텍스트로 대체
-            if let currentText = contentTextView.text,
-               let range = Range(range, in: currentText) {
-                let updatedText = currentText.replacingCharacters(in: range, with: text)
-                contentTextView.text = updatedText
-            }
-            return false // false를 반환하여 기존 텍스트가 변경되지 않도록 함
-        }
-        return true
     }
 
     

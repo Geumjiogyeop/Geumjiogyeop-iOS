@@ -18,8 +18,9 @@ class writePostViewController: UIViewController {
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(pickImage))
                 imageView.addGestureRecognizer(tapGesture)
                 imageView.isUserInteractionEnabled = true

@@ -15,7 +15,7 @@ class PhoneViewController: UIViewController {
     var isRegister: Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
         nexttoinfo.isEnabled = false
         nexttoinfo.backgroundColor = UIColor(hex: 0xEBEBEB) // 배경색을 원하는 색상으로 변경해주세요.
         nexttoinfo.setTitle("다음", for: .normal)

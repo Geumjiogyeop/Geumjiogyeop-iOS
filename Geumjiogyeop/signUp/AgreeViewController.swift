@@ -21,6 +21,7 @@ class AgreeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
         nexttoinfoBtn.backgroundColor = UIColor(hex: 0xEBEBEB)
         nexttoinfoBtn.setTitleColor(UIColor.black, for: .normal)
         

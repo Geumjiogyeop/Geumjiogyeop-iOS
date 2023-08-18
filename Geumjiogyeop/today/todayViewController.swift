@@ -47,6 +47,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
         let moveBtn = UIBarButtonItem(title: "내 글로 이동", style: .plain, target: self, action: #selector(moveButtonTapped))
                 navigationItem.rightBarButtonItem = moveBtn
 

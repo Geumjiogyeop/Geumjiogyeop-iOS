@@ -15,7 +15,10 @@ class loginViewController: UIViewController {
     @IBOutlet weak var pwTextField: UITextField!
     
     override func viewDidLoad(){
-        
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
+        let backButton = UIBarButtonItem()
+                backButton.title = "홈" // 원하는 텍스트로 변경
+                self.navigationItem.backBarButtonItem = backButton
     }
     @IBAction func loginBtn(_ sender: UIButton) {
            performLogin()

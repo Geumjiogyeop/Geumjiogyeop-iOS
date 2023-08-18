@@ -31,6 +31,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
   
     override func viewDidLoad() {
             super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
 
             // UITextFieldDelegate 설정
             nameTextField.delegate = self

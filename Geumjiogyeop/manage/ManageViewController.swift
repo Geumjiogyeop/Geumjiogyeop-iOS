@@ -31,6 +31,7 @@ class ManageViewController: UIViewController,UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(hex: 0xFFA24B)
 
         collectionView.delegate = self
         collectionView.dataSource = self
