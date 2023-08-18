@@ -35,7 +35,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     let images: [String] = ["logo", "Today", "location", "report_btn"]
     
     @IBOutlet weak var imageButton: UIButton!
-        
+    @IBOutlet weak var adoptionButton: UIButton!
+    
+    @IBOutlet weak var todayButton: UIButton!
+    
     var posts: [(image: UIImage, title: String, date: String, content: String, userID: String, postID: Int, likes: Int, editable: Bool)] = []
         
     
@@ -148,9 +151,41 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @objc func imageButtonTapped() {
-            // Handle button tap event
-            print("Image button tapped!")
+        // Handle button tap event
+        let storyboard = UIStoryboard(name: "myPageStoryboard", bundle: nil)
+        
+        // WebKitViewController의 storyboardID를 가진 뷰 컨트롤러 인스턴스 생성
+        if let webKitViewController = storyboard.instantiateViewController(withIdentifier: "webKitViewController") as? webKitViewController {
+            self.present(webKitViewController, animated: true, completion: nil)
         }
+        
+        print("Image button tapped!")
+    }
+    
+    @IBAction func adoptionButtonClick(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "adoptionStoryboard", bundle: nil)
+        
+        // WebKitViewController의 storyboardID를 가진 뷰 컨트롤러 인스턴스 생성
+        if let adoptionViewController = storyboard.instantiateViewController(withIdentifier: "adoptionViewController") as? adoptionViewController {
+            self.present(adoptionViewController, animated: true, completion: nil)
+        }
+        
+        print("Image button tapped!")
+    }
+    
+    @IBAction func todayButtonClick(_ sender: UIButton) {
+        // Handle button tap event
+        let storyboard = UIStoryboard(name: "todayStoryboard", bundle: nil)
+        
+        // WebKitViewController의 storyboardID를 가진 뷰 컨트롤러 인스턴스 생성
+        if let todayViewController = storyboard.instantiateViewController(withIdentifier: "todayViewController") as? todayViewController {
+            self.present(todayViewController, animated: true, completion: nil)
+        }
+        
+        print("Image button tapped!")
+    }
+    
+
     
     
 
@@ -178,17 +213,26 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             return cell
         }
         else if collectionView == collectionView3 {
-                    let cell = collectionView3.dequeueReusableCell(withReuseIdentifier: "Cell3", for: indexPath) as! ReviewCell
-                    
-                    // Configure the ReviewCell using data from 'posts' array
-                    let post = posts[indexPath.item]
-                    cell.reviewImage.image = post.image
-                    cell.reviewLabel.text = post.title
-                    cell.dayLabel.text = post.date
-                    cell.nameLabel.text = post.userID
-                    cell.commentLabel.text = post.content
-                    
-                    return cell
+            
+            let cell = collectionView3.dequeueReusableCell(withReuseIdentifier: "Cell3", for: indexPath)
+
+            // Clear the cell's content view before adding new subviews
+            for subview in cell.contentView.subviews {
+                subview.removeFromSuperview()
+            }
+
+            // Example: You can set up UILabels and UIImageView here
+            let nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: cell.contentView.bounds.width, height: 20))
+            nameLabel.text = "Name \(indexPath.item + 1)"
+            cell.contentView.addSubview(nameLabel)
+
+            let genderLabel = UILabel(frame: CGRect(x: 0, y: 25, width: cell.contentView.bounds.width, height: 20))
+            genderLabel.text = "Gender \(indexPath.item + 1)"
+            cell.contentView.addSubview(genderLabel)
+
+            // ... (Add other labels and image view)
+
+            return cell
                 }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
