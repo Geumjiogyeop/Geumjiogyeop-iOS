@@ -325,6 +325,7 @@ class adoptionCell: UICollectionViewCell {
     @IBOutlet weak var introductionLabel: UILabel!
     @IBOutlet weak var availableButton: UIButton!
     
-
+    @IBOutlet weak var likeImageView: UIImageView!
+    
     
 }

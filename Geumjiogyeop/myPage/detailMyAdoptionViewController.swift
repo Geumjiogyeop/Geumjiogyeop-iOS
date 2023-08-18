@@ -31,12 +31,29 @@ class detailMyAdoptionViewController: UIViewController {
         if let selectedAdoption = adoption {
             nameLabel.text = selectedAdoption.name
             introductionLabel.text = selectedAdoption.introduction
-            dateLabel.text = selectedAdoption.created_at
-            breedLabel.text = "\( selectedAdoption.breed)"
-            genderLabel.text = selectedAdoption.gender
-            ageLabel.text = "\( selectedAdoption.age)"
-            weightLabel.text = "\( selectedAdoption.weight)"
-            isNeutralized.text = "\( selectedAdoption.is_neutralized)"
+            if let createdAt = selectedAdoption.created_at.components(separatedBy: "T").first {
+                    dateLabel.text = createdAt
+                }
+                
+                breedLabel.text = selectedAdoption.breed ? "강아지" : "고양이"
+                genderLabel.text = selectedAdoption.gender
+                
+                if selectedAdoption.age == 0 {
+                    ageLabel.text = "모름"
+                } else {
+                    ageLabel.text = "\(selectedAdoption.age)세"
+                }
+                
+                weightLabel.text = "\(selectedAdoption.weight)kg"
+                
+                switch selectedAdoption.is_neutralized {
+                case 0:
+                    isNeutralized.text = "미완료"
+                case 1:
+                    isNeutralized.text = "완료"
+                default:
+                    isNeutralized.text = "모름"
+                }
             letterTextView.text = selectedAdoption.letter
             
             

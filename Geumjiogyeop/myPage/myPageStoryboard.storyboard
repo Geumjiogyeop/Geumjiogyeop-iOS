@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,21 +19,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="100" y="4"/>
-        </scene>
         <!--내 정보-->
         <scene sceneID="naE-Gh-Sgi">
             <objects>
@@ -506,10 +492,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-cH-lRy">
-                                <rect key="frame" x="0.0" y="59" width="379.66666666666669" height="2441"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="2441"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-wW-QoN">
-                                        <rect key="frame" x="0.0" y="0.0" width="379.66666666666669" height="2155"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2155"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klV-bY-8No">
                                                 <rect key="frame" x="24" y="68.333333333333329" width="37" height="17.666666666666671"/>
@@ -518,13 +504,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금지옥엽 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEO-rm-L6y">
-                                                <rect key="frame" x="24" y="14.999999999999998" width="331.66666666666669" height="23.333333333333329"/>
+                                                <rect key="frame" x="24" y="14.999999999999998" width="345" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumGothicOTFBold" family="NanumGothicOTF" pointSize="20"/>
                                                 <color key="textColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XiI-9T-fpK">
-                                                <rect key="frame" x="24" y="146" width="331.66666666666669" height="39.666666666666657"/>
+                                                <rect key="frame" x="24" y="146" width="345" height="39.666666666666657"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-PB-jUM">
                                                         <rect key="frame" x="0.0" y="2.3333333333333321" width="15" height="15.000000000000004"/>
@@ -535,7 +521,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2번째줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-Pn-3H8">
-                                                        <rect key="frame" x="19" y="0.0" width="312.66666666666669" height="39.666666666666664"/>
+                                                        <rect key="frame" x="19" y="0.0" width="326" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -543,13 +529,13 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goods" translatesAutoresizingMaskIntoConstraints="NO" id="rXF-HV-eJf">
-                                                <rect key="frame" x="24" y="225.66666666666669" width="331.66666666666669" height="211"/>
+                                                <rect key="frame" x="24" y="225.66666666666669" width="345" height="211"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="211" id="X7k-Fe-iP6"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sXs-Wf-JBe">
-                                                <rect key="frame" x="24" y="536.66666666666663" width="331.66666666666669" height="39.666666666666629"/>
+                                                <rect key="frame" x="24" y="536.66666666666663" width="345" height="39.666666666666629"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rkr-Uw-lUM">
                                                         <rect key="frame" x="0.0" y="2.3333333333333321" width="15" height="15.000000000000004"/>
@@ -560,7 +546,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2번째줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9Q-Fe-R6p">
-                                                        <rect key="frame" x="19" y="0.0" width="312.66666666666669" height="39.666666666666664"/>
+                                                        <rect key="frame" x="19" y="0.0" width="326" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -575,7 +561,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CtP-3h-SMP">
-                                                <rect key="frame" x="24" y="1320.3333333333333" width="331.66666666666669" height="39.666666666666742"/>
+                                                <rect key="frame" x="24" y="1320.3333333333333" width="345" height="39.666666666666742"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dZx-wI-myt">
                                                         <rect key="frame" x="0.0" y="2.3333333333333321" width="15" height="15.000000000000004"/>
@@ -586,7 +572,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2번째줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2a-nY-n1i">
-                                                        <rect key="frame" x="19" y="0.0" width="312.66666666666669" height="39.666666666666664"/>
+                                                        <rect key="frame" x="19" y="0.0" width="326" height="39.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NanumGothicOTF" family="NanumGothicOTF" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -594,13 +580,13 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoSample" translatesAutoresizingMaskIntoConstraints="NO" id="SX7-4G-eno">
-                                                <rect key="frame" x="20" y="1400" width="339.66666666666669" height="300"/>
+                                                <rect key="frame" x="20" y="1400" width="353" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="VXs-Kn-69k"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sor-GB-Li4" customClass="borderClass" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="1850" width="331.66666666666669" height="180"/>
+                                                <rect key="frame" x="24" y="1850" width="345" height="180"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="geg-dU-wOh">
                                                         <rect key="frame" x="29.999999999999996" y="30" width="60.666666666666657" height="120"/>
@@ -674,7 +660,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZIY-uE-aZC">
-                                                        <rect key="frame" x="179" y="60" width="122.66666666666669" height="60"/>
+                                                        <rect key="frame" x="192.33333333333334" y="60" width="122.66666666666666" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩129,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4z-5z-3eD">
                                                                 <rect key="frame" x="62.333333333333343" y="0.0" width="60.333333333333343" height="18.333333333333332"/>
@@ -703,10 +689,10 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dkV-Mc-o74">
-                                                <rect key="frame" x="199.99999999999997" y="1837" width="119.66666666666666" height="25.666666666666742"/>
+                                                <rect key="frame" x="200" y="1837" width="133" height="25.666666666666742"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHh-A6-obc" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="25.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="25.666666666666668"/>
                                                         <color key="backgroundColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -715,7 +701,7 @@
                                                         </buttonConfiguration>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcG-Z0-rc0" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                        <rect key="frame" x="54.333333333333336" y="0.0" width="65.333333333333314" height="25.666666666666668"/>
+                                                        <rect key="frame" x="59.333333333333321" y="0.0" width="73.666666666666686" height="25.666666666666668"/>
                                                         <color key="backgroundColor" red="1" green="0.42377591129999997" blue="0.22975754740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -726,7 +712,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqB-ps-m4s" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="2080" width="331.66666666666669" height="45"/>
+                                                <rect key="frame" x="24" y="2080" width="345" height="45"/>
                                                 <color key="backgroundColor" red="1" green="0.61340403560000001" blue="0.18716159460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="99d-62-X4d"/>
@@ -809,7 +795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEz-Ba-AhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707.63358778625957" y="605.63380281690149"/>
+            <point key="canvasLocation" x="976" y="606"/>
         </scene>
         <!--My List View Controller-->
         <scene sceneID="sh8-t8-OIG">
@@ -1064,11 +1050,11 @@
             <objects>
                 <viewController id="faY-YX-LkR" customClass="secondStepViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r13-oh-IXc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="csb-ch-GXm">
-                                <rect key="frame" x="40" y="109" width="310" height="130"/>
+                                <rect key="frame" x="40" y="50" width="310" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-Yp-UqN" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
@@ -1105,13 +1091,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리집 강아지 이름은요," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-gZ-Zzn">
-                                <rect key="frame" x="40" y="309" width="310" height="29.333333333333314"/>
+                                <rect key="frame" x="40" y="250.00000000000003" width="310" height="29.333333333333343"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="반려동물의 이름을 적어주세요 !" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yvr-jI-PgD">
-                                <rect key="frame" x="40" y="358.33333333333331" width="310" height="50"/>
+                                <rect key="frame" x="40" y="299.33333333333331" width="310" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aU3-8w-pmp"/>
                                 </constraints>
@@ -1119,7 +1105,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-Xg-n2p" customClass="defaultButton" customModule="Geumjiogyeop" customModuleProvider="target">
-                                <rect key="frame" x="24" y="708" width="342" height="45"/>
+                                <rect key="frame" x="24" y="767" width="342" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="8u0-QJ-1rl"/>
@@ -1134,13 +1120,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FO4-fo-KIV">
-                                <rect key="frame" x="40.000000000000007" y="468.33333333333331" width="86.666666666666686" height="29.333333333333314"/>
+                                <rect key="frame" x="40.000000000000007" y="409.33333333333331" width="86.666666666666686" height="29.333333333333314"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="plus.square" image="plus.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jXN-pa-sxG">
-                                <rect key="frame" x="24" y="509.33333333333337" width="150" height="147"/>
+                                <rect key="frame" x="24" y="450.33333333333337" width="150" height="147"/>
                                 <color key="tintColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="i7t-9F-0fG"/>

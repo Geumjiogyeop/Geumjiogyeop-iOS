@@ -55,6 +55,7 @@
 		78EDE7E02A8F7B0B00B041FA /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDE7DF2A8F7B0B00B041FA /* roundedButton.swift */; };
 		A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */; };
 		DBF338E0D4391B03AD6874A3 /* Pods_GeumjiogyeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */; };
+		EDEF377B2A8F84D0002C0AEB /* detailAdoptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF377A2A8F84D0002C0AEB /* detailAdoptionViewController.swift */; };
 		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		78EDE7DF2A8F7B0B00B041FA /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
 		CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeumjiogyeopTests.release.xcconfig"; path = "Target Support Files/Pods-GeumjiogyeopTests/Pods-GeumjiogyeopTests.release.xcconfig"; sourceTree = "<group>"; };
 		D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDEF377A2A8F84D0002C0AEB /* detailAdoptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailAdoptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 				78EDE7BB2A8F770500B041FA /* adoptionViewController.swift */,
 				78EDE7BD2A8F774600B041FA /* CategoryButton.swift */,
 				78EDE7C12A8F783F00B041FA /* adoptionStoryboard.storyboard */,
+				EDEF377A2A8F84D0002C0AEB /* detailAdoptionViewController.swift */,
 			);
 			path = adoption;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				295BDAD92A8F7F1400C8B927 /* MainViewController.swift in Sources */,
 				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
 				78EDE7D82A8F7A8400B041FA /* myPageViewController.swift in Sources */,
+				EDEF377B2A8F84D0002C0AEB /* detailAdoptionViewController.swift in Sources */,
 				78EDE7BE2A8F774600B041FA /* CategoryButton.swift in Sources */,
 				78EDE7CC2A8F79BB00B041FA /* borderClass.swift in Sources */,
 				78EDE7DA2A8F7AA200B041FA /* secondStepViewController.swift in Sources */,
