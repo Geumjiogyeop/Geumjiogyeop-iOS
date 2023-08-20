@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="ccz-Bh-cB1">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pr9-nC-35L" customClass="MainViewController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
@@ -288,7 +288,7 @@
                             <constraint firstItem="d1E-6S-z2B" firstAttribute="top" secondItem="VAF-zu-B5Y" secondAttribute="top" id="Foe-bq-Zcf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="o9R-bD-lL1"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="o9R-bD-lL1"/>
                     <navigationItem key="navigationItem" id="UoD-NO-ocq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="393" height="1500"/>
@@ -328,29 +328,31 @@
         <!--Tab Bar Controller-->
         <scene sceneID="P1P-7S-aJv">
             <objects>
-                <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sr3-Xo-ZmI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sr3-Xo-ZmI" customClass="TabBarController" customModule="Geumjiogyeop" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ytk-vE-qzl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.6134040355682373" blue="0.18716159462928772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Pr9-nC-35L" kind="relationship" relationship="viewControllers" id="yrE-qZ-prK"/>
                         <segue destination="aiI-IX-fsz" kind="relationship" relationship="viewControllers" id="9Rn-c9-zds"/>
-                        <segue destination="XdX-2R-GxF" kind="relationship" relationship="viewControllers" id="omE-fy-WLa"/>
                         <segue destination="G3I-8M-w36" kind="relationship" relationship="viewControllers" id="3d6-wM-Dla"/>
+                        <segue destination="XdX-2R-GxF" kind="relationship" relationship="viewControllers" id="JNW-6N-hn1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZf-Gi-7pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2854.1984732824426" y="-1449.2957746478874"/>
         </scene>
-        <!--Item-->
+        <!--오늘도-->
         <scene sceneID="dZV-L1-Eio">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G3I-8M-w36" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8KK-sH-1jO"/>
+                    <tabBarItem key="tabBarItem" title="오늘도" image="heart.circle" catalog="system" id="8KK-sH-1jO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ngh-yE-9ZN">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -520,6 +522,8 @@
     <resources>
         <image name="empty_like" width="40" height="40"/>
         <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
+        <image name="heart.circle" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="location" width="20" height="24"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="trash" catalog="system" width="117" height="128"/>

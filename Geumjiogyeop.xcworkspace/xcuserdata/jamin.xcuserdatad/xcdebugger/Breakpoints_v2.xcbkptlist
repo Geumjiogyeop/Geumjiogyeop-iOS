@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ADCA8309-5119-45E6-8844-2550E5D03D80"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "358F4B17-FD46-44E4-A58A-0941F2B2340C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Geumjiogyeop/myPage/serviceInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "signUpServiceButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "358F4B17-FD46-44E4-A58A-0941F2B2340C - e4e12cac9dc8d900"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Geumjiogyeop.serviceInfoViewController.signUpServiceButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Geumjiogyeop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamin/Documents/GitHub/Geumjiogyeop-iOS/Geumjiogyeop/myPage/serviceInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "358F4B17-FD46-44E4-A58A-0941F2B2340C - e4e12cac9dc8d900"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Geumjiogyeop.serviceInfoViewController.signUpServiceButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Geumjiogyeop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamin/Documents/GitHub/Geumjiogyeop-iOS/Geumjiogyeop/myPage/serviceInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "764">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

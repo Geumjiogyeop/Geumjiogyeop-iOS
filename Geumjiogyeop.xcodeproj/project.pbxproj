@@ -55,6 +55,7 @@
 		78EDE7E02A8F7B0B00B041FA /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDE7DF2A8F7B0B00B041FA /* roundedButton.swift */; };
 		A0613664CED34C9D8D77641E /* Pods_Geumjiogyeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D9D3F88BA2B3EB217F86 /* Pods_Geumjiogyeop.framework */; };
 		DBF338E0D4391B03AD6874A3 /* Pods_GeumjiogyeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306145F1F7A99B42C8F086 /* Pods_GeumjiogyeopTests.framework */; };
+		EDEF377F2A8FFA82002C0AEB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF377E2A8FFA82002C0AEB /* TabBarController.swift */; };
 		FE99B710D75B66803F2EDF86 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BEFF5069003B317F8782B6 /* Pods_Geumjiogyeop_GeumjiogyeopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		78EDE7DF2A8F7B0B00B041FA /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
 		CB45E8BE3CDB1C83989DFAF3 /* Pods-GeumjiogyeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeumjiogyeopTests.release.xcconfig"; path = "Target Support Files/Pods-GeumjiogyeopTests/Pods-GeumjiogyeopTests.release.xcconfig"; sourceTree = "<group>"; };
 		D66B381EA5F2ABF55F6D1A5B /* Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-Geumjiogyeop-GeumjiogyeopUITests/Pods-Geumjiogyeop-GeumjiogyeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDEF377E2A8FFA82002C0AEB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				295BDAD62A8F7EE100C8B927 /* MainStoryboard.storyboard */,
 				295BDAD82A8F7F1400C8B927 /* MainViewController.swift */,
+				EDEF377E2A8FFA82002C0AEB /* TabBarController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				78EDE7D42A8F7A4500B041FA /* letterViewController.swift in Sources */,
 				78B614342A87E5280011D7AE /* AgreeViewController.swift in Sources */,
 				78EDE7CE2A8F79DF00B041FA /* RoundedImageView.swift in Sources */,
+				EDEF377F2A8FFA82002C0AEB /* TabBarController.swift in Sources */,
 				78EDE7C82A8F797A00B041FA /* kakaoWebKitViewController.swift in Sources */,
 				295BDAD92A8F7F1400C8B927 /* MainViewController.swift in Sources */,
 				78767FE02A8A790600E628CF /* LeftPaddingLabel.swift in Sources */,
@@ -803,6 +807,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJKNV9KXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geumjiogyeop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -831,6 +836,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJKNV9KXF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Geumjiogyeop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

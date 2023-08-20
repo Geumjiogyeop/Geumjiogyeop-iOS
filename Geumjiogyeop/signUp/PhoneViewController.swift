@@ -42,4 +42,13 @@ class PhoneViewController: UIViewController {
         nexttoinfo.setTitleColor(UIColor.white, for: .normal)
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

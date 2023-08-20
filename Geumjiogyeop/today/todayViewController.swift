@@ -65,7 +65,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
         collectionView.collectionViewLayout = flowLayout
         
         
-        AF.request("http://175.45.194.93/today").responseJSON { response in
+        AF.request("http://175.45.194.93/today/").responseJSON { response in
             switch response.result {
             case .success(let value):
                 if let jsonArray = value as? [[String: Any]] {
@@ -296,7 +296,7 @@ class todayViewController: UIViewController,UICollectionViewDelegate, UICollecti
     }
     
     func updateData() {
-        AF.request("http://175.45.194.93/today").responseJSON { response in
+        AF.request("http://175.45.194.93/today/").responseJSON { response in
             switch response.result {
             case .success(let value):
                 if let jsonArray = value as? [[String: Any]] {

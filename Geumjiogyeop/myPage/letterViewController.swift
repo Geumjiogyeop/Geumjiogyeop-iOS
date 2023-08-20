@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class letterViewController: UIViewController{
+class letterViewController: UIViewController, UITextFieldDelegate{
     
     
     @IBOutlet weak var introductionTextField: UITextField!
@@ -46,6 +46,7 @@ class letterViewController: UIViewController{
         // 텍스트 필드와 텍스트 뷰의 내용이 변경될 때마다 호출되는 메서드 등록
         introductionTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         letterTextView.delegate = self
+        introductionTextField.delegate = self
     }
     // 텍스트 필드의 내용이 변경될 때 호출되는 메서드
         @objc func textFieldDidChange(_ textField: UITextField) {
@@ -70,12 +71,21 @@ class letterViewController: UIViewController{
         letter = (letterTextView?.text)!
         sendPetDataToServer()
         // 이동할 뷰 컨트롤러 인스턴스 생성
-        if let nextViewController = storyboard?.instantiateViewController(withIdentifier: "myPageViewController") as? myPageViewController {
-            // 모달로 화면 전환
-            nextViewController.modalPresentationStyle = .fullScreen
-            present(nextViewController, animated: true, completion: nil)
-        }
+        // 탭 바의 첫 번째 탭(myPageViewController)로 돌아가기
+            if let tabBarController = self.tabBarController, let myPageViewController = tabBarController.viewControllers?[3] as? myPageViewController {
+                tabBarController.selectedIndex = 3
+                myPageViewController.getUserInfo() // 유저 정보 업데이트
+            }
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     //API 요청

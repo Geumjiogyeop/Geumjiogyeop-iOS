@@ -66,16 +66,20 @@ class myPageViewController: UIViewController {
     }
     
     @objc func serviceInfoViewTapped() {
+        print("tapp!")
         let storyboard = UIStoryboard(name: "myPageStoryboard", bundle: nil)
            
         if let adoptions_count = userInfo?.adoptions_count {
+            print(adoptions_count)
             if adoptions_count > 0 {
+                print("입양공고 0개 이상")
                 // myListViewController로 이동
                 if let myListViewController = storyboard.instantiateViewController(withIdentifier: "myListViewController") as? myListViewController {
                     myListViewController.userInfo = userInfo  // 유저 정보 전달
                     navigationController?.pushViewController(myListViewController, animated: true)
                 }
             } else {
+                print("입양공고 0개")
                 // serviceInfoView로 이동
                 if let nextViewController = storyboard.instantiateViewController(withIdentifier: "serviceInfoView") as? serviceInfoViewController {
                     navigationController?.pushViewController(nextViewController, animated: true)
@@ -83,7 +87,6 @@ class myPageViewController: UIViewController {
             }
         }
     }
-
     
     // GET 요청을 보내고 응답을 처리하는 함수
     func getUserInfo() {

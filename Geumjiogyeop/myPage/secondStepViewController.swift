@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class secondStepViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class secondStepViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     
@@ -34,6 +34,7 @@ class secondStepViewController: UIViewController, UIImagePickerControllerDelegat
         title = "반려동물 정보 입력"
         navigationController?.navigationBar.tintColor = UIColor.black
         
+        petNameTextField.delegate = self    
         // 처음에 강아지 버튼을 선택 상태로 변경
         updateButtonStyles()
         
@@ -133,4 +134,12 @@ class secondStepViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
